@@ -28,7 +28,14 @@
 	FB.getLoginStatus(function(response) {
 	    //statusChangeCallback(response);
 	    console.log(response);
-	});  
+	});
+	//verifica status do login
+	function checkLoginState() {
+	  FB.getLoginStatus(function(response) {
+	    //statusChangeCallback(response);
+	    console.log(response);
+	  });
+	}  
   };
 
   (function(d, s, id){
@@ -349,6 +356,14 @@ Modal de login
   <div class="modal-content">
 	<div class="row">
 	    <form class="col s12">
+	      <div class="row">
+	      	<div class="col s12">
+			  <fb:login-button 
+			    scope="public_profile,email"
+			    onlogin="checkLoginState();">
+			  </fb:login-button>	      		
+	      	</div>
+	      </div>
 	      <div class="row">
 	        <div class="input-field col s6">
 	          <input id="first_name" type="text" class="validate">
