@@ -29,13 +29,6 @@
 	    //statusChangeCallback(response);
 	    console.log(response);
 	});
-	//verifica status do login
-	function checkLoginState() {
-	  FB.getLoginStatus(function(response) {
-	    //statusChangeCallback(response);
-	    console.log(response);
-	  });
-	}  
   };
 
   (function(d, s, id){
@@ -363,7 +356,8 @@ Modal de login
 			  <fb:login-button 
 			    scope="public_profile,email"
 			    onlogin="checkLoginState();"
-			    data-size="large">
+			    data-size="large"
+			    auto_logout_link="true">
 			  </fb:login-button>
 	      	</div>
 	      </div>
