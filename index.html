@@ -44,7 +44,7 @@ MENU DA PAGINA
 		  <li><div class="divider"></div></li>
 		  <li><a class="waves-effect" href="#!">Cadastrar CV</a></li>
 		  <li><a class="waves-effect" href="#!">Anunciar Vaga</a></li>
-		  <li><a class="waves-effect" href="#!">Login</a></li>
+		  <li><a class="waves-effect" href="#LoginModal">Login</a></li>
 		</ul>
 		<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>	
 		<div class="nav-wrapper grey darken-4">
@@ -58,7 +58,7 @@ MENU DA PAGINA
 			<ul class="right hide-on-med-and-down">
 				<li><a class="waves-effect waves-light btn orange darken-3">Cadastrar CV</a></li>
 				<li><a href="#">Anunciar Vaga</a></li>
-				<li><a href="#">Login</a></li>
+				<li><a href="#LoginModal">Login</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -306,13 +306,51 @@ LINK PATROCINADO AINDA NÃO DEFINIDO 100%
 						<div class="circle"></div>
 					</div><div class="gap-patch">
 					<div class="circle"></div>
-				</div><div class="circle-clipper right">
-				<div class="circle"></div>
-			</div>
+				</div>
+				<div class="circle-clipper right"><div class="circle"></div></div>
 		</div>
 	</div>	  		
 </div>
 </div>
+<!-- 
+Modal de login 
+-->
+<div id="LoginModal" class="modal modal-fixed-footer">
+  <div class="modal-content">
+	<div class="row">
+	    <form class="col s12">
+	      <div class="row">
+	        <div class="input-field col s6">
+	          <input id="first_name" type="text" class="validate">
+	          <label for="first_name">Nome</label>
+	        </div>
+	        <div class="input-field col s6">
+	          <input id="last_name" type="text" class="validate">
+	          <label for="last_name">Sobrenome</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <input id="password" type="password" class="validate">
+	          <label for="password">Password</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <input id="email" type="email" class="validate">
+	          <label for="email">Email</label>
+	        </div>
+	      </div>
+	    </form>
+	  </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cadastrar</a>
+  </div>
+</div>
+<!-- 
+final do Modal de login 
+-->
 <footer class="page-footer grey darken-1">
 	<div class="container">
 		<div class="row">
@@ -342,7 +380,13 @@ LINK PATROCINADO AINDA NÃO DEFINIDO 100%
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 <script>
-	$(".button-collapse").sideNav();	
+	$(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+	//modal de login
+    	$('.modal').modal();
+	//menu mobile
+		$(".button-collapse").sideNav();	
+  	});
 </script>
 </body>
 </html>
