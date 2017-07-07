@@ -1,32 +1,37 @@
 link de referencia 
 https://www.infojobs.com.br/empregos.aspx
+https://www.empregos.com.br/vagas
 
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 auxiliar administrativo
 auxiliar de produção
 assistente administrativo
 auxiliar de escritório
+auxiliar de enfermagem
+auxiliar de vendas
 atendente
 administrativo
+analista fiscal
 ajudante geral
+ajudante de cozinha
 auxiliar de limpeza
 auxiliar
-auxiliar administrativo sem experiencia
+advogado
+auxiliar de serviços em geral
 
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 balconista
 bilingue
 baba
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+caixa
 conferente
+contador
 copeira
 coordenador
 comprador
 cobrança
 comercial
+cozinheiro
 
-DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 digitador
 departamento pessoal
 diarista
@@ -34,22 +39,23 @@ domestica
 designer gráfico
 demonstradora
 
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 estoquista
 eletricista
+encanador
 enfermeiro
 estágio
 
-FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 financeiro
 farmacia
+farmacêutico
+faturista
 fiscal de loja
 frentista
 faturamento
 fisioterapeuta
+fonoaudíologo
 freelancer
 
-GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
 gerente
 gerente de loja
 garçom
@@ -58,43 +64,77 @@ grafica
 gerente administrativo
 gerente de vendas
 
-HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 home office
 hospitalar
 hotelaria
-hotelaria e turismo
+hotelaria e turismogerente
 
-IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 informatica
 inspetor de alunos
 inspetor de qualidade
 informatica ti telecomunicações
 
-JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
 juridico
 jornalista
 
-KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
 
-LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
 logistica
 limpeza
 laboratorio
 
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 motorista
 marketing
 motorista hab d
 motorista hab b
 manobrista
+mecânico
 motorista particular
 motoboy
 
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
 nutricionista
 
-OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+operador de caixa
+operador de empilhadeira
+office boy
+operador de câmera
+operador de produção
+operador de telemarketing
+operador de máquinas
+operacional
 
-P
-Q
+porteiro
+promotor de vendas
+professor
+programador
+personal trainner
+pintor
+
+químico
+
+recepcionista
+recursos humanos
+recepção
+repositor
+representante comercial
+
+supervisor
+segurança
+segurança do trabalho
+secretária
+
+telemarketing
+telefonista
+téc. em ar condicionado
+téc. em segurança do trabalho
+téc. em enfermagem
+téc. em informática
+
+usinagem
+
+vendedor
+vendedor externo
+vendedora
+vigilante
+
+
 
