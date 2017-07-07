@@ -31,6 +31,7 @@ comprador
 cobrança
 comercial
 cozinheiro
+costureira
 
 digitador
 departamento pessoal
@@ -124,6 +125,7 @@ secretária
 
 telemarketing
 telefonista
+téc. em eletrônica
 téc. em ar condicionado
 téc. em segurança do trabalho
 téc. em enfermagem
@@ -133,6 +135,8 @@ usinagem
 
 vendedor
 vendedor externo
+vendedor de veículos
+vendedor de loja
 vendedora
 vigilante
 
