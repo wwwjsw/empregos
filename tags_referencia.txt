@@ -1,144 +1,116 @@
-link de referencia 
-https://www.infojobs.com.br/empregos.aspx
-https://www.empregos.com.br/vagas
-
-auxiliar administrativo
-auxiliar de produção
-assistente administrativo
-auxiliar de escritório
-auxiliar de enfermagem
-auxiliar de vendas
-atendente
-administrativo
-analista fiscal
-ajudante geral
-ajudante de cozinha
-auxiliar de limpeza
-auxiliar
-advogado
-auxiliar de serviços em geral
-
-balconista
-bilingue
-baba
-
-caixa
-conferente
-contador
-copeira
-coordenador
-comprador
-cobrança
-comercial
-cozinheiro
-costureira
-
-digitador
-departamento pessoal
-diarista
-domestica
-designer gráfico
-demonstradora
-
-estoquista
-eletricista
-encanador
-enfermeiro
-estágio
-
-financeiro
-farmacia
-farmacêutico
-faturista
-fiscal de loja
-frentista
-faturamento
-fisioterapeuta
-fonoaudíologo
-freelancer
-
-gerente
-gerente de loja
-garçom
-gerente comercial
-grafica
-gerente administrativo
-gerente de vendas
-
-home office
-hospitalar
-hotelaria
-hotelaria e turismogerente
-
-informatica
-inspetor de alunos
-inspetor de qualidade
-informatica ti telecomunicações
-
-juridico
-jornalista
-
-
-logistica
-limpeza
-laboratorio
-
-motorista
-marketing
-motorista hab d
-motorista hab b
-manobrista
-mecânico
-motorista particular
-motoboy
-
-nutricionista
-
-operador de caixa
-operador de empilhadeira
-office boy
-operador de câmera
-operador de produção
-operador de telemarketing
-operador de máquinas
-operacional
-
-porteiro
-promotor de vendas
-professor
-programador
-personal trainner
-pintor
-
-químico
-
-recepcionista
-recursos humanos
-recepção
-repositor
-representante comercial
-
-supervisor
-segurança
-segurança do trabalho
-secretária
-
-telemarketing
-telefonista
-téc. em eletrônica
-téc. em ar condicionado
-téc. em segurança do trabalho
-téc. em enfermagem
-téc. em informática
-
-usinagem
-
-vendedor
-vendedor externo
-vendedor de veículos
-vendedor de loja
-vendedora
-vigilante
-
-
-
+'administrativo',
+'advogado',
+'ajudante de cozinha',
+'ajudante geral',
+'analista fiscal',
+'assistente administrativo',
+'atendente',
+'auxiliar',
+'auxiliar administrativo',
+'auxiliar de enfermagem',
+'auxiliar de escritório',
+'auxiliar de limpeza',
+'auxiliar de produção',
+'auxiliar de serviços em geral',
+'auxiliar de vendas',
+'baba',
+'balconista',
+'bilingue',
+'caixa',
+'cobrança',
+'comercial',
+'comprador',
+'conferente',
+'contador',
+'coordenador',
+'copeira',
+'costureira',
+'cozinheiro',
+'demonstradora',
+'departamento pessoal',
+'designer gráfico',
+'diarista',
+'digitador',
+'domestica',
+'eletricista',
+'encanador',
+'enfermeiro',
+'estoquista',
+'estágio',
+'farmacia',
+'farmacêutico',
+'faturamento',
+'faturista',
+'financeiro',
+'fiscal de loja',
+'fisioterapeuta',
+'fonoaudíologo',
+'freelancer',
+'frentista',
+'garçom',
+'gerente',
+'gerente administrativo',
+'gerente comercial',
+'gerente de loja',
+'gerente de vendas',
+'grafica',
+'home office',
+'hospitalar',
+'hotelaria',
+'hotelaria e turismo',
+'informatica',
+'informatica ti telecomunicações',
+'inspetor de alunos',
+'inspetor de qualidade',
+'jornalista',
+'juridico',
+'laboratorio',
+'limpeza',
+'logistica',
+'manobrista',
+'marketing',
+'mecânico',
+'motoboy',
+'motorista',
+'motorista hab b',
+'motorista hab d',
+'motorista particular',
+'nutricionista',
+'office boy',
+'operacional',
+'operador de caixa',
+'operador de câmera',
+'operador de empilhadeira',
+'operador de máquinas',
+'operador de produção',
+'operador de telemarketing',
+'personal trainner',
+'pintor',
+'porteiro',
+'professor',
+'programador',
+'promotor de vendas',
+'químico',
+'recepcionista',
+'recepção',
+'recursos humanos',
+'repositor',
+'representante comercial',
+'secretária',
+'segurança',
+'segurança do trabalho',
+'supervisor',
+'telefonista',
+'telemarketing',
+'téc. em ar condicionado',
+'téc. em eletrônica',
+'téc. em enfermagem',
+'téc. em informática',
+'téc. em segurança do trabalho',
+'usinagem',
+'vendedor',
+'vendedor de loja',
+'vendedor de veículos',
+'vendedor externo',
+'vendedora',
+'vigilante'
