@@ -375,28 +375,9 @@ Modal de login
 			    auto_logout_link="true">
 			  </fb:login-button>
 	      	</div>
-	      </div>
-	      <div class="row">
-	        <div class="input-field col s6">
-	          <input id="first_name" type="text" class="validate">
-	          <label for="first_name">Nome</label>
-	        </div>
-	        <div class="input-field col s6">
-	          <input id="last_name" type="text" class="validate">
-	          <label for="last_name">Sobrenome</label>
-	        </div>
-	      </div>
-	      <div class="row">
-	        <div class="input-field col s12">
-	          <input id="password" type="password" class="validate">
-	          <label for="password">Password</label>
-	        </div>
-	      </div>
-	      <div class="row">
-	        <div class="input-field col s12">
-	          <input id="email" type="email" class="validate">
-	          <label for="email">Email</label>
-	        </div>
+	      	<div class="col s12">
+	      		<div class="chips chips-autocomplete"></div>
+	      	</div>
 	      </div>
 	    </form>
 	  </div>
@@ -442,7 +423,20 @@ final do Modal de login
 	//modal de login
     	$('.modal').modal();
 	//menu mobile
-		$(".button-collapse").sideNav();	
+		$(".button-collapse").sideNav();
+	//tags do formulario
+		$('.chips').material_chip();
+		$('.chips-autocomplete').material_chip({
+		autocompleteOptions: {
+			data: {
+		        'Apple': null,
+		        'Microsoft': null,
+		        'Google': null
+      		},
+      	limit: Infinity,
+      	minLength: 1
+    }
+  });	
   	});
 </script>
 </body>
