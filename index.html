@@ -16,309 +16,309 @@
 	FACEBOOK SDK - IMPORTAR DADOS
 -->
 <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '492177727799820',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-    FB.AppEvents.logPageView();   
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '492177727799820',
+			cookie     : true,
+			xfbml      : true,
+			version    : 'v2.8'
+		});
+		FB.AppEvents.logPageView();   
 	//verifica login do facebook
 	FB.getLoginStatus(function(response) {
 	    //statusChangeCallback(response);
 	    console.log(response);
 	});
-  };
+};
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+(function(d, s, id){
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) {return;}
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/sdk.js";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 </script>
 <script>
-  function basicAPIRequest() {
-    FB.api('/me?fields=name,picture', function(response) {
-      Log.info('API response', response);
-      document.getElementById('accountInfo').innerHTML = ('<img src="' + response.picture.data.url + '"> ' + response.name);
-    });
-  }
-  
-  FB.getLoginStatus(function(response) {
-    Log.info('Login Status', response);
-    if (response.status === 'connected') {
-      basicAPIRequest();
-    }
-  });
+	function basicAPIRequest() {
+		FB.api('/me?fields=name,picture', function(response) {
+			Log.info('API response', response);
+			document.getElementById('accountInfo').innerHTML = ('<img src="' + response.picture.data.url + '"> ' + response.name);
+		});
+	}
+
+	FB.getLoginStatus(function(response) {
+		Log.info('Login Status', response);
+		if (response.status === 'connected') {
+			basicAPIRequest();
+		}
+	});
 </script>
 <!--
 	FACEBOOK SDK - IMPORTAR DADOS
 -->
-	<style>
-		.card .card-title{
-			font-weight: 600;
-		}
-		.margin-number{
-			margin-bottom: 10px;
-		}
-		.card .card-content .card-title{
-			margin-bottom: 0 !important;
-		}
-		.patrocinado-text{
-			font-size: 10px;
-		}
-		.lateral-text p{
-			font-size: 12px;
-		}
-	</style>
+<style>
+	.card .card-title{
+		font-weight: 600;
+	}
+	.margin-number{
+		margin-bottom: 10px;
+	}
+	.card .card-content .card-title{
+		margin-bottom: 0 !important;
+	}
+	.patrocinado-text{
+		font-size: 10px;
+	}
+	.lateral-text p{
+		font-size: 12px;
+	}
+</style>
 <!--
 MENU DA PAGINA
 -->
-	<nav>
-		<ul id="slide-out" class="side-nav">
-		  <li><div class="user-view">
-		    <a href="#!user"><img class="circle" src="http://graph.facebook.com/100003840614157/picture?type=square"></a>
-		    <a href="#!name"><span class="black-text name">Guilherme Henrique</span></a>
-		    <a href="#!email"><span class="black-text email">progr.guilherme@gmail.com</span></a>
-		  </div></li>
-		  <li><a class="waves-effect grey darken-2 href="#!">Empresas</a></li>
-		  <li><a class="waves-effect" href="#!">Candidatos</a></li>
-		  <li><div class="divider"></div></li>
-		  <li><a class="waves-effect" href="#!">Cadastrar CV</a></li>
-		  <li><a class="waves-effect" href="#!">Anunciar Vaga</a></li>
-		  <li><a class="waves-effect" href="#LoginModal">Login</a></li>
+<nav>
+	<ul id="slide-out" class="side-nav">
+		<li><div class="user-view">
+			<a href="#!user"><img class="circle" src="http://graph.facebook.com/100003840614157/picture?type=square"></a>
+			<a href="#!name"><span class="black-text name">Guilherme Henrique</span></a>
+			<a href="#!email"><span class="black-text email">progr.guilherme@gmail.com</span></a>
+		</div></li>
+		<li><a class="waves-effect grey darken-2 href="#!">Empresas</a></li>
+		<li><a class="waves-effect" href="#!">Candidatos</a></li>
+		<li><div class="divider"></div></li>
+		<li><a class="waves-effect" href="#!">Cadastrar CV</a></li>
+		<li><a class="waves-effect" href="#!">Anunciar Vaga</a></li>
+		<li><a class="waves-effect" href="#LoginModal">Login</a></li>
+	</ul>
+	<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>	
+	<div class="nav-wrapper grey darken-4">
+		<ul class="left hide-on-med-and-down">
+			<li class="grey darken-2"><a href="#">Empresas</a></li>
+			<li><a href="#">Candidatos</a></li>
 		</ul>
-		<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>	
-		<div class="nav-wrapper grey darken-4">
-			<ul class="left hide-on-med-and-down">
-				<li class="grey darken-2"><a href="#">Empresas</a></li>
-				<li><a href="#">Candidatos</a></li>
-			</ul>
-			<a href="#" class="brand-logo center">
-				<img style="height: 50px; margin-top: 5px;" class="responsive-img" src="assets/images/logo.png" alt="">
-			</a>
-			<ul class="right hide-on-med-and-down">
-				<li><a class="waves-effect waves-light btn orange darken-3">Cadastrar CV</a></li>
-				<li><a href="#">Anunciar Vaga</a></li>
-				<li><a href="#LoginModal">Login</a></li>
-			</ul>
-		</div>
-	</nav>
+		<a href="#" class="brand-logo center">
+			<img style="height: 50px; margin-top: 5px;" class="responsive-img" src="assets/images/logo.png" alt="">
+		</a>
+		<ul class="right hide-on-med-and-down">
+			<li><a class="waves-effect waves-light btn orange darken-3">Cadastrar CV</a></li>
+			<li><a href="#">Anunciar Vaga</a></li>
+			<li><a href="#LoginModal">Login</a></li>
+		</ul>
+	</div>
+</nav>
 <!--
 FINAL DO MENU DA PAGINA
 -->	
-	<div class="row"> 	
-		<div class="col s12 m6 l3">
-			<div class="card small grey darken-3">
-				<div class="card-content white-text">
-					<span class="card-title">Diarista</span>
-					<div class="row">
-						<div class="col l6 lateral-text">
-							<p>C.L.T</p>
-							<p>Beneficios</p>
-							<p>Plano de saúde</p>
-							<p>Plano odontológico</p>
-						</div>
-						<div class="col l6 lateral-text">
-							<p>C.L.T</p>
-							<p>Beneficios</p>
-							<p>Plano de saúde</p>
-							<p>Plano odontológico</p>						
-						</div>
+<div class="row"> 	
+	<div class="col s12 m6 l3">
+		<div class="card small grey darken-3">
+			<div class="card-content white-text">
+				<span class="card-title">Diarista</span>
+				<div class="row">
+					<div class="col l6 lateral-text">
+						<p>C.L.T</p>
+						<p>Beneficios</p>
+						<p>Plano de saúde</p>
+						<p>Plano odontológico</p>
+					</div>
+					<div class="col l6 lateral-text">
+						<p>C.L.T</p>
+						<p>Beneficios</p>
+						<p>Plano de saúde</p>
+						<p>Plano odontológico</p>						
 					</div>
 				</div>
-				<div class="card-action">
-					<div class="row">
-						<div class="col s12 l12 center-align margin-number">
-							<a href="#" class="white-text">(00) 00000-0000</a>						
-						</div>
-						<div class="col s12 l12 center-align">
-							<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
-						</div>
+			</div>
+			<div class="card-action">
+				<div class="row">
+					<div class="col s12 l12 center-align margin-number">
+						<a href="#" class="white-text">(00) 00000-0000</a>						
 					</div>
-						<div class="left-align white-text patrocinado-text"><p>Anúncio patrocinado</p></div>
-				</div>
-			</div>	    		
-		</div>
-		<div class="col s12 m6 l6">
-			<div class="card small orange darken-3">
-				<div class="card-content white-text">
-					<span class="card-title">Aux. de escritorio</span>
-					<p>C.L.T</p>
-					<p>Beneficios</p>
-					<p>Plano de saúde</p>
-					<p>Plano odontológico</p>
-				</div>
-				<div class="card-action">
-					<div class="row">
-						<div class="col s12 l12 center-align margin-number">
-							<a href="#" class="white-text">(00) 00000-0000</a>						
-						</div>
-						<div class="col s12 l12 center-align">
-							<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
-						</div>
+					<div class="col s12 l12 center-align">
+						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
 					</div>
 				</div>
-			</div>	    		
-		</div>
-		<div class="col s12 m6 l3">
-			<div class="card small red darken-3">
-				<div class="card-content white-text">
-					<span class="card-title">Tec. de laboratorio laboratorio</span>
-					<div class="row">
-						<div class="col l6 lateral-text">
-							<p>C.L.T</p>
-							<p>Beneficios</p>
-							<p>Plano de saúde</p>
-							<p>Plano odontológico</p>
-						</div>
-						<div class="col l6 lateral-text">
-							<p>C.L.T</p>
-							<p>Beneficios</p>
-							<p>Plano de saúde</p>
-							<p>Plano odontológico</p>						
-						</div>
+				<div class="left-align white-text patrocinado-text"><p>Anúncio patrocinado</p></div>
+			</div>
+		</div>	    		
+	</div>
+	<div class="col s12 m6 l6">
+		<div class="card small orange darken-3">
+			<div class="card-content white-text">
+				<span class="card-title">Aux. de escritorio</span>
+				<p>C.L.T</p>
+				<p>Beneficios</p>
+				<p>Plano de saúde</p>
+				<p>Plano odontológico</p>
+			</div>
+			<div class="card-action">
+				<div class="row">
+					<div class="col s12 l12 center-align margin-number">
+						<a href="#" class="white-text">(00) 00000-0000</a>						
+					</div>
+					<div class="col s12 l12 center-align">
+						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
 					</div>
 				</div>
-				<div class="card-action ">
-					<div class="row">
-						<div class="col l12 s12 center-align margin-number">
-							<a href="#" class="white-text">(00) 00000-0000</a>						
-						</div>
-						<div class="col l12 s12 center-align">
-							<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
-						</div>
+			</div>
+		</div>	    		
+	</div>
+	<div class="col s12 m6 l3">
+		<div class="card small red darken-3">
+			<div class="card-content white-text">
+				<span class="card-title">Tec. de laboratorio laboratorio</span>
+				<div class="row">
+					<div class="col l6 lateral-text">
+						<p>C.L.T</p>
+						<p>Beneficios</p>
+						<p>Plano de saúde</p>
+						<p>Plano odontológico</p>
+					</div>
+					<div class="col l6 lateral-text">
+						<p>C.L.T</p>
+						<p>Beneficios</p>
+						<p>Plano de saúde</p>
+						<p>Plano odontológico</p>						
 					</div>
 				</div>
-			</div>	    		
-		</div>
-		<div class="col s12 m6 l3">
-			<div class="card small cyan darken-3">
-				<div class="card-content white-text">
-					<span class="card-title">Op. de motoniveladora</span>
-					<div class="row">
-						<div class="col l6 lateral-text">
-							<p>C.L.T</p>
-							<p>Beneficios</p>
-							<p>Plano de saúde</p>
-							<p>Plano odontológico</p>
-						</div>
-						<div class="col l6 lateral-text">
-							<p>C.L.T</p>
-							<p>Beneficios</p>
-							<p>Plano de saúde</p>
-							<p>Plano odontológico</p>						
-						</div>
+			</div>
+			<div class="card-action ">
+				<div class="row">
+					<div class="col l12 s12 center-align margin-number">
+						<a href="#" class="white-text">(00) 00000-0000</a>						
+					</div>
+					<div class="col l12 s12 center-align">
+						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
 					</div>
 				</div>
-				<div class="card-action ">
-					<div class="row">
-						<div class="col s12 l12 center-align margin-number">
-							<a href="#" class="white-text">(00) 00000-0000</a>						
-						</div>
-						<div class="col s12 l12 center-align">
-							<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
-						</div>
-					</div>	
-				</div>
-			</div>	    		
-		</div>
-		<div class="col s12 m6 l3">
-			<div class="card small purple darken-3">
-				<div class="card-content white-text">
-					<span class="card-title">Op. telemarketing</span>
-					<div class="row">
-						<div class="col l6 lateral-text">
-							<p>C.L.T</p>
-							<p>Beneficios</p>
-							<p>Plano de saúde</p>
-							<p>Plano odontológico</p>
-						</div>
-						<div class="col l6 lateral-text">
-							<p>C.L.T</p>
-							<p>Beneficios</p>
-							<p>Plano de saúde</p>
-							<p>Plano odontológico</p>						
-						</div>
+			</div>
+		</div>	    		
+	</div>
+	<div class="col s12 m6 l3">
+		<div class="card small cyan darken-3">
+			<div class="card-content white-text">
+				<span class="card-title">Op. de motoniveladora</span>
+				<div class="row">
+					<div class="col l6 lateral-text">
+						<p>C.L.T</p>
+						<p>Beneficios</p>
+						<p>Plano de saúde</p>
+						<p>Plano odontológico</p>
+					</div>
+					<div class="col l6 lateral-text">
+						<p>C.L.T</p>
+						<p>Beneficios</p>
+						<p>Plano de saúde</p>
+						<p>Plano odontológico</p>						
 					</div>
 				</div>
-				<div class="card-action ">
-					<div class="row">
-						<div class="col s12 l12 center-align margin-number">
-							<a href="#" class="white-text">(00) 00000-0000</a>						
-						</div>
-						<div class="col s12 l12 center-align">
-							<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
-						</div>
+			</div>
+			<div class="card-action ">
+				<div class="row">
+					<div class="col s12 l12 center-align margin-number">
+						<a href="#" class="white-text">(00) 00000-0000</a>						
+					</div>
+					<div class="col s12 l12 center-align">
+						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
+					</div>
+				</div>	
+			</div>
+		</div>	    		
+	</div>
+	<div class="col s12 m6 l3">
+		<div class="card small purple darken-3">
+			<div class="card-content white-text">
+				<span class="card-title">Op. telemarketing</span>
+				<div class="row">
+					<div class="col l6 lateral-text">
+						<p>C.L.T</p>
+						<p>Beneficios</p>
+						<p>Plano de saúde</p>
+						<p>Plano odontológico</p>
+					</div>
+					<div class="col l6 lateral-text">
+						<p>C.L.T</p>
+						<p>Beneficios</p>
+						<p>Plano de saúde</p>
+						<p>Plano odontológico</p>						
 					</div>
 				</div>
-			</div>	    		
-		</div>
-		<div class="col s12 m6 l3">
-			<div class="card small yellow darken-3">
-				<div class="card-content white-text">
-					<span class="card-title">Op. telemarketing</span>
-					<div class="row">
-						<div class="col l6 lateral-text">
-							<p>C.L.T</p>
-							<p>Beneficios</p>
-							<p>Plano de saúde</p>
-							<p>Plano odontológico</p>
-						</div>
-						<div class="col l6 lateral-text">
-							<p>C.L.T</p>
-							<p>Beneficios</p>
-							<p>Plano de saúde</p>
-							<p>Plano odontológico</p>						
-						</div>
+			</div>
+			<div class="card-action ">
+				<div class="row">
+					<div class="col s12 l12 center-align margin-number">
+						<a href="#" class="white-text">(00) 00000-0000</a>						
+					</div>
+					<div class="col s12 l12 center-align">
+						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
 					</div>
 				</div>
-				<div class="card-action ">
-					<div class="row">
-						<div class="col s12 l12 center-align margin-number">
-							<a href="#" class="white-text">(00) 00000-0000</a>						
-						</div>
-						<div class="col s12 l12 center-align">
-							<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
-						</div>
+			</div>
+		</div>	    		
+	</div>
+	<div class="col s12 m6 l3">
+		<div class="card small yellow darken-3">
+			<div class="card-content white-text">
+				<span class="card-title">Op. telemarketing</span>
+				<div class="row">
+					<div class="col l6 lateral-text">
+						<p>C.L.T</p>
+						<p>Beneficios</p>
+						<p>Plano de saúde</p>
+						<p>Plano odontológico</p>
+					</div>
+					<div class="col l6 lateral-text">
+						<p>C.L.T</p>
+						<p>Beneficios</p>
+						<p>Plano de saúde</p>
+						<p>Plano odontológico</p>						
 					</div>
 				</div>
-			</div>	    		
-		</div>
-		<div class="col s12 m6 l3">
-			<div class="card small green darken-3">
-				<div class="card-content white-text">
-					<span class="card-title">Op. telemarketing</span>
-					<div class="row">
-						<div class="col l6 lateral-text">
-							<p>C.L.T</p>
-							<p>Beneficios</p>
-							<p>Plano de saúde</p>
-							<p>Plano odontológico</p>
-						</div>
-						<div class="col l6 lateral-text">
-							<p>C.L.T</p>
-							<p>Beneficios</p>
-							<p>Plano de saúde</p>
-							<p>Plano odontológico</p>						
-						</div>
+			</div>
+			<div class="card-action ">
+				<div class="row">
+					<div class="col s12 l12 center-align margin-number">
+						<a href="#" class="white-text">(00) 00000-0000</a>						
+					</div>
+					<div class="col s12 l12 center-align">
+						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
 					</div>
 				</div>
-				<div class="card-action ">
-					<div class="row">
-						<div class="col s12 l12 center-align margin-number">
-							<a href="#" class="white-text">(00) 00000-0000</a>						
-						</div>
-						<div class="col s12 l12 center-align">
-							<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
-						</div>
+			</div>
+		</div>	    		
+	</div>
+	<div class="col s12 m6 l3">
+		<div class="card small green darken-3">
+			<div class="card-content white-text">
+				<span class="card-title">Op. telemarketing</span>
+				<div class="row">
+					<div class="col l6 lateral-text">
+						<p>C.L.T</p>
+						<p>Beneficios</p>
+						<p>Plano de saúde</p>
+						<p>Plano odontológico</p>
+					</div>
+					<div class="col l6 lateral-text">
+						<p>C.L.T</p>
+						<p>Beneficios</p>
+						<p>Plano de saúde</p>
+						<p>Plano odontológico</p>						
 					</div>
 				</div>
-			</div>	    		
-		</div>				
+			</div>
+			<div class="card-action ">
+				<div class="row">
+					<div class="col s12 l12 center-align margin-number">
+						<a href="#" class="white-text">(00) 00000-0000</a>						
+					</div>
+					<div class="col s12 l12 center-align">
+						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
+					</div>
+				</div>
+			</div>
+		</div>	    		
+	</div>				
 <!--
 LINK PATROCINADO AINDA NÃO DEFINIDO 100%		
 		<div class="col s12 m6 l3">
@@ -341,18 +341,18 @@ LINK PATROCINADO AINDA NÃO DEFINIDO 100%
 				</div>
 			</div>   		
 		</div>
--->	 	    		    		    	 		    		    	
-	</div>
-	<div class="row">
-		<div class="center">
-			<div class="preloader-wrapper big active">
-				<div class="spinner-layer spinner-blue-only">
-					<div class="circle-clipper left">
-						<div class="circle"></div>
-					</div><div class="gap-patch">
+	-->	 	    		    		    	 		    		    	
+</div>
+<div class="row">
+	<div class="center">
+		<div class="preloader-wrapper big active">
+			<div class="spinner-layer spinner-blue-only">
+				<div class="circle-clipper left">
 					<div class="circle"></div>
-				</div>
-				<div class="circle-clipper right"><div class="circle"></div></div>
+				</div><div class="gap-patch">
+				<div class="circle"></div>
+			</div>
+			<div class="circle-clipper right"><div class="circle"></div></div>
 		</div>
 	</div>	  		
 </div>
@@ -361,30 +361,499 @@ LINK PATROCINADO AINDA NÃO DEFINIDO 100%
 Modal de login 
 -->
 <div id="LoginModal" class="modal modal-fixed-footer">
-  <div class="modal-content">
-	<div class="row">
-	    <form class="col s12">
-	      <div class="row">
-	      	<div class="col s12">
-			  <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" onlogin="checkLoginState();" data-auto-logout-link="true" data-use-continue-as="true"></div>			
-			<div class="divider"></div>
-			  <fb:login-button 
-			    scope="public_profile,email"
-			    onlogin="checkLoginState();"
-			    data-size="large"
-			    auto_logout_link="true">
-			  </fb:login-button>
-	      	</div>
-	      	<div class="col s12">
-	      		<div class="chips chips-autocomplete"></div>
-	      	</div>
-	      </div>
-	    </form>
-	  </div>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cadastrar</a>
-  </div>
+	<div class="modal-content">
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="col s12">
+						<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" onlogin="checkLoginState();" data-auto-logout-link="true" data-use-continue-as="true"></div>			
+						<div class="divider"></div>
+						<fb:login-button 
+						scope="public_profile,email"
+						onlogin="checkLoginState();"
+						data-size="large"
+						auto_logout_link="true">
+					</fb:login-button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 l4">
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" checked />
+						<label for="t1">administrativo</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">advogado</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">ajudante de cozinha</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">ajudante geral</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">analista fiscal</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">assistente administrativo</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">atendente</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">auxiliar</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">auxiliar administrativo</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">auxiliar de enfermagem</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">auxiliar de escritório</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">auxiliar de limpeza</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">auxiliar de produção</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">auxiliar de serviços em geral</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">auxiliar de vendas</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">baba</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">balconista</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">bilingue</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">caixa</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">cobrança</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">comercial</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">comprador</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">conferente</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">contador</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">coordenador</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">copeira</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">costureira</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">cozinheiro</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">demonstradora</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">departamento pessoal</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">designer gráfico</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">diarista</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">digitador</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">domestica</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">eletricista</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">encanador</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">enfermeiro</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">estoquista</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">estágio</label>
+					</p>
+				</div>
+				<div class="col s12 l4">
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">farmacia</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">farmacêutico</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">faturamento</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">faturista</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">financeiro</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">fiscal de loja</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">fisioterapeuta</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">fonoaudíologo</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">freelancer</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">frentista</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">garçom</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">gerente</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">gerente administrativo</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">gerente comercial</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">gerente de loja</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">gerente de vendas</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">grafica</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">home office</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">hospitalar</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">hotelaria</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">hotelaria e turismo</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">informatica</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">informatica ti telecomunicações</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">inspetor de alunos</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">inspetor de qualidade</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">jornalista</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">juridico</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">laboratorio</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">limpeza</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">logistica</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">manobrista</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">marketing</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">mecânico</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">motoboy</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">motorista</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">motorista hab b</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">motorista hab d</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">motorista particular</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">nutricionista</label>
+					</p>
+				</div>
+				<div class="col s12 l4">
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">office boy</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">operacional</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">operador de caixa</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">operador de câmera</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">operador de empilhadeira</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">operador de máquinas</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">operador de produção</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">operador de telemarketing</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">personal trainner</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">pintor</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">porteiro</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">professor</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">programador</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">promotor de vendas</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">químico</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">recepcionista</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">recepção</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">recursos humanos</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">repositor</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">representante comercial</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">secretária</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">segurança</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">segurança do trabalho</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">supervisor</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">telefonista</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">telemarketing</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">téc. em ar condicionado</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">téc. em eletrônica</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">téc. em enfermagem</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">téc. em informática</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">téc. em segurança do trabalho</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">usinagem</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">vendedor</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">vendedor de loja</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">vendedor de veículos</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">vendedor externo</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">vendedora</label>
+					</p>
+					<p>
+					<input class="with-gap" name="cargo[]" type="radio" id="t1" />
+						<label for="t1">vigilante</label>
+					</p>									  								
+				</div>	      		      	
+			</div>
+		</form>
+	</div>
+</div>
+<div class="modal-footer">
+	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cadastrar</a>
+</div>
 </div>
 <!-- 
 final do Modal de login 
@@ -421,138 +890,10 @@ final do Modal de login
 	$(document).ready(function(){
     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
 	//modal de login
-    	$('.modal').modal();
+	$('.modal').modal();
 	//menu mobile
-		$(".button-collapse").sideNav();
-	//tags do formulario
-		$('.chips').material_chip();
-		$('.chips-autocomplete').material_chip({
-		autocompleteOptions: {
-			data: {
-				'administrativo' : null,
-				'advogado' : null,
-				'ajudante de cozinha' : null,
-				'ajudante geral' : null,
-				'analista fiscal' : null,
-				'assistente administrativo' : null,
-				'atendente' : null,
-				'auxiliar' : null,
-				'auxiliar administrativo' : null,
-				'auxiliar de enfermagem' : null,
-				'auxiliar de escritório' : null,
-				'auxiliar de limpeza' : null,
-				'auxiliar de produção' : null,
-				'auxiliar de serviços em geral' : null,
-				'auxiliar de vendas' : null,
-				'baba' : null,
-				'balconista' : null,
-				'bilingue' : null,
-				'caixa' : null,
-				'cobrança' : null,
-				'comercial' : null,
-				'comprador' : null,
-				'conferente' : null,
-				'contador' : null,
-				'coordenador' : null,
-				'copeira' : null,
-				'costureira' : null,
-				'cozinheiro' : null,
-				'demonstradora' : null,
-				'departamento pessoal' : null,
-				'designer gráfico' : null,
-				'diarista' : null,
-				'digitador' : null,
-				'domestica' : null,
-				'eletricista' : null,
-				'encanador' : null,
-				'enfermeiro' : null,
-				'estoquista' : null,
-				'estágio' : null,
-				'farmacia' : null,
-				'farmacêutico' : null,
-				'faturamento' : null,
-				'faturista' : null,
-				'financeiro' : null,
-				'fiscal de loja' : null,
-				'fisioterapeuta' : null,
-				'fonoaudíologo' : null,
-				'freelancer' : null,
-				'frentista' : null,
-				'garçom' : null,
-				'gerente' : null,
-				'gerente administrativo' : null,
-				'gerente comercial' : null,
-				'gerente de loja' : null,
-				'gerente de vendas' : null,
-				'grafica' : null,
-				'home office' : null,
-				'hospitalar' : null,
-				'hotelaria' : null,
-				'hotelaria e turismo' : null,
-				'informatica' : null,
-				'informatica ti telecomunicações' : null,
-				'inspetor de alunos' : null,
-				'inspetor de qualidade' : null,
-				'jornalista' : null,
-				'juridico' : null,
-				'laboratorio' : null,
-				'limpeza' : null,
-				'logistica' : null,
-				'manobrista' : null,
-				'marketing' : null,
-				'mecânico' : null,
-				'motoboy' : null,
-				'motorista' : null,
-				'motorista hab b' : null,
-				'motorista hab d' : null,
-				'motorista particular' : null,
-				'nutricionista' : null,
-				'office boy' : null,
-				'operacional' : null,
-				'operador de caixa' : null,
-				'operador de câmera' : null,
-				'operador de empilhadeira' : null,
-				'operador de máquinas' : null,
-				'operador de produção' : null,
-				'operador de telemarketing' : null,
-				'personal trainner' : null,
-				'pintor' : null,
-				'porteiro' : null,
-				'professor' : null,
-				'programador' : null,
-				'promotor de vendas' : null,
-				'químico' : null,
-				'recepcionista' : null,
-				'recepção' : null,
-				'recursos humanos' : null,
-				'repositor' : null,
-				'representante comercial' : null,
-				'secretária' : null,
-				'segurança' : null,
-				'segurança do trabalho' : null,
-				'supervisor' : null,
-				'telefonista' : null,
-				'telemarketing' : null,
-				'téc. em ar condicionado' : null,
-				'téc. em eletrônica' : null,
-				'téc. em enfermagem' : null,
-				'téc. em informática' : null,
-				'téc. em segurança do trabalho' : null,
-				'usinagem' : null,
-				'vendedor' : null,
-				'vendedor de loja' : null,
-				'vendedor de veículos' : null,
-				'vendedor externo' : null,
-				'vendedora' : null,
-				'vigilante' : null
-      		},
-      		limit: 5,
-      		minLength: 1,
-      		maxTags: 1
-    	}
-  	});
-  	console.log($('.chips-autocomplete').material_chip('data'));	
-  	});
+	$(".button-collapse").sideNav();
+});
 </script>
 </body>
 </html>
