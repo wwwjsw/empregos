@@ -1,116 +1,116 @@
-'administrativo',
-'advogado',
-'ajudante de cozinha',
-'ajudante geral',
-'analista fiscal',
-'assistente administrativo',
-'atendente',
-'auxiliar',
-'auxiliar administrativo',
-'auxiliar de enfermagem',
-'auxiliar de escritório',
-'auxiliar de limpeza',
-'auxiliar de produção',
-'auxiliar de serviços em geral',
-'auxiliar de vendas',
-'baba',
-'balconista',
-'bilingue',
-'caixa',
-'cobrança',
-'comercial',
-'comprador',
-'conferente',
-'contador',
-'coordenador',
-'copeira',
-'costureira',
-'cozinheiro',
-'demonstradora',
-'departamento pessoal',
-'designer gráfico',
-'diarista',
-'digitador',
-'domestica',
-'eletricista',
-'encanador',
-'enfermeiro',
-'estoquista',
-'estágio',
-'farmacia',
-'farmacêutico',
-'faturamento',
-'faturista',
-'financeiro',
-'fiscal de loja',
-'fisioterapeuta',
-'fonoaudíologo',
-'freelancer',
-'frentista',
-'garçom',
-'gerente',
-'gerente administrativo',
-'gerente comercial',
-'gerente de loja',
-'gerente de vendas',
-'grafica',
-'home office',
-'hospitalar',
-'hotelaria',
-'hotelaria e turismo',
-'informatica',
-'informatica ti telecomunicações',
-'inspetor de alunos',
-'inspetor de qualidade',
-'jornalista',
-'juridico',
-'laboratorio',
-'limpeza',
-'logistica',
-'manobrista',
-'marketing',
-'mecânico',
-'motoboy',
-'motorista',
-'motorista hab b',
-'motorista hab d',
-'motorista particular',
-'nutricionista',
-'office boy',
-'operacional',
-'operador de caixa',
-'operador de câmera',
-'operador de empilhadeira',
-'operador de máquinas',
-'operador de produção',
-'operador de telemarketing',
-'personal trainner',
-'pintor',
-'porteiro',
-'professor',
-'programador',
-'promotor de vendas',
-'químico',
-'recepcionista',
-'recepção',
-'recursos humanos',
-'repositor',
-'representante comercial',
-'secretária',
-'segurança',
-'segurança do trabalho',
-'supervisor',
-'telefonista',
-'telemarketing',
-'téc. em ar condicionado',
-'téc. em eletrônica',
-'téc. em enfermagem',
-'téc. em informática',
-'téc. em segurança do trabalho',
-'usinagem',
-'vendedor',
-'vendedor de loja',
-'vendedor de veículos',
-'vendedor externo',
-'vendedora',
-'vigilante'
+administrativo
+advogado
+ajudante de cozinha
+ajudante geral
+analista fiscal
+assistente administrativo
+atendente
+auxiliar
+auxiliar administrativo
+auxiliar de enfermagem
+auxiliar de escritório
+auxiliar de limpeza
+auxiliar de produção
+auxiliar de serviços em geral
+auxiliar de vendas
+baba
+balconista
+bilingue
+caixa
+cobrança
+comercial
+comprador
+conferente
+contador
+coordenador
+copeira
+costureira
+cozinheiro
+demonstradora
+departamento pessoal
+designer gráfico
+diarista
+digitador
+domestica
+eletricista
+encanador
+enfermeiro
+estoquista
+estágio
+farmacia
+farmacêutico
+faturamento
+faturista
+financeiro
+fiscal de loja
+fisioterapeuta
+fonoaudíologo
+freelancer
+frentista
+garçom
+gerente
+gerente administrativo
+gerente comercial
+gerente de loja
+gerente de vendas
+grafica
+home office
+hospitalar
+hotelaria
+hotelaria e turismo
+informatica
+informatica ti telecomunicações
+inspetor de alunos
+inspetor de qualidade
+jornalista
+juridico
+laboratorio
+limpeza
+logistica
+manobrista
+marketing
+mecânico
+motoboy
+motorista
+motorista hab b
+motorista hab d
+motorista particular
+nutricionista
+office boy
+operacional
+operador de caixa
+operador de câmera
+operador de empilhadeira
+operador de máquinas
+operador de produção
+operador de telemarketing
+personal trainner
+pintor
+porteiro
+professor
+programador
+promotor de vendas
+químico
+recepcionista
+recepção
+recursos humanos
+repositor
+representante comercial
+secretária
+segurança
+segurança do trabalho
+supervisor
+telefonista
+telemarketing
+téc. em ar condicionado
+téc. em eletrônica
+téc. em enfermagem
+téc. em informática
+téc. em segurança do trabalho
+usinagem
+vendedor
+vendedor de loja
+vendedor de veículos
+vendedor externo
+vendedora
+vigilante
