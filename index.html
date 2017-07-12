@@ -35,7 +35,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '492177727799820',
+    appId      : '2379364772289597',
     cookie     : true,   
     xfbml      : true,  
     version    : 'v2.9' 
@@ -106,21 +106,22 @@ MENU DA PAGINA
 		<li><a class="waves-effect grey darken-2 href="#!">Empresas</a></li>
 		<li><a class="waves-effect" href="#!">Candidatos</a></li>
 		<li><div class="divider"></div></li>
-		<li><a class="waves-effect" href="">Cadastrar CV</a></li>
-		<li><a class="waves-effect" href="#LoginModal">Anunciar Vaga</a></li>
+		<li><a class="waves-effect" id="servico" 	href="#LoginModal">Anunciar Serviço</a></li>
+		<li><a class="waves-effect" id="vaga" 		href="#LoginModal">Anunciar Vaga</a></li>
 	</ul>
 	<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>	
 	<div class="nav-wrapper grey darken-4">
 		<ul class="left hide-on-med-and-down">
 			<li class="grey darken-2"><a href="#">Empresas</a></li>
 			<li><a href="#">Candidatos</a></li>
+			<li><a href="" class="waves-effect waves-light btn cyan darken-3">Busca</a></li>
 		</ul>
 		<a href="#" class="brand-logo center">
 			<img style="height: 50px; margin-top: 5px;" class="responsive-img" src="assets/images/logo.png" alt="">
 		</a>
 		<ul class="right hide-on-med-and-down">
-			<li><a href="" class="waves-effect waves-light btn orange darken-3">Cadastrar CV</a></li>
-			<li><a href="#LoginModal">Anunciar Vaga</a></li>
+			<li><a href="#LoginModal" id="servico" class="waves-effect waves-light btn orange darken-3">Anunciar Serviço</a></li>
+			<li><a href="#LoginModal" id="vaga" >Anunciar Vaga</a></li>
 		</ul>
 	</div>
 </nav>
@@ -403,7 +404,7 @@ Modal de login
 			<form id="anunciar" class="col s12">
 				<div class="row">
 					<div class="col s12 l12">
-						<h5>Benefícios</h5>
+						<h5><span id="beneficios"></span></h5>
 					</div>
 				</div>
 				<div class="row">
@@ -475,7 +476,7 @@ Modal de login
 				</div>
 				<div class="row">
 					<div class="col s12 l12">
-						<h5>Vaga Oferecida</h5>
+						<h5><span id="oferecido"></span></h5>
 					</div>
 				</div>				
 				<div class="row">
@@ -992,7 +993,18 @@ final do Modal de login
 	$(document).ready(function(){
     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
 	//modal de login
-	$('.modal').modal();
+	$('.modal').modal({
+		ready: function(modal, trigger) {
+        	if (trigger[0].id === 'vaga') 		{
+				document.getElementById('oferecido').innerText = 'Vaga Oferecida';
+				document.getElementById('beneficios').innerText = 'Benefícios Oferecidos';
+        	}
+        	if (trigger[0].id === 'servico') 	{
+				document.getElementById('oferecido').innerText = 'Serviço Oferecido';
+				document.getElementById('beneficios').innerText = 'Benefícios Necessários';
+        	}
+      	}
+	});
 	//menu mobile
 	$(".button-collapse").sideNav();
 	//inicializa o campo select para as cores do card
