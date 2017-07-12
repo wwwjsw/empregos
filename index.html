@@ -16,58 +16,58 @@
 	FACEBOOK SDK - IMPORTAR DADOS
 -->
 <script>
-	window.fbAsyncInit = function() {
-		FB.init({
-			appId      : '2379364772289597',
-			cookie     : true,
-			xfbml      : true,
-			version    : 'v2.8'
-		});
-		FB.AppEvents.logPageView();   
-		//verifica login do facebook
-		FB.getLoginStatus(function(response) {
-	    	statusChangeCallback(response);
-		});
-		function statusChangeCallback(response) {
-    		if (response.status === 'connected') {
-      			SucessoAoAcesso();
-      			document.getElementById('login-descricao').classList.add('hidden');
-      			document.getElementById('formulario-achados').classList.remove('hidden');
-      			document.getElementById('form-achados').classList.remove('hidden');
+  function statusChangeCallback(response) {
+    if (response.status === 'connected') {
+      testAPI();
     } else {
-    	console.log('não conectado');
-    	document.getElementById('login-descricao').classList.remove('hidden');
-    	document.getElementById('form-achados').classList.add('hidden');
-    	document.getElementById('formulario-achados').classList.add('hidden');
-    }
-    function SucessoAoAcesso(response){
-    	console.log(response);
+      console.log('Por favor logue no applicativo.');
+      document.getElementById('anunciar').classList.add('hide');
+      document.getElementById('modal-foo').classList.add('hide');
     }
   }
-};
 
-(function(d, s, id){
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) {return;}
-	js = d.createElement(s); js.id = id;
-	js.src = "//connect.facebook.net/en_US/sdk.js";
-	fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
-<script>
-	function basicAPIRequest() {
-		FB.api('/me?fields=name,picture', function(response) {
-			Log.info('API response', response);
-			document.getElementById('accountInfo').innerHTML = ('<img src="' + response.picture.data.url + '"> ' + response.name);
-		});
-	}
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
 
-	FB.getLoginStatus(function(response) {
-		Log.info('Login Status', response);
-		if (response.status === 'connected') {
-			basicAPIRequest();
-		}
-	});
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '2379364772289597',
+    cookie     : true,   
+    xfbml      : true,  
+    version    : 'v2.9' 
+  });
+
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  function testAPI() {
+    console.log('Bem vindo... buscando informação... ');
+    FB.api('/me?fields=id,name,email', function(response) {
+      console.log('Successful login for: ' + response.name);
+      console.log(response);
+      //form #anunciar remove classe para ocultar
+      document.getElementById('anunciar').classList.remove('hide');
+      //.modal-footer & #modal-foo remove classe para ocultar
+      document.getElementById('modal-foo').classList.remove('hide');
+
+
+    });
+  }
 </script>
 <!--
 	FACEBOOK SDK - IMPORTAR DADOS
@@ -157,7 +157,7 @@ FINAL DO MENU DA PAGINA
 						<a href="#" class="white-text">(00) 00000-0000</a>						
 					</div>
 					<div class="col s12 l12 center-align">
-						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
+						<div class="chip "><img src="http://placehold.it/50x50/000000" alt="Contact Person">Guilherme Henrique</div>
 					</div>
 				</div>
 				<div class="left-align white-text patrocinado-text"><p>Anúncio patrocinado</p></div>
@@ -179,7 +179,7 @@ FINAL DO MENU DA PAGINA
 						<a href="#" class="white-text">(00) 00000-0000</a>						
 					</div>
 					<div class="col s12 l12 center-align">
-						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
+						<div class="chip "><img src="http://placehold.it/50x50/000000" alt="Contact Person">Guilherme Henrique</div>
 					</div>
 				</div>
 			</div>
@@ -210,7 +210,7 @@ FINAL DO MENU DA PAGINA
 						<a href="#" class="white-text">(00) 00000-0000</a>						
 					</div>
 					<div class="col l12 s12 center-align">
-						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
+						<div class="chip "><img src="http://placehold.it/50x50/000000" alt="Contact Person">Guilherme Henrique</div>
 					</div>
 				</div>
 			</div>
@@ -241,7 +241,7 @@ FINAL DO MENU DA PAGINA
 						<a href="#" class="white-text">(00) 00000-0000</a>						
 					</div>
 					<div class="col s12 l12 center-align">
-						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
+						<div class="chip "><img src="http://placehold.it/50x50/000000" alt="Contact Person">Guilherme Henrique</div>
 					</div>
 				</div>	
 			</div>
@@ -272,7 +272,7 @@ FINAL DO MENU DA PAGINA
 						<a href="#" class="white-text">(00) 00000-0000</a>						
 					</div>
 					<div class="col s12 l12 center-align">
-						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
+						<div class="chip "><img src="http://placehold.it/50x50/000000" alt="Contact Person">Guilherme Henrique</div>
 					</div>
 				</div>
 			</div>
@@ -303,7 +303,7 @@ FINAL DO MENU DA PAGINA
 						<a href="#" class="white-text">(00) 00000-0000</a>						
 					</div>
 					<div class="col s12 l12 center-align">
-						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
+						<div class="chip "><img src="http://placehold.it/50x50/000000" alt="Contact Person">Guilherme Henrique</div>
 					</div>
 				</div>
 			</div>
@@ -334,7 +334,7 @@ FINAL DO MENU DA PAGINA
 						<a href="#" class="white-text">(00) 00000-0000</a>						
 					</div>
 					<div class="col s12 l12 center-align">
-						<div class="chip "><img src="https://lorempixel.com/50/50/business/6" alt="Contact Person">Guilherme Henrique</div>
+						<div class="chip "><img src="http://placehold.it/50x50/000000" alt="Contact Person">Guilherme Henrique</div>
 					</div>
 				</div>
 			</div>
@@ -384,13 +384,19 @@ Modal de login
 <div id="LoginModal" class="modal modal-fixed-footer">
 	<div class="modal-content">
 		<div class="row">
-			<form class="col s12">
-				<div class="row">
-					<div class="col s12">
-						<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" onlogin="checkLoginState();" data-auto-logout-link="true" data-use-continue-as="true"></div>			
-						<div class="divider"></div>
-					</div>
-				</div>
+			<div class="center-align">
+				<div class="fb-login-button"
+					data-auto-logout-link="true"
+					data-max-rows="1" 
+					data-size="medium" 
+					data-button-type="continue_with" 
+					data-show-faces="false" 
+					onlogin="checkLoginState();" 
+					data-auto-logout-link="true" 
+					data-button-type="continue_with"
+					data-use-continue-as="true"></div>			
+			</div>
+			<form id="anunciar" class="col s12">
 				<div class="row">
 					<div class="col s12 l12">
 						<h5>Benefícios</h5>
@@ -434,7 +440,11 @@ Modal de login
 						</p>										
 					</div>
 					<div class="input-field col s12 l4">
-						<select class="icons">
+					    <input placeholder="(00) 00000-0000" id="contact_number" type="text" class="validate">
+          				<label for="contact_number">Número de contato</label>
+					</div>
+					<div class="input-field col s12 l4">
+						<select class="icons" id="color">
 							<option value="" selected>Escolha uma opção</option>
 							<option value="c62828" data-icon="assets/images/c62828.png" class="left circle">Vermelho</option>
 							<option value="ad1457" data-icon="assets/images/ad1457.png" class="left circle">Rosa</option>
@@ -456,7 +466,7 @@ Modal de login
 							<option value="424242" data-icon="assets/images/424242.png" class="left circle">Cinza</option>
 							<option value="37474f" data-icon="assets/images/37474f.png" class="left circle">Cinza azulado</option>
 						</select>
-						<label>Cor do Card</label>
+						<label for="color">Cor do Card</label>
 					</div>
 				</div>
 				<div class="row">
@@ -939,7 +949,7 @@ Modal de login
 			</form>
 		</div>
 	</div>
-	<div class="modal-footer">
+	<div id="modal-foo" class="modal-footer">
 		<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cadastrar</a>
 	</div>
 </div>
