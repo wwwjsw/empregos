@@ -19,6 +19,7 @@
   function statusChangeCallback(response) {
     if (response.status === 'connected') {
       testAPI();
+      //shareLINK();
     } else {
       console.log('Por favor logue no applicativo.');
       document.getElementById('anunciar').classList.add('hide');
@@ -72,6 +73,14 @@
 
     });
   }
+function shareLINK(){
+	FB.ui({
+    	method: 'share',
+    	display: 'popup',
+    	href: 'https://developers.facebook.com/docs/',
+  	}, function(response){});
+}
+
 </script>
 <!--
 	FACEBOOK SDK - IMPORTAR DADOS
