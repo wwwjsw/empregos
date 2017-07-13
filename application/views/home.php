@@ -5,7 +5,7 @@ PAGINA INICIAL
 	<div class="col s12 m6 l3">
 		<div class="card medium grey darken-3">
 			<div class="card-content white-text">
-				<span class="card-title">Diarista</span>
+				<span class="card-title"><a class="white-text" href="<?=base_url('/anuncio/teste')?>">Diarista</a></span>
 				<div class="row">
 					<div class="col l6 s6 lateral-text">
 						<p>C.L.T</p>
