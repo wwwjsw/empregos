@@ -23,7 +23,7 @@ class Admin extends CI_Controller {
 		$this->load->view('administrativo/header');
 		$this->load->view('login');
 		$this->load->view('administrativo/footer');
-		
+
 		if($_POST) {
 			//regras de validação
 			$this->form_validation->set_rules('login', 'Login', 'required|trim|min_length[5]');
@@ -38,6 +38,7 @@ class Admin extends CI_Controller {
 			if($this->form_validation->run() == FALSE){
 				echo validation_errors();
 			}else{
+				$this->load->model('login');
 				echo 'post realizado e formulario verificado';
 			}
 		}
