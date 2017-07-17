@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CGN Empregos</title>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+	<!--Import home page Css-->
+	<link rel="stylesheet" href="assets/css/home.css"/>
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>	
+</head>
+<body>
+<!--
+	COMEÇO DO MENU ADMINISTRATIVO
+-->
+	<nav>
+		<div class="nav-wrapper grey darken-4">
+			<img src="assets/images/logo.png" class="responsive-img" style="height: 50px; margin-top: 5px;">
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="#">Publicações</a></li>
+				<li><a href="#">Pessoas</a></li>
+				<li><a href="#">Configurações</a></li>
+			</ul>
+		</div>
+	</nav>
+<!--
+	FIM DO MENU ADMINISTRATIVO
+-->
+<!--
+	COMEÇO DA LISTAGEM ADMINISTRATIVA
+-->
+<div class="container">
+	<div class="row">
+		<table class="highlight">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Vaga Oferecida/Requerida</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>Guilherme henrique</td>
+					<td>Diarista <div class="chip">Vaga</div></td>
+					<td><a class='dropdown-button btn' href='#' data-activates='dropdown1'>Ações</a></td>
+				</tr>
+				<tr>
+					<td>Guilherme henrique Machado</td>
+					<td>operador de produção <div class="chip">Candidato</div></td>
+					<td><a class='dropdown-button btn' href='#' data-activates='dropdown1'>Ações</a></td>
+				</tr>				
+			</tbody>
+		</table>
+		<!--
+			Dropdown Structure
+		--> 
+		<ul id='dropdown1' class='dropdown-content'>
+			<li><a href="#!"><i class="material-icons">block</i>Bloquear</a></li>
+			<li><a href="#!"><i class="material-icons">delete</i>Excluir</a></li>
+			<li><a href="#!"><i class="material-icons">star</i>Patrocinado</a></li>
+			<li><a href="#!"><i class="material-icons">edit</i>Editar</a></li>
+		</ul>
+  		<!--
+			End Of Dropdown Structure
+  		-->
+	</div>
+</div>
+<!--
+	FIM DA LISTAGEM ADMINISTRATIVA
+-->
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+<script>
+(function() {
+	$('.dropdown-button').dropdown({
+    	inDuration: 300,
+    	outDuration: 225,
+      	constrainWidth: false, // Does not change width of dropdown to that of the activator
+      	hover: true, // Activate on hover
+      	gutter: 0, // Spacing from edge
+      	belowOrigin: false, // Displays dropdown below the button
+      	alignment: 'left', // Displays dropdown with edge aligned to the left of button
+      	stopPropagation: false // Stops event propagation
+	});
+})();
+</script>
+</body>
+</html>
