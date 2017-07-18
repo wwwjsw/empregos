@@ -62,3 +62,4 @@ $route['anuncio'] = 'home/lerAnuncio/$1';
 	ROTA ADMIN
 **/
 $route['administrativo'] = 'admin';
+$route['administrativo/logout'] = 'admin/logout';

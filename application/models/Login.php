@@ -4,15 +4,16 @@ class Login extends CI_Model {
         public function __construct()
         {
                 parent::__construct();
-                // Your own constructor code
+                $this->load->database();        
         }
         public function authUser($user, $pass)
         {
-                $this->load->model('blog');
-
-                $data['query'] = $this->blog->get_last_ten_entries();
-
-                $this->load->view('blog', $data);
+                $this->db->select('*');
+                $this->db->where('username', $user);
+                $this->db->where('password', $pass);
+                $this->db->where('status', 'ativo');
+                $query = $this->db->get('usuarios');
+                return $query->result();
         }        
 
 }

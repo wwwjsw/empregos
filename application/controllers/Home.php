@@ -7,7 +7,8 @@ class Home extends CI_Controller {
 	 * Construct function.
 	 *
 	 */
-	public function __construct(){
+	public function __construct()
+	{
 		parent::__construct();
 		$this->load->helper('url');
 	}
