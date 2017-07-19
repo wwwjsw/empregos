@@ -72,6 +72,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       document.getElementById('modal-foo').classList.remove('hide');
       // #LoginModal volta para o valor padrão
       document.getElementById('LoginModal').style.height = '';
+      // #fb_id & #fb_name insert values
+      document.getElementById('fb_id').value = response.id;
+      document.getElementById('fb_name').value = response.name;
 
 
 
