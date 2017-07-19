@@ -40,4 +40,16 @@ class Home extends CI_Controller {
 		echo current_url();
 		$this->output->enable_profiler(true);
 	}
+	/**
+	 *
+	 * lerAnuncio link interno do card.
+	 *
+	 */	
+	public function enviarServicoVaga()
+	{
+		echo "<pre>";
+		var_dump($_POST);
+		echo "</pre>";
+		$this->output->enable_profiler(true);
+	}	
 }
