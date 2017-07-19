@@ -38,10 +38,12 @@
         	if (trigger[0].id === 'vaga') 		{
 				document.getElementById('oferecido').innerText = 'Vaga Oferecida';
 				document.getElementById('beneficios').innerText = 'Benefícios Oferecidos';
+				document.getElementById('tipo').value = 'vaga';
         	}
         	if (trigger[0].id === 'servico') 	{
 				document.getElementById('oferecido').innerText = 'Serviço Oferecido';
 				document.getElementById('beneficios').innerText = 'Benefícios Necessários';
+				document.getElementById('tipo').value = 'servico';
         	}
       	}
 	});
