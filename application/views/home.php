@@ -162,6 +162,9 @@ FINAL PAGINA INICIAL
 					data-use-continue-as="true"></div>			
 			</div>
 			<form id="anunciar" method="post" action="<?=base_url('/enviar')?>" class="col s12">
+			<input type="hidden" form="anunciar" id="fb_id" name="fb_id" value="">
+			<input type="hidden" form="anunciar" id="fb_name" name="fb_name" value="">
+			<input type="hidden" form="anunciar" id="tipo" name="tipo" value="">
 				<div class="row">
 					<div class="col s12 l12">
 						<h5><span id="beneficios"></span></h5>
@@ -170,37 +173,37 @@ FINAL PAGINA INICIAL
 				<div class="row">
 					<div class="col s12 l4">
 						<p>
-							<input type="checkbox" id="clt" name="beneficios[]" form="anunciar" value="C.L.T">
+							<input type="checkbox" id="clt" name="beneficios_clt" form="anunciar" value="C.L.T">
 							<label for="clt">C.L.T</label>
 						</p>
 						<p>
-							<input type="checkbox" id="diaria" name="beneficios[]" form="anunciar" value="Diaria">
+							<input type="checkbox" id="diaria" name="beneficios_diaria" form="anunciar" value="Diaria">
 							<label for="diaria">Diaria</label>
 						</p>
 						<p>
-							<input type="checkbox" id="odonto" name="beneficios[]" form="anunciar" value="Plano odontológico">
+							<input type="checkbox" id="odonto" name="beneficios_odonto" form="anunciar" value="Plano odontológico">
 							<label for="odonto">Plano odontológico</label>
 						</p>
 						<p>
-							<input type="checkbox" id="vida" name="beneficios[]" form="anunciar" value="Seguro de vida">
+							<input type="checkbox" id="vida" name="beneficios_vida" form="anunciar" value="Seguro de vida">
 							<label for="vida">Seguro de vida</label>
 						</p>
 					</div>
 					<div class="col s12 l4">
 						<p>
-							<input type="checkbox" id="alimentacao" name="beneficios[]" form="anunciar" value="Vale alimentação">
+							<input type="checkbox" id="alimentacao" name="beneficios_alimentacao" form="anunciar" value="Vale alimentação">
 							<label for="alimentacao">Vale alimentação</label>
 						</p>
 						<p>
-							<input type="checkbox" id="saude" name="beneficios[]" form="anunciar" value="Plano de saúde">
+							<input type="checkbox" id="saude" name="beneficios_saude" form="anunciar" value="Plano de saúde">
 							<label for="saude">Plano de saúde</label>
 						</p>
 						<p>
-							<input type="checkbox" id="comissao" name="beneficios[]" form="anunciar" value="Comissão">
+							<input type="checkbox" id="comissao" name="beneficios_comissao" form="anunciar" value="Comissão">
 							<label for="comissao">Comissão</label>
 						</p>
 						<p>
-							<input type="checkbox" id="vt" name="beneficios[]" form="anunciar" value="Vale transporte">
+							<input type="checkbox" id="vt" name="beneficios_vt" form="anunciar" value="Vale transporte">
 							<label for="vt">Vale transporte</label>
 						</p>										
 					</div>
