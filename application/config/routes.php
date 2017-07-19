@@ -59,6 +59,10 @@ $route['translate_uri_dashes'] = FALSE;
 $route['anuncio/(:any)'] = 'home/lerAnuncio/$1';
 $route['anuncio'] = 'home/lerAnuncio/$1';
 /**
+	ROTA DO CADASTRO DE SERVIÇO E VAGA
+**/
+$route['enviar'] = 'home/enviarServicoVaga';
+/**
 	ROTA ADMIN
 **/
 $route['administrativo'] = 'admin';
