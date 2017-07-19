@@ -1,0 +1,4 @@
+- run at localhost:8000
+- facebook appId *must* be 2379364772289597
+- don't put in /var/www/html, permissions problems 
+- every database change *must* import cgn_empregos.sql
