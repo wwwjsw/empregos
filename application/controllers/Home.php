@@ -47,9 +47,6 @@ class Home extends CI_Controller {
 	 */	
 	public function enviarServicoVaga()
 	{
-		echo "<pre>";
-		var_dump($_POST);
-		echo "</pre>";
 		$this->output->enable_profiler(true);
 	}	
 }
