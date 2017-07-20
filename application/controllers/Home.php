@@ -19,6 +19,9 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
+		//carrega a library de validação, para não haver erros no template/footer
+		$this->load->library('form_validation');
+
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
 		$this->load->view('home');
@@ -47,6 +50,46 @@ class Home extends CI_Controller {
 	 */	
 	public function enviarServicoVaga()
 	{
-		$this->output->enable_profiler(true);
+		if($_POST) 
+		{
+			$this->load->library('form_validation');
+
+			//regras de validação do usuario do facebook
+			$this->form_validation->set_rules('fb_id', 'Facebook id', 'required|trim');
+			$this->form_validation->set_rules('fb_name', 'Nome', 'required|trim');
+
+			//tradução da validação
+			$this->form_validation->set_message('required', '{field} é um campo obrigatório.');
+
+			//verifica se a validação do facebook ocorreu bem
+			if($this->form_validation->run() == FALSE)
+			{
+				$this->index();
+			}else
+			{
+				$this->load->model('usuario');
+				
+				$fb_id		=	$this->input->post('fb_id');
+				$fb_name	=	$this->input->post('fb_name');
+				
+				if($this->usuario->verifyFbUser($fb_id))
+				{
+					$id = $this->usuario->verifyFbUser($fb_id);
+					echo 'usuario existe<br>';
+					echo $id;
+				}else{
+					echo "usuario não existe";
+					$id = $this->usuario->insertFbUser($fb_id,$fb_name);
+					echo $id;
+				}
+
+
+
+				$this->output->enable_profiler(true);
+			}
+		}else
+		{
+			redirect(base_url());
+		}
 	}	
 }
