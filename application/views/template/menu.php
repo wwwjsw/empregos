@@ -3,12 +3,7 @@ MENU DA PAGINA
 -->
 <nav>
 	<ul id="slide-out" class="side-nav">
-		<li><div class="user-view">
-			<a href="#!user"><img class="circle" src="http://graph.facebook.com/100003840614157/picture?type=square"></a>
-			<a href="#!name"><span class="black-text name">Guilherme Henrique</span></a>
-			<a href="#!email"><span class="black-text email">progr.guilherme@gmail.com</span></a>
-		</div></li>
-		<li><a class="waves-effect grey darken-2 href="#!">Empresas</a></li>
+		<li><a class="waves-effect grey darken-2" href="#!" >Empresas</a></li>
 		<li><a class="waves-effect" href="#!">Candidatos</a></li>
 		<li><div class="divider"></div></li>
 		<li><a class="waves-effect" id="servico" 	href="#LoginModal">Anunciar Serviço</a></li>
