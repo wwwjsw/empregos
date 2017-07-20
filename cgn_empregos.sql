@@ -71,7 +71,7 @@ CREATE TABLE `usuarios_facebook` (
 CHARACTER SET = utf8
 COLLATE = utf8_general_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 1;
+AUTO_INCREMENT = 4;
 -- -------------------------------------------------------------
 -- ---------------------------------------------------------
 
@@ -86,6 +86,7 @@ INSERT INTO `usuarios`(`id`,`username`,`password`,`nivel`,`status`) VALUES ( '1'
 
 
 -- Dump data of "usuarios_facebook" ------------------------
+INSERT INTO `usuarios_facebook`(`id`,`fb_id`,`fb_name`) VALUES ( '3', '903743969763615', 'Guilherme Henrique' );
 -- ---------------------------------------------------------
 
 
