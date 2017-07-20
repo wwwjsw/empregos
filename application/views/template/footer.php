@@ -53,6 +53,13 @@
 	$('select').material_select();
 });
 </script>
+<?php if(validation_errors()){ ?>
+	<script>
+		//toasts com aviso
+		Materialize.toast('<?=form_error('fb_id')?>', 4000);
+		Materialize.toast('<?=form_error('fb_name')?>', 5000);
+	</script>
+<?php } ?>
 </body>
 </html>
 <!--
