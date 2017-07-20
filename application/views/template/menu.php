@@ -24,7 +24,7 @@ MENU DA PAGINA
 			<li><a href="#">Candidatos</a></li>
 			<li><a href="#SearchModal" class="waves-effect waves-light btn cyan darken-3">Busca</a></li>
 		</ul>
-		<a href="#" class="brand-logo center">
+		<a href="<?=base_url()?>" class="brand-logo center">
 			<img style="height: 50px; margin-top: 5px;" class="responsive-img" src="assets/images/logo.png" alt="">
 		</a>
 		<ul class="right hide-on-med-and-down">
