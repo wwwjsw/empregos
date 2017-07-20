@@ -42,7 +42,7 @@ class Home extends CI_Controller {
 	}
 	/**
 	 *
-	 * lerAnuncio link interno do card.
+	 * enviarServicoVaga envia servico ou vaga.
 	 *
 	 */	
 	public function enviarServicoVaga()
