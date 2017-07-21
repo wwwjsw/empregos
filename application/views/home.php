@@ -213,26 +213,26 @@ FINAL PAGINA INICIAL
 					</div>
 					<div class="input-field col s12 l4">
 						<select class="icons" id="color" form="anunciar" name="cor">
-							<option value="" selected>Escolha uma opção</option>
-							<option value="c62828" data-icon="assets/images/c62828.png" class="left circle">Vermelho</option>
-							<option value="ad1457" data-icon="assets/images/ad1457.png" class="left circle">Rosa</option>
-							<option value="6a1b9a" data-icon="assets/images/6a1b9a.png" class="left circle">Roxo</option>
-							<option value="4527a0" data-icon="assets/images/4527a0.png" class="left circle">Roxo escuro</option>
-							<option value="283593" data-icon="assets/images/283593.png" class="left circle">Indigo</option>
-							<option value="1565c0" data-icon="assets/images/1565c0.png" class="left circle">Azul</option>
-							<option value="0277bd" data-icon="assets/images/0277bd.png" class="left circle">Azul claro</option>
-							<option value="00838f" data-icon="assets/images/00838f.png" class="left circle">Ciano</option>
-							<option value="00695c" data-icon="assets/images/00695c.png" class="left circle">Cerceta</option>
-							<option value="2e7d32" data-icon="assets/images/2e7d32.png" class="left circle">Verde</option>
-							<option value="558b2f" data-icon="assets/images/558b2f.png" class="left circle">Verde claro</option>
-							<option value="9e9d24" data-icon="assets/images/9e9d24.png" class="left circle">Lima</option>
-							<option value="f9a825" data-icon="assets/images/f9a825.png" class="left circle">Amarelo</option>
-							<option value="ff8f00" data-icon="assets/images/ff8f00.png" class="left circle">Âmbar</option>
-							<option value="ef6c00" data-icon="assets/images/ef6c00.png" class="left circle">Laranja</option>
-							<option value="d84315" data-icon="assets/images/d84315.png" class="left circle">Laranja escuro</option>
-							<option value="4e342e" data-icon="assets/images/4e342e.png" class="left circle">Marron</option>
-							<option value="424242" data-icon="assets/images/424242.png" class="left circle">Cinza</option>
-							<option value="37474f" data-icon="assets/images/37474f.png" class="left circle">Cinza azulado</option>
+							<option value="grey" selected>Escolha uma opção</option>
+							<option value="red" data-icon="assets/images/c62828.png" class="left circle">Vermelho</option>
+							<option value="pink" data-icon="assets/images/ad1457.png" class="left circle">Rosa</option>
+							<option value="purple" data-icon="assets/images/6a1b9a.png" class="left circle">Roxo</option>
+							<option value="deep-purple" data-icon="assets/images/4527a0.png" class="left circle">Roxo escuro</option>
+							<option value="indigo" data-icon="assets/images/283593.png" class="left circle">Indigo</option>
+							<option value="blue" data-icon="assets/images/1565c0.png" class="left circle">Azul</option>
+							<option value="light-blue" data-icon="assets/images/0277bd.png" class="left circle">Azul claro</option>
+							<option value="cyan" data-icon="assets/images/00838f.png" class="left circle">Ciano</option>
+							<option value="teal" data-icon="assets/images/00695c.png" class="left circle">Cerceta</option>
+							<option value="green" data-icon="assets/images/2e7d32.png" class="left circle">Verde</option>
+							<option value="light-green" data-icon="assets/images/558b2f.png" class="left circle">Verde claro</option>
+							<option value="lime" data-icon="assets/images/9e9d24.png" class="left circle">Lima</option>
+							<option value="yellow" data-icon="assets/images/f9a825.png" class="left circle">Amarelo</option>
+							<option value="amber" data-icon="assets/images/ff8f00.png" class="left circle">Âmbar</option>
+							<option value="orange" data-icon="assets/images/ef6c00.png" class="left circle">Laranja</option>
+							<option value="deep-orange" data-icon="assets/images/d84315.png" class="left circle">Laranja escuro</option>
+							<option value="brown" data-icon="assets/images/4e342e.png" class="left circle">Marron</option>
+							<option value="grey" data-icon="assets/images/424242.png" class="left circle">Cinza</option>
+							<option value="blue-grey" data-icon="assets/images/37474f.png" class="left circle">Cinza azulado</option>
 						</select>
 						<label for="color">Cor do Card</label>
 					</div>
