@@ -173,37 +173,37 @@ FINAL PAGINA INICIAL
 				<div class="row">
 					<div class="col s12 l4">
 						<p>
-							<input type="checkbox" id="clt" name="beneficios_clt" form="anunciar" value="C.L.T">
+							<input type="checkbox" id="clt" name="beneficios_clt" form="anunciar">
 							<label for="clt">C.L.T</label>
 						</p>
 						<p>
-							<input type="checkbox" id="diaria" name="beneficios_diaria" form="anunciar" value="Diaria">
+							<input type="checkbox" id="diaria" name="beneficios_diaria" form="anunciar">
 							<label for="diaria">Diaria</label>
 						</p>
 						<p>
-							<input type="checkbox" id="odonto" name="beneficios_odonto" form="anunciar" value="Plano odontológico">
+							<input type="checkbox" id="odonto" name="beneficios_odonto" form="anunciar">
 							<label for="odonto">Plano odontológico</label>
 						</p>
 						<p>
-							<input type="checkbox" id="vida" name="beneficios_vida" form="anunciar" value="Seguro de vida">
+							<input type="checkbox" id="vida" name="beneficios_vida" form="anunciar">
 							<label for="vida">Seguro de vida</label>
 						</p>
 					</div>
 					<div class="col s12 l4">
 						<p>
-							<input type="checkbox" id="alimentacao" name="beneficios_alimentacao" form="anunciar" value="Vale alimentação">
+							<input type="checkbox" id="alimentacao" name="beneficios_alimentacao" form="anunciar">
 							<label for="alimentacao">Vale alimentação</label>
 						</p>
 						<p>
-							<input type="checkbox" id="saude" name="beneficios_saude" form="anunciar" value="Plano de saúde">
+							<input type="checkbox" id="saude" name="beneficios_saude" form="anunciar">
 							<label for="saude">Plano de saúde</label>
 						</p>
 						<p>
-							<input type="checkbox" id="comissao" name="beneficios_comissao" form="anunciar" value="Comissão">
+							<input type="checkbox" id="comissao" name="beneficios_comissao" form="anunciar" >
 							<label for="comissao">Comissão</label>
 						</p>
 						<p>
-							<input type="checkbox" id="vt" name="beneficios_vt" form="anunciar" value="Vale transporte">
+							<input type="checkbox" id="vt" name="beneficios_vt" form="anunciar">
 							<label for="vt">Vale transporte</label>
 						</p>										
 					</div>
