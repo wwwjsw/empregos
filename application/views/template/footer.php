@@ -58,6 +58,18 @@
 		//toasts com aviso
 		Materialize.toast('<?=form_error('fb_id')?>', 4000);
 		Materialize.toast('<?=form_error('fb_name')?>', 5000);
+		Materialize.toast('<?=form_error('tipo')?>', 5000);
+		Materialize.toast('<?=form_error('beneficios_clt')?>', 5000);
+		Materialize.toast('<?=form_error('beneficios_diaria')?>', 5000);
+		Materialize.toast('<?=form_error('beneficios_odonto')?>', 5000);
+		Materialize.toast('<?=form_error('beneficios_vida')?>', 5000);
+		Materialize.toast('<?=form_error('beneficios_alimentacao')?>', 5000);
+		Materialize.toast('<?=form_error('beneficios_saude')?>', 5000);
+		Materialize.toast('<?=form_error('beneficios_comissao')?>', 5000);
+		Materialize.toast('<?=form_error('beneficios_vt')?>', 5000);
+		Materialize.toast('<?=form_error('numero')?>', 5000);
+		Materialize.toast('<?=form_error('cor')?>', 5000);
+		Materialize.toast('<?=form_error('cargo')?>', 5000);
 	</script>
 <?php } ?>
 </body>
