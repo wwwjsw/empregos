@@ -26,7 +26,6 @@ class Home extends CI_Controller {
 		$this->load->view('template/menu');
 		$this->load->view('home');
 		$this->load->view('template/footer');
-		$this->output->enable_profiler(true);
 	}
 	/**
 	 *
@@ -67,25 +66,68 @@ class Home extends CI_Controller {
 				$this->index();
 			}else
 			{
+				//primeira validação de formulario
 				$this->load->model('usuario');
 				
 				$fb_id		=	$this->input->post('fb_id');
 				$fb_name	=	$this->input->post('fb_name');
 				
+				//verifica se usuario do facebook já existe e retorna id
 				if($this->usuario->verifyFbUser($fb_id))
 				{
 					$id = $this->usuario->verifyFbUser($fb_id);
-					echo 'usuario existe<br>';
-					echo $id;
+					//echo $id;
 				}else{
-					echo "usuario não existe";
 					$id = $this->usuario->insertFbUser($fb_id,$fb_name);
-					echo $id;
+					//echo $id;
 				}
 
+				//regras de validação para o card 
+				$this->form_validation->set_rules('tipo', 'Tipo', 'required|in_list[servico,vaga]');
+				$this->form_validation->set_rules('beneficios_clt',			'C.L.T',				'alpha');
+				$this->form_validation->set_rules('beneficios_diaria',		'Diaria',				'alpha');
+				$this->form_validation->set_rules('beneficios_odonto',		'Plano odontológico',	'alpha');
+				$this->form_validation->set_rules('beneficios_vida',		'Seguro de vida',		'alpha');
+				$this->form_validation->set_rules('beneficios_alimentacao',	'Vale alimentação',		'alpha');
+				$this->form_validation->set_rules('beneficios_saude',		'Plano de saúde',		'alpha');
+				$this->form_validation->set_rules('beneficios_comissao',	'Comissão',				'alpha');
+				$this->form_validation->set_rules('beneficios_vt',			'Vale transporte',		'alpha');
+				$this->form_validation->set_rules('numero',					'Numero',				'required|min_length[9]|max_length[17]|trim');
+				$this->form_validation->set_rules('cor',					'Cor',					'required');
+				$this->form_validation->set_rules('cargo',					'Cargo',				'required');
 
 
-				$this->output->enable_profiler(true);
+				//tradução da validação 
+				$this->form_validation->set_message('required', '{field} é um campo obrigatório.');
+				$this->form_validation->set_message('in_list', '{field} é um campo que permite apenas {param}');
+				$this->form_validation->set_message('alpha', '{field} é um campo que aceita apenas caracteres alfabéticos');
+				$this->form_validation->set_message('min_length', '{field} deve conter no mínimo {param} caracteres');
+				$this->form_validation->set_message('max_length', '{field} deve conter no máximo {param} caracteres');
+
+				if($this->form_validation->run() == FALSE){
+					$this->index();
+				}else
+				{
+					$this->load->model('card');
+
+					$tipo			=	$this->input->post('tipo');
+					$clt			=	$this->input->post('beneficios_clt');
+					$diaria 		=	$this->input->post('beneficios_diaria');
+					$odontologico	=	$this->input->post('beneficios_odonto');	
+					$vida			=	$this->input->post('beneficios_vida');
+					$alimentacao	=	$this->input->post('beneficios_alimentacao');	
+					$saude			=	$this->input->post('beneficios_saude');
+					$comissao		=	$this->input->post('beneficios_comissao');
+					$vt				=	$this->input->post('beneficios_vt');
+					$numero			=	$this->input->post('numero');
+					$cor			=	$this->input->post('cor');
+					$cargo 			=	$this->input->post('cargo');
+
+					$this->card->SaveCard($id,$tipo,$clt,$diaria,$odontologico,$vida,$alimentacao,$saude,$comissao,$vt,$numero,$cor,$cargo);
+
+					redirect(base_url());
+				}
+
 			}
 		}else
 		{
