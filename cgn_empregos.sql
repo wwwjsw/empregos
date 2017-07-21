@@ -24,14 +24,14 @@ CREATE TABLE `cards` (
 	`is_ad` TinyInt( 1 ) NULL,
 	`facebook` Int( 200 ) NOT NULL,
 	`tipo` Enum( 'servico', 'vaga' ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-	`beneficios_clt` TinyInt( 1 ) NOT NULL,
-	`beneficios_diaria` TinyInt( 1 ) NOT NULL,
-	`beneficios_odonto` TinyInt( 1 ) NOT NULL,
-	`beneficios_vida` TinyInt( 1 ) NOT NULL,
-	`beneficios_alimentacao` TinyInt( 1 ) NOT NULL,
-	`beneficios_saude` TinyInt( 1 ) NOT NULL,
-	`beneficios_comissao` TinyInt( 1 ) NOT NULL,
-	`beneficios_vt` TinyInt( 1 ) NOT NULL,
+	`beneficios_clt` TinyInt( 1 ) NULL,
+	`beneficios_diaria` TinyInt( 1 ) NULL,
+	`beneficios_odonto` TinyInt( 1 ) NULL,
+	`beneficios_vida` TinyInt( 1 ) NULL,
+	`beneficios_alimentacao` TinyInt( 1 ) NULL,
+	`beneficios_saude` TinyInt( 1 ) NULL,
+	`beneficios_comissao` TinyInt( 1 ) NULL,
+	`beneficios_vt` TinyInt( 1 ) NULL,
 	`numero` VarChar( 11 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
 	`cor` VarChar( 6 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
 	`cargo` VarChar( 40 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE `cards` (
 CHARACTER SET = utf8
 COLLATE = utf8_general_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 1;
+AUTO_INCREMENT = 3;
 -- -------------------------------------------------------------
 -- ---------------------------------------------------------
 
@@ -77,6 +77,11 @@ AUTO_INCREMENT = 4;
 
 
 -- Dump data of "cards" ------------------------------------
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`) VALUES ( '1', '0', '3', 'servico', NULL, NULL, '0', NULL, '0', '0', NULL, NULL, '(45) 00000 ', 'grey', 'ajudante de cozinha' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`) VALUES ( '2', '0', '3', 'servico', '0', NULL, NULL, NULL, NULL, '0', NULL, NULL, '(45) 00000 ', 'grey', 'farmácia' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`) VALUES ( '3', '0', '3', 'vaga', '0', '0', '0', '0', NULL, NULL, NULL, NULL, '(45) 12345 ', 'grey', 'operador de telemarketing' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`) VALUES ( '4', '0', '3', 'vaga', NULL, NULL, NULL, NULL, '0', '0', '0', '0', '(45) 99999 ', 'grey', 'gerente comercial' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`) VALUES ( '5', '0', '3', 'servico', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '(45) 00000 - 0000', 'grey', 'gerente de loja' );
 -- ---------------------------------------------------------
 
 
