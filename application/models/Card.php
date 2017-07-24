@@ -22,10 +22,41 @@ class Card extends CI_Model {
                         'beneficios_vt'         => $vt,
                         'numero'                => $numero,
                         'cor'                   => $cor,
-                        'cargo'                 => $cargo
+                        'cargo'                 => $cargo,
+                        'block'                 => FALSE
                 );
 
                 $this->db->insert('cards', $data);
-        }        
-
+        }
+        //conta registros para a paginação
+        public function record_count()
+        {
+                $this->db->where('block', FALSE);
+                $this->db->where('tipo', 'vaga');
+                return $this->db->count_all("cards");
+        }
+        //retorna resutados da paginação                
+        public function fetch_data($limit, $id) {
+                $this->db->join('usuarios_facebook', 'usuarios_facebook.id = cards.facebook', 'inner');
+                $this->db->order_by('cards.id', 'DESC');
+                $this->db->limit($limit);
+                //$this->db->where('id', $id);
+                $query = $this->db->get("cards");
+                if ($query->num_rows() > 0) 
+                {
+                        foreach ($query->result() as $row) 
+                        {
+                                $data[] = $row;
+                        }
+                        return $data;
+                }
+                return false;
+        }
+        /*
+        select * from cgn_empregos.cards 
+        inner join cgn_empregos.usuarios_facebook
+        on cgn_empregos.cards.facebook = cgn_empregos.usuarios_facebook.id
+        order by cgn_empregos.cards.id desc 
+        limit 1
+        */                
 }
