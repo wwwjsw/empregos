@@ -111,20 +111,19 @@ class Home extends CI_Controller {
 					$this->load->model('card');
 
 					$tipo			=	$this->input->post('tipo');
-					$clt			=	$this->input->post('beneficios_clt');
-					$diaria 		=	$this->input->post('beneficios_diaria');
-					$odontologico	=	$this->input->post('beneficios_odonto');	
-					$vida			=	$this->input->post('beneficios_vida');
-					$alimentacao	=	$this->input->post('beneficios_alimentacao');	
-					$saude			=	$this->input->post('beneficios_saude');
-					$comissao		=	$this->input->post('beneficios_comissao');
-					$vt				=	$this->input->post('beneficios_vt');
+					$clt			=	($this->input->post('beneficios_clt') == 'on' ? TRUE : FALSE);
+					$diaria 		=	($this->input->post('beneficios_diaria') == 'on' ? TRUE : FALSE);
+					$odontologico	=	($this->input->post('beneficios_odonto') == 'on' ? TRUE : FALSE);
+					$vida			=	($this->input->post('beneficios_vida') == 'on' ? TRUE : FALSE);
+					$alimentacao	=	($this->input->post('beneficios_alimentacao') == 'on' ? TRUE : FALSE);
+					$saude			=	($this->input->post('beneficios_saude') == 'on' ? TRUE : FALSE);
+					$comissao		=	($this->input->post('beneficios_comissao') == 'on' ? TRUE : FALSE);
+					$vt				=	($this->input->post('beneficios_vt') == 'on' ? TRUE : FALSE);
 					$numero			=	$this->input->post('numero');
 					$cor			=	$this->input->post('cor');
 					$cargo 			=	$this->input->post('cargo');
 
 					$this->card->SaveCard($id,$tipo,$clt,$diaria,$odontologico,$vida,$alimentacao,$saude,$comissao,$vt,$numero,$cor,$cargo);
-
 					redirect(base_url());
 				}
 
