@@ -32,14 +32,15 @@ CREATE TABLE `cards` (
 	`beneficios_saude` TinyInt( 1 ) NULL,
 	`beneficios_comissao` TinyInt( 1 ) NULL,
 	`beneficios_vt` TinyInt( 1 ) NULL,
-	`numero` VarChar( 11 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+	`numero` VarChar( 17 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
 	`cor` VarChar( 6 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
 	`cargo` VarChar( 40 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+	`block` TinyInt( 1 ) NOT NULL DEFAULT '0',
 	PRIMARY KEY ( `id` ) )
 CHARACTER SET = utf8
 COLLATE = utf8_general_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 3;
+AUTO_INCREMENT = 7;
 -- -------------------------------------------------------------
 -- ---------------------------------------------------------
 
