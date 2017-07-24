@@ -1,7 +1,11 @@
 <!--
 PAGINA INICIAL
 -->	
-<div class="row"> 	
+<div class="row">
+<pre>
+	<?php var_dump($results); ?>
+</pre>
+<!-- 	
 	<div class="col s12 m6 l3">
 		<div class="card medium grey darken-3">
 			<div class="card-content white-text">
@@ -122,6 +126,7 @@ PAGINA INICIAL
 			</div>
 		</div>	    		
 	</div>
+-->
 </div>
 <!--
 FINAL PAGINA INICIAL
@@ -129,6 +134,10 @@ FINAL PAGINA INICIAL
 <!-- 
 	INICIO DA PAGINAÇÃO
 -->
+	<?php foreach ($links as $link) {
+		echo "<li>". $link."</li>";
+	} ?>
+<!--
 <div class="row">
 	<ul class="pagination center-align">
 		<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
@@ -140,6 +149,7 @@ FINAL PAGINA INICIAL
 		<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
 	</ul>
 </div>
+-->
 <!--
 	FIM DA PAGINAÇÃO
 -->

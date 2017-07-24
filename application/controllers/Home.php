@@ -19,12 +19,40 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		//carrega a library de validação, para não haver erros no template/footer
+		//carrega a library de validação, para retorno de erros no template/footer
 		$this->load->library('form_validation');
+		// carrega library de paginação
+		$this->load->library('pagination');
+		//carrega model dos cards
+		$this->load->model('card');
 
+		$config = array();
+        $config["base_url"] = base_url();
+        $total_row = $this->card->record_count();
+        $config["total_rows"] = $total_row;
+        $config["per_page"] = 8;
+        $config['use_page_numbers'] = TRUE;
+        $config['num_links'] = $total_row;
+        $config['cur_tag_open'] = '&nbsp;<a class="current">';
+        $config['cur_tag_close'] = '</a>';
+        $config['next_link'] = 'Next';
+        $config['prev_link'] = 'Previous';
+        
+        $this->pagination->initialize($config);
+        if($this->uri->segment(1)){
+        $page = ($this->uri->segment(1)) ;
+          }
+        else{
+               $page = 1;
+        }
+        $data["results"] = $this->card->fetch_data($config["per_page"], $page);
+        $str_links = $this->pagination->create_links();
+        $data["links"] = explode('&nbsp;',$str_links );
+        
+		//carrega as views da pagina inicial
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
-		$this->load->view('home');
+		$this->load->view('home', $data);
 		$this->load->view('template/footer');
 	}
 	/**
