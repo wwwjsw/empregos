@@ -3,7 +3,8 @@ PAGINA INICIAL
 -->	
 <div class="row">
 <pre>
-	<?php var_dump($results); ?>
+	<?php //var_dump($results); ?>
+	<?php echo $results[0]->id; ?>
 </pre>
 <!-- 	
 	<div class="col s12 m6 l3">

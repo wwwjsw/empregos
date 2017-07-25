@@ -30,7 +30,7 @@ class Home extends CI_Controller {
         $config["base_url"] = base_url();
         $total_row = $this->card->record_count();
         $config["total_rows"] = $total_row;
-        $config["per_page"] = 8;
+        $config["per_page"] = 1;
         $config['use_page_numbers'] = TRUE;
         $config['num_links'] = $total_row;
         $config['cur_tag_open'] = '&nbsp;<a class="current">';
@@ -40,12 +40,12 @@ class Home extends CI_Controller {
         
         $this->pagination->initialize($config);
         if($this->uri->segment(1)){
-        $page = ($this->uri->segment(1)) ;
+        $range = ($this->uri->segment(1)) ;
           }
         else{
-               $page = 1;
+               $range = 0;
         }
-        $data["results"] = $this->card->fetch_data($config["per_page"], $page);
+        $data["results"] = $this->card->fetch_data($config["per_page"], $range);
         $str_links = $this->pagination->create_links();
         $data["links"] = explode('&nbsp;',$str_links );
         

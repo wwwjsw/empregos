@@ -67,3 +67,7 @@ $route['enviar'] = 'home/enviarServicoVaga';
 **/
 $route['administrativo'] = 'admin';
 $route['administrativo/logout'] = 'admin/logout';
+/**
+	ROTA DA PAGINAÇÃO
+**/
+$route['(:any)'] = 'home/index/$1'; 
