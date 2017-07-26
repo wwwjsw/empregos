@@ -3,9 +3,51 @@ PAGINA INICIAL
 -->	
 <div class="row">
 <pre>
-	<?php //var_dump($results); ?>
-	<?php echo $results[0]->id; ?>
+	<?php var_dump($results[0]); ?>
 </pre>
+<?php foreach($results as $i => $r){ ?>
+	<?php //echo $r->id; ?>
+	<div class="col s12 m6 l3">
+		<div class="card medium <?=$r->cor?> darken-3">
+			<div class="card-content white-text">
+				<span class="card-title"><a class="white-text" href="<?=base_url('/anuncio/'.$r->id)?>"><?=$r->cargo?></a></span>
+				<div class="row">
+					<div class="col l6 s6 lateral-text">
+						<?php if($r->beneficios_clt == TRUE){ ?><p>C.L.T</p><?php } ?>
+						<?php if($r->beneficios_diaria == TRUE){ ?><p>Diaria</p><?php } ?>
+						<?php if($r->beneficios_vida == TRUE){ ?><p>Seguro de vida</p><?php } ?>
+						<?php if($r->beneficios_odonto == TRUE){ ?><p>Plano odontológico</p><?php } ?>
+					</div>
+					<div class="col l6 s6 lateral-text">
+						<?php if($r->beneficios_alimentacao == TRUE){ ?><p>Vale alimentação</p><?php } ?>
+						<?php if($r->beneficios_saude == TRUE){ ?><p>Plano de saúde</p><?php } ?>
+						<?php if($r->beneficios_comissao == TRUE){ ?><p>Comissão</p><?php } ?>
+						<?php if($r->beneficios_vt == TRUE){ ?><p>Vale transporte</p><?php } ?>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 l12 center-align">
+					<a href=""><img src="assets/images/facebook.png" alt=""></a>
+					<a href=""><img src="assets/images/twitter.png" alt=""></a>
+					<a href=""><img src="assets/images/g_plus.png" alt=""></a>
+					<a href=""><img src="assets/images/linkedin.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="card-action">
+				<div class="row">
+					<div class="col s12 l12 center-align margin-number">
+						<a href="#" class="white-text">(00) 00000-0000</a>						
+					</div>
+					<div class="col s12 l12 center-align">
+						<div class="chip "><img src="http://placehold.it/50x50/000000" alt="Contact Person">Guilherme Henrique</div>
+					</div>
+				</div>
+				<div class="left-align white-text patrocinado-text"><p>Anúncio patrocinado</p></div>
+			</div>
+		</div>	    		
+	</div>	
+<?php } ?>
 <!-- 	
 	<div class="col s12 m6 l3">
 		<div class="card medium grey darken-3">
@@ -135,9 +177,7 @@ FINAL PAGINA INICIAL
 <!-- 
 	INICIO DA PAGINAÇÃO
 -->
-	<?php foreach ($links as $link) {
-		echo "<li>". $link."</li>";
-	} ?>
+	<?php echo $links; ?>
 <!--
 <div class="row">
 	<ul class="pagination center-align">

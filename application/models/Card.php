@@ -36,9 +36,9 @@ class Card extends CI_Model {
                 return $this->db->count_all("cards");
         }
         //retorna resutados da paginação                
-        public function fetch_data($limit, $range) {
-                //$this->db->join('usuarios_facebook', 'usuarios_facebook.id = cards.facebook', 'inner');
+        public function fetch_data($limit, $range){
                 $this->db->order_by('cards.id', 'DESC');
+                $this->db->join('usuarios_facebook', 'cards.facebook = usuarios_facebook.id_f', 'inner');
                 $this->db->limit($limit, $range);
                 //$this->db->where('id', $id);
                 $query = $this->db->get("cards");
@@ -51,12 +51,5 @@ class Card extends CI_Model {
                         return $data;
                 }
                 return false;
-        }
-        /*
-        select * from cgn_empregos.cards 
-        inner join cgn_empregos.usuarios_facebook
-        on cgn_empregos.cards.facebook = cgn_empregos.usuarios_facebook.id
-        order by cgn_empregos.cards.id desc 
-        limit 1
-        */                
+        }               
 }

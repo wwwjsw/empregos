@@ -8,7 +8,7 @@ class Usuario extends CI_Model {
         }
         public function verifyFbUser($id)
         {
-                $this->db->select('id');
+                $this->db->select('id_f');
                 $this->db->from('usuarios_facebook');
                 $this->db->where('fb_id', $id);
                 $this->db->limit(1);

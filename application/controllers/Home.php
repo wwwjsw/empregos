@@ -30,24 +30,23 @@ class Home extends CI_Controller {
         $config["base_url"] = base_url();
         $total_row = $this->card->record_count();
         $config["total_rows"] = $total_row;
-        $config["per_page"] = 1;
-        $config['use_page_numbers'] = TRUE;
+        $config["per_page"] = 4;
+        $config['use_page_numbers'] = false;
         $config['num_links'] = $total_row;
-        $config['cur_tag_open'] = '&nbsp;<a class="current">';
+        $config['cur_tag_open'] = '<a>';
         $config['cur_tag_close'] = '</a>';
-        $config['next_link'] = 'Next';
-        $config['prev_link'] = 'Previous';
+        $config['next_link'] = 'Próximo';
+        $config['prev_link'] = 'Anterior';
         
         $this->pagination->initialize($config);
         if($this->uri->segment(1)){
-        $range = ($this->uri->segment(1)) ;
+        	$range = ($this->uri->segment(1)) ;
           }
         else{
-               $range = 0;
+			$range = 0;
         }
         $data["results"] = $this->card->fetch_data($config["per_page"], $range);
-        $str_links = $this->pagination->create_links();
-        $data["links"] = explode('&nbsp;',$str_links );
+        $data["links"] = $this->pagination->create_links();
         
 		//carrega as views da pagina inicial
 		$this->load->view('template/header');
