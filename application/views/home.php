@@ -2,9 +2,6 @@
 PAGINA INICIAL
 -->	
 <div class="row">
-<pre>
-	<?php var_dump($results[0]); ?>
-</pre>
 <?php foreach($results as $i => $r){ ?>
 	<?php //echo $r->id; ?>
 	<div class="col s12 m6 l3">
