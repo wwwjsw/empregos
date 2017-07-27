@@ -3,7 +3,6 @@ PAGINA INICIAL
 -->	
 <div class="row">
 <?php foreach($results as $i => $r){ ?>
-	<?php //echo $r->id; ?>
 	<div class="col s12 m6 l3">
 		<div class="card medium <?=$r->cor?> darken-3">
 			<div class="card-content white-text">
@@ -34,13 +33,20 @@ PAGINA INICIAL
 			<div class="card-action">
 				<div class="row">
 					<div class="col s12 l12 center-align margin-number">
-						<a href="#" class="white-text">(00) 00000-0000</a>						
+						<a href="#" class="white-text"><?=$r->numero?></a>						
 					</div>
+						<a href="http://fb.com/<?=$r->fb_id?>" target="_blank">
 					<div class="col s12 l12 center-align">
-						<div class="chip "><img src="http://placehold.it/50x50/000000" alt="Contact Person">Guilherme Henrique</div>
+							<div class="chip ">
+								<img src="http://graph.facebook.com/<?=$r->fb_id?>/picture?type=square" alt="Contact Person">
+								<?=$r->fb_name?>
+							</div>
 					</div>
+						</a>
 				</div>
-				<div class="left-align white-text patrocinado-text"><p>Anúncio patrocinado</p></div>
+				<?php if($r->is_ad){ ?>
+					<div class="left-align white-text patrocinado-text"><p>Anúncio patrocinado</p></div>
+					<?php } ?>
 			</div>
 		</div>	    		
 	</div>	
