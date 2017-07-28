@@ -40,7 +40,7 @@ CREATE TABLE `cards` (
 CHARACTER SET = utf8
 COLLATE = utf8_general_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 16;
+AUTO_INCREMENT = 21;
 -- -------------------------------------------------------------
 -- ---------------------------------------------------------
 
@@ -72,21 +72,25 @@ CREATE TABLE `usuarios_facebook` (
 CHARACTER SET = utf8
 COLLATE = utf8_general_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 4;
+AUTO_INCREMENT = 10;
 -- -------------------------------------------------------------
 -- ---------------------------------------------------------
 
 
 -- Dump data of "cards" ------------------------------------
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '7', '0', '3', 'servico', '0', '0', '0', '0', '0', '0', '0', '0', '(45) 00000 - 0000', 'blue-grey', 'gerente de loja', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '8', '0', '3', 'servico', '1', '1', '1', '1', '1', '1', '1', '1', '(45) 00000 - 0000', 'grey', 'administrativo', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '9', '0', '3', 'servico', '0', '1', '1', '1', '1', '1', '1', '1', '(45) 00000 - 0000', 'pink', 'fisioterapeuta', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '10', '0', '3', 'servico', NULL, NULL, NULL, NULL, '0', NULL, '0', NULL, '(45) 12345 - 1234', 'pink', 'operador de câmera', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '11', '0', '3', 'servico', NULL, NULL, NULL, NULL, '0', '0', NULL, NULL, '(45) 00000 - 0000', 'red', 'faturamento', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '12', '0', '3', 'servico', NULL, NULL, NULL, NULL, '0', '0', '0', NULL, '(45) 12345 - 1234', 'red', 'operador de câmera', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '13', '0', '3', 'servico', NULL, NULL, NULL, NULL, '0', NULL, NULL, NULL, '(45) 00000 - 0000', 'red', 'operador de empilhadeira', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '14', '0', '3', 'servico', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '(45) 00000 - 0000', 'grey', 'administrativo', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '15', '0', '3', 'servico', '0', '0', '0', '0', '1', '0', '0', '0', '(45) 00000 - 0000', 'deep-purple', 'farmacêutico', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '16', '0', '4', 'servico', '1', '1', '1', '1', '0', '1', '0', '1', '(45) 12345 - 1234', 'light-blue', 'motoboy', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '17', '0', '5', 'servico', '1', '0', '0', '0', '1', '0', '0', '1', '(45) 00000 - 0000', 'orange', 'farmácia', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '18', '0', '6', 'servico', '0', '1', '0', '0', '0', '0', '1', '0', '(45) 00000 - 0000', 'green', 'freelancer', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '19', '1', '7', 'servico', '1', '0', '1', '1', '1', '1', '0', '1', '(45) 00000 - 0000', 'grey', 'jurídico', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '20', '0', '9', 'servico', '1', '0', '0', '1', '0', '1', '0', '0', '(45) 12345 - 7777', 'yellow', 'operador de câmera', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '21', '0', '11', 'servico', '1', '0', '1', '0', '1', '0', '0', '0', '(45) 99999 - 6666', 'green', 'frentista', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '22', '0', '13', 'servico', '0', '1', '0', '1', '0', '0', '0', '1', '(45) 12345 - 1234', 'cyan', 'fiscal de loja', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '23', '1', '14', 'servico', '0', '1', '1', '0', '1', '0', '0', '0', '(45) 88888 - 0000', 'deep-purple', 'administrativo', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '24', '0', '15', 'servico', '0', '0', '0', '0', '1', '1', '0', '0', '(45) 12345 - 1234', 'amber', 'personal trainner', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '25', '0', '16', 'servico', '0', '1', '0', '0', '0', '0', '1', '0', '(45) 99999 - 0000', 'blue-grey', 'faturamento', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '26', '0', '17', 'servico', '0', '1', '0', '0', '0', '0', '0', '0', '45 66666 0000', 'light-blue', 'diarista', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '27', '0', '18', 'servico', '0', '1', '0', '0', '0', '1', '0', '1', '(45) 00000 - 9999', 'amber', 'gerente', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '28', '0', '19', 'servico', '0', '1', '1', '0', '1', '0', '0', '0', '(45) 99999 - 4444', 'orange', 'operador de telemarketing', '0' );
 -- ---------------------------------------------------------
 
 
@@ -97,6 +101,22 @@ INSERT INTO `usuarios`(`id`,`username`,`password`,`nivel`,`status`) VALUES ( '1'
 
 -- Dump data of "usuarios_facebook" ------------------------
 INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '3', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '4', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '5', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '6', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '7', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '8', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '9', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '10', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '11', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '12', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '13', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '14', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '15', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '16', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '17', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '18', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '19', '903743969763615', 'Guilherme Henrique' );
 -- ---------------------------------------------------------
 
 
