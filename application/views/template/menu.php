@@ -3,7 +3,7 @@ MENU DA PAGINA
 -->
 <nav>
 	<ul id="slide-out" class="side-nav">
-		<li><a class="waves-effect grey darken-2" href="#!" >Empresas</a></li>
+		<li><a class="waves-effect grey darken-2" href="#!" >Empregos</a></li>
 		<li><a class="waves-effect" href="#!">Candidatos</a></li>
 		<li><div class="divider"></div></li>
 		<li><a class="waves-effect" id="servico" 	href="#LoginModal">Anunciar Serviço</a></li>
@@ -15,7 +15,7 @@ MENU DA PAGINA
 	<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>	
 	<div class="nav-wrapper grey darken-4">
 		<ul class="left hide-on-med-and-down">
-			<li class="grey darken-2"><a href="#">Empresas</a></li>
+			<li class="grey darken-2"><a href="#">Empregos</a></li>
 			<li><a href="#">Candidatos</a></li>
 			<li><a href="#SearchModal" class="waves-effect waves-light btn cyan darken-3">Busca</a></li>
 		</ul>
