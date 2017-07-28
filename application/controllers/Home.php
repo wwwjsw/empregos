@@ -17,7 +17,7 @@ class Home extends CI_Controller {
 	 * Index Page for this controller.
 	 *
 	 */
-	public function index()
+	public function index($tipo = 'servico')
 	{
 		//carrega a library de validação, para retorno de erros no template/footer
 		$this->load->library('form_validation');
@@ -169,5 +169,9 @@ class Home extends CI_Controller {
 		{
 			redirect(base_url());
 		}
+	}
+	public function filtraTipo($tipo)
+	{
+		$this->index($tipo);
 	}	
 }

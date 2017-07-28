@@ -70,4 +70,7 @@ $route['administrativo/logout'] = 'admin/logout';
 /**
 	ROTA DA PAGINAÇÃO
 **/
-$route['(:any)'] = 'home/index/$1'; 
+$route['(:any)'] = 'home/index/$1';
+
+$route['servico'] = 'home/index/filtraTipo/servico'; 
+$route['vaga'] = 'home/index/filtraTipo/vaga'; 
