@@ -40,7 +40,7 @@ CREATE TABLE `cards` (
 CHARACTER SET = utf8
 COLLATE = utf8_general_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 21;
+AUTO_INCREMENT = 31;
 -- -------------------------------------------------------------
 -- ---------------------------------------------------------
 
@@ -72,7 +72,7 @@ CREATE TABLE `usuarios_facebook` (
 CHARACTER SET = utf8
 COLLATE = utf8_general_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 10;
+AUTO_INCREMENT = 22;
 -- -------------------------------------------------------------
 -- ---------------------------------------------------------
 
@@ -91,6 +91,8 @@ INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_
 INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '26', '0', '17', 'servico', '0', '1', '0', '0', '0', '0', '0', '0', '45 66666 0000', 'light-blue', 'diarista', '0' );
 INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '27', '0', '18', 'servico', '0', '1', '0', '0', '0', '1', '0', '1', '(45) 00000 - 9999', 'amber', 'gerente', '0' );
 INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '28', '0', '19', 'servico', '0', '1', '1', '0', '1', '0', '0', '0', '(45) 99999 - 4444', 'orange', 'operador de telemarketing', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '29', '0', '20', 'vaga', '1', '0', '0', '0', '1', '0', '0', '0', '(45) 12345 - 1234', 'teal', 'farmácia', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '30', '0', '21', 'vaga', '0', '0', '1', '0', '0', '0', '1', '0', '45 00000 0000', 'indigo', 'operador de caixa', '0' );
 -- ---------------------------------------------------------
 
 
@@ -117,6 +119,8 @@ INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '16', '903743
 INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '17', '903743969763615', 'Guilherme Henrique' );
 INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '18', '903743969763615', 'Guilherme Henrique' );
 INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '19', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '20', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '21', '903743969763615', 'Guilherme Henrique' );
 -- ---------------------------------------------------------
 
 
