@@ -29,17 +29,24 @@ class Card extends CI_Model {
                 $this->db->insert('cards', $data);
         }
         //conta registros para a paginação
-        public function record_count()
+        public function record_count($tipo = NULL)
         {
                 $this->db->where('block', FALSE);
-                $this->db->where('tipo', 'vaga');
-                return $this->db->count_all("cards");
+                if(isset($tipo))
+                {
+                        $this->db->where('tipo', $tipo);
+                }                
+                return $this->db->count_all_results("cards");
         }
         //retorna resutados da paginação                
-        public function fetch_data($limit, $range){
+        public function fetch_data($limit, $range, $tipo = NULL){
                 $this->db->join('usuarios_facebook', 'cards.facebook = usuarios_facebook.id_f', 'inner');
                 $this->db->order_by('cards.is_ad', 'DESC');
                 $this->db->order_by('cards.id', 'DESC');
+                if(isset($tipo))
+                {
+                        $this->db->where('cards.tipo', $tipo);
+                }
                 $this->db->limit($limit, $range);
                 //$this->db->where('id', $id);
                 $query = $this->db->get("cards");
