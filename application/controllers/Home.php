@@ -17,7 +17,7 @@ class Home extends CI_Controller {
 	 * Index Page for this controller.
 	 *
 	 */
-	public function index($tipo = 'servico')
+	public function index()
 	{
 		//carrega a library de validação, para retorno de erros no template/footer
 		$this->load->library('form_validation');
@@ -170,8 +170,95 @@ class Home extends CI_Controller {
 			redirect(base_url());
 		}
 	}
-	public function filtraTipo($tipo)
+	public function empregos()
 	{
-		$this->index($tipo);
+		//carrega a library de validação, para retorno de erros no template/footer
+		$this->load->library('form_validation');
+		// carrega library de paginação
+		$this->load->library('pagination');
+		//carrega model dos cards
+		$this->load->model('card');
+
+		$config = array();
+        $config["base_url"] = base_url('empregos');
+        $total_row = $this->card->record_count('vaga');
+        $config["total_rows"] = $total_row;
+        $config["per_page"] = 4;
+        $config['use_page_numbers'] = false;
+        $config['num_links'] = $total_row;
+        $config['full_tag_open'] = '<ul class="pagination center-align">';
+        $config['full_tag_close'] = '</ul>';
+        $config['cur_tag_open'] = '<li class="waves-effect active red"><a>';
+        $config['cur_tag_close'] = '</a></li>';
+        $config['num_tag_open'] = '<li class="waves-effect">';
+		$config['num_tag_close'] = '</li>';
+
+        $config['next_link'] = '<i class="material-icons">chevron_right</i>';
+        $config['next_tag_open'] = '<li class="waves-effect">';
+        $config['next_tag_close'] = '</li>';
+        
+        $config['prev_link'] = '<i class="material-icons">chevron_left</i>';
+        $config['prev_tag_open'] = '<li class="waves-effect">';
+        $config['prev_tag_close'] = '</li>';
+        
+        $this->pagination->initialize($config);
+        if($this->uri->segment(2)){
+        	$range = ($this->uri->segment(2)) ;
+          }
+        else{
+			$range = 0;
+        }
+        $data["results"] = $this->card->fetch_data($config["per_page"], $range, 'vaga');
+        $data["links"] = $this->pagination->create_links();
+
+        $this->load->view('template/header');
+		$this->load->view('template/menu');
+		$this->load->view('home', $data);
+		$this->load->view('template/footer');
 	}	
+	public function candidatos()
+	{
+		//carrega a library de validação, para retorno de erros no template/footer
+		$this->load->library('form_validation');
+		// carrega library de paginação
+		$this->load->library('pagination');
+		//carrega model dos cards
+		$this->load->model('card');
+
+		$config = array();
+        $config["base_url"] = base_url('candidatos');
+        $total_row = $this->card->record_count('servico');
+        $config["total_rows"] = $total_row;
+        $config["per_page"] = 4;
+        $config['use_page_numbers'] = false;
+        $config['num_links'] = $total_row;
+        $config['full_tag_open'] = '<ul class="pagination center-align">';
+        $config['full_tag_close'] = '</ul>';
+        $config['cur_tag_open'] = '<li class="waves-effect active red"><a>';
+        $config['cur_tag_close'] = '</a></li>';
+        $config['num_tag_open'] = '<li class="waves-effect">';
+		$config['num_tag_close'] = '</li>';
+
+        $config['next_link'] = '<i class="material-icons">chevron_right</i>';
+        $config['next_tag_open'] = '<li class="waves-effect">';
+        $config['next_tag_close'] = '</li>';
+        
+        $config['prev_link'] = '<i class="material-icons">chevron_left</i>';
+        $config['prev_tag_open'] = '<li class="waves-effect">';
+        $config['prev_tag_close'] = '</li>';
+        
+        $this->pagination->initialize($config);
+        if($this->uri->segment(2)){
+        	$range = ($this->uri->segment(2)) ;
+          }
+        else{
+			$range = 0;
+        }
+        $data["results"] = $this->card->fetch_data($config["per_page"], $range, 'servico');
+        $data["links"] = $this->pagination->create_links();
+		$this->load->view('template/header');
+		$this->load->view('template/menu');
+		$this->load->view('home', $data);
+		$this->load->view('template/footer');
+	}
 }
