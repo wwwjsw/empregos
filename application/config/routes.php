@@ -70,7 +70,12 @@ $route['administrativo/logout'] = 'admin/logout';
 /**
 	ROTA DA PAGINAÇÃO
 **/
-$route['(:any)'] = 'home/index/$1';
+$route['(:num)'] = 'home/index/$1';
+/**
+	ROTA DE LISTAGENS EXPECIFICAS 
+**/
+$route['empregos/(:num)'] = 'home/empregos/$1';
+$route['empregos'] = 'home/empregos';
 
-$route['servico'] = 'home/index/filtraTipo/servico'; 
-$route['vaga'] = 'home/index/filtraTipo/vaga'; 
+$route['candidatos/(:num)'] = 'home/candidatos/$1';
+$route['candidatos'] = 'home/candidatos';
