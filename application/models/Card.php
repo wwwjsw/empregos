@@ -27,6 +27,7 @@ class Card extends CI_Model {
                 );
 
                 $this->db->insert('cards', $data);
+                return $this->db->insert_id();
         }
         //conta registros para a paginação
         public function record_count($tipo = NULL)
