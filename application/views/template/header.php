@@ -23,7 +23,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   function statusChangeCallback(response) {
     if (response.status === 'connected') {
       testAPI();
-      //shareLINK();
+<?php if($this->input->get('share')){ ?>
+    //shareLINK('<?=base_url('anuncio/'.$this->input->get('share'))?>');
+    shareLINK('https://wwwjsw.github.io/empregos/facebook_share.html');
+<?php }?>
     } else {
       console.log('Por favor logue no applicativo.');
       document.getElementById('anunciar').classList.add('hide');
@@ -80,11 +83,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     });
   }
-function shareLINK(){
+function shareLINK(link){
 	FB.ui({
     	method: 'share',
-    	display: 'popup',
-    	href: 'https://developers.facebook.com/docs/',
+    	display: 'iframe',
+    	href: link,
   	}, function(response){});
 }
 
