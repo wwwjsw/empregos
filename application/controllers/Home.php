@@ -86,7 +86,7 @@ class Home extends CI_Controller {
 	 */	
 	public function enviarServicoVaga()
 	{
-		if($_POST) 
+		if($_POST)
 		{
 			$this->load->library('form_validation');
 
@@ -160,8 +160,11 @@ class Home extends CI_Controller {
 					$cor			=	$this->input->post('cor');
 					$cargo 			=	$this->input->post('cargo');
 
-					$this->card->SaveCard($id,$tipo,$clt,$diaria,$odontologico,$vida,$alimentacao,$saude,$comissao,$vt,$numero,$cor,$cargo);
-					redirect(base_url());
+					$cardSalvo = $this->card->SaveCard($id,$tipo,$clt,$diaria,$odontologico,$vida,$alimentacao,$saude,$comissao,$vt,$numero,$cor,$cargo);
+					if(isset($cardSalvo))
+                    {
+                        redirect(base_url('?share='.$cardSalvo));
+                    }
 				}
 
 			}
