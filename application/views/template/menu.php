@@ -3,8 +3,8 @@ MENU DA PAGINA
 -->
 <nav>
 	<ul id="slide-out" class="side-nav">
-		<li><a class="waves-effect grey darken-2" href="<?=base_url('empregos')?>" >Empregos</a></li>
-		<li><a class="waves-effect" href="<?=base_url('candidatos')?>">Candidatos</a></li>
+		<li><a class="waves-effect <?php echo ($this->uri->segment(1) == 'empregos' ? 'grey' : '');?> darken-2" href="<?=base_url('empregos')?>" >Empregos</a></li>
+		<li><a class="waves-effect <?php echo ($this->uri->segment(1) == 'candidatos' ? 'grey' : '');?> darken-2" href="<?=base_url('candidatos')?>">Candidatos</a></li>
 		<li><div class="divider"></div></li>
 		<li><a class="waves-effect" id="servico" 	href="#LoginModal">Anunciar Serviço</a></li>
 		<li><a class="waves-effect" id="vaga" 		href="#LoginModal">Anunciar Emprego</a></li>
