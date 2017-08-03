@@ -26,10 +26,46 @@ class Admin extends CI_Controller {
 		//verifica sessão 
 		if($this->session->logged_in == TRUE)
 		{
+		// carrega library de paginação
+		$this->load->library('pagination');
+		//carrega model dos cards
+		$this->load->model('administrativo');
+
+		$config = array();
+        $config["base_url"] = base_url('administrativo');
+        $total_row = $this->administrativo->record_count();
+        $config["total_rows"] = $total_row;
+        $config["per_page"] = 10;
+        $config['use_page_numbers'] = false;
+        $config['num_links'] = $total_row;
+        $config['full_tag_open'] = '<ul class="pagination center-align">';
+        $config['full_tag_close'] = '</ul>';
+        $config['cur_tag_open'] = '<li class="waves-effect active red"><a>';
+        $config['cur_tag_close'] = '</a></li>';
+        $config['num_tag_open'] = '<li class="waves-effect">';
+		$config['num_tag_close'] = '</li>';
+
+        $config['next_link'] = '<i class="material-icons">chevron_right</i>';
+        $config['next_tag_open'] = '<li class="waves-effect">';
+        $config['next_tag_close'] = '</li>';
+        
+        $config['prev_link'] = '<i class="material-icons">chevron_left</i>';
+        $config['prev_tag_open'] = '<li class="waves-effect">';
+        $config['prev_tag_close'] = '</li>';
+        
+        $this->pagination->initialize($config);
+        if($this->uri->segment(2)){
+        	$range = ($this->uri->segment(2)) ;
+          }
+        else{
+			$range = 0;
+        }
+        $data["results"] = $this->administrativo->fetch_data($config["per_page"], $range);
+        $data["links"] = $this->pagination->create_links();			
 			//carrega views para usuarios logados
 			$this->load->view('administrativo/header');
 			$this->load->view('administrativo/menu');
-			$this->load->view('listagem');
+			$this->load->view('listagem', $data);
 			$this->load->view('administrativo/footer');
 		}else
 		{

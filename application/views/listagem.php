@@ -13,30 +13,34 @@
 			</thead>
 
 			<tbody>
+			<?php foreach($results as $i => $r){ ?>
 				<tr>
-					<td>Guilherme henrique</td>
-					<td>Diarista <div class="chip">Vaga</div></td>
-					<td><a class='dropdown-button btn' href='#' data-activates='dropdown1'>Ações</a></td>
+					<td><?=$r->fb_name?></td>
+					<td><?=$r->cargo?> <div class="chip"><?=$r->tipo?></div></td>
+					<td><a class='dropdown-button btn' href='<?=$r->id?>' data-activates='<?=$r->id?>'>Ações</a></td>
 				</tr>
-				<tr>
-					<td>Guilherme henrique Machado</td>
-					<td>operador de produção <div class="chip">Candidato</div></td>
-					<td><a class='dropdown-button btn' href='#' data-activates='dropdown1'>Ações</a></td>
-				</tr>				
+			<?php } ?>				
 			</tbody>
 		</table>
 		<!--
 			Dropdown Structure
-		--> 
-		<ul id='dropdown1' class='dropdown-content'>
-			<li><a href="#!"><i class="material-icons">block</i>Bloquear</a></li>
-			<li><a href="#!"><i class="material-icons">delete</i>Excluir</a></li>
-			<li><a href="#!"><i class="material-icons">star</i>Patrocinado</a></li>
-			<li><a href="#!"><i class="material-icons">edit</i>Editar</a></li>
-		</ul>
+		-->
+		<?php foreach($results as $i => $r){ ?> 
+			<ul id='<?=$r->id?>' class='dropdown-content'>
+				<li><a href="<?=base_url('administrativo/block/'.$r->id)?>"><i class="material-icons">block</i>Bloquear</a></li>
+				<li><a href="<?=base_url('administrativo/delete/'.$r->id)?>"><i class="material-icons">delete</i>Excluir</a></li>
+				<li><a href="<?=base_url('administrativo/ads/'.$r->id)?>"><i class="material-icons">star</i>Patrocinado</a></li>
+				<li><a href="<?=base_url('administrativo/edit/'.$r->id)?>"><i class="material-icons">edit</i>Editar</a></li>
+			</ul>
+		<?php } ?>
   		<!--
 			End Of Dropdown Structure
   		-->
+	</div>
+	<div class="row">
+		<div class="container">
+			<?php echo $links; ?>
+		</div>
 	</div>
 </div>
 <!--
