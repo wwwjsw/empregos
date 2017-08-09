@@ -2,7 +2,12 @@
 PAGINA INICIAL
 -->	
 <div class="row">
-<?php foreach($results as $i => $r){ ?>
+<?php
+	if(!empty($results))
+	{
+		foreach($results as $i => $r)
+		{ 
+?>
 	<div class="col s12 m6 l3">
 		<div class="card medium <?=$r->cor?> darken-3">
 			<div class="card-content white-text">
@@ -59,7 +64,19 @@ PAGINA INICIAL
 			</div>
 		</div>	    		
 	</div>	
-<?php } ?>
+<?php 
+		}
+	}else
+	{
+?>
+	<div class="col s12 m12 l12">
+        <br><br><br><br><br><br>
+		<h2 class="center-align">Não há nada aqui. Tente mais tarde!</h2>
+        <br><br><br><br><br><br><br>
+    </div>
+<?php
+	} 
+?>
 <!-- 	
 	<div class="col s12 m6 l3">
 		<div class="card medium grey darken-3">
@@ -772,7 +789,6 @@ FINAL PAGINA INICIAL
 		</div>
 	</div>
 	<div id="modal-foo" class="modal-footer">
-		<!--<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cadastrar</a>-->
 		<button class="waves-green btn-flat" form="anunciar" type="submit">Cadastrar</button>
 	</div>
 </div>
@@ -785,7 +801,7 @@ FINAL PAGINA INICIAL
 <div id="SearchModal" class="modal modal-fixed-footer">
 	<div class="modal-content">
 		<div class="row">
-			<form id="search" class="col s12">
+			<form id="search" method="post" action="<?=base_url('/pesquisa')?>" class="col s12">
 				<div class="row">
 					<div class="col s12 l12">
 						<h5>Categorias</h5>
@@ -794,480 +810,480 @@ FINAL PAGINA INICIAL
 				<div class="row">
 					<div class="col s12 l4">
 						<p>
-							<input name="search" type="radio" id="o1" checked />
-							<label for="o1">administrativo</label>
+							<input name="termo" value="administrativo" form="search" type="radio" id="ts1" checked />
+							<label for="ts1">administrativo</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o2" />
-							<label for="o2">advogado</label>
+							<input name="termo" value="advogado" form="search" type="radio" id="ts2" />
+							<label for="ts2">advogado</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o3" />
-							<label for="o3">ajudante de cozinha</label>
+							<input name="termo" value="ajudante de cozinha" form="search" type="radio" id="ts3" />
+							<label for="ts3">ajudante de cozinha</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o4" />
-							<label for="o4">ajudante geral</label>
+							<input name="termo" value="ajudante geral" form="search" type="radio" id="ts4" />
+							<label for="ts4">ajudante geral</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o5" />
-							<label for="o5">analista fiscal</label>
+							<input name="termo" value="analista fiscal" form="search" type="radio" id="ts5" />
+							<label for="ts5">analista fiscal</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o6" />
-							<label for="o6">assistente administrativo</label>
+							<input name="termo" value="assistente administrativo" form="search" type="radio" id="ts6" />
+							<label for="ts6">assistente administrativo</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o7" />
-							<label for="o7">atendente</label>
+							<input name="termo" value="atendente" form="search" type="radio" id="ts7" />
+							<label for="ts7">atendente</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o8" />
-							<label for="o8">auxiliar</label>
+							<input name="termo" value="auxiliar" form="search" type="radio" id="ts8" />
+							<label for="ts8">auxiliar</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o9" />
-							<label for="o9">auxiliar administrativo</label>
+							<input name="termo" value="auxiliar administrativo" form="search" type="radio" id="ts9" />
+							<label for="ts9">auxiliar administrativo</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o10" />
-							<label for="o10">auxiliar de enfermagem</label>
+							<input name="termo" value="auxiliar de enfermagem" form="search" type="radio" id="ts10" />
+							<label for="ts10">auxiliar de enfermagem</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o11" />
-							<label for="o11">auxiliar de escritório</label>
+							<input name="termo" value="auxiliar de escritório" form="search" type="radio" id="ts11" />
+							<label for="ts11">auxiliar de escritório</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o12" />
-							<label for="o13">auxiliar de limpeza</label>
+							<input name="termo" value="auxiliar de limpeza" form="search" type="radio" id="ts12" />
+							<label for="ts13">auxiliar de limpeza</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o13" />
-							<label for="o13">auxiliar de produção</label>
+							<input name="termo" value="auxiliar de produção" form="search" type="radio" id="ts13" />
+							<label for="ts13">auxiliar de produção</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o14" />
-							<label for="o14">auxiliar de serviços em geral</label>
+							<input name="termo" value="auxiliar de serviços em geral" form="search" type="radio" id="ts14" />
+							<label for="ts14">auxiliar de serviços em geral</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o15" />
-							<label for="o15">auxiliar de vendas</label>
+							<input name="termo" value="auxiliar de vendas" form="search" type="radio" id="ts15" />
+							<label for="ts15">auxiliar de vendas</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o16" />
-							<label for="o16">baba</label>
+							<input name="termo" value="baba" form="search" type="radio" id="ts16" />
+							<label for="ts16">baba</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o17" />
-							<label for="o17">balconista</label>
+							<input name="termo" value="balconista" form="search" type="radio" id="ts17" />
+							<label for="ts17">balconista</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o18" />
-							<label for="o18">bilingue</label>
+							<input name="termo" value="bilingue" form="search" type="radio" id="ts18" />
+							<label for="ts18">bilingue</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o19" />
-							<label for="o19">caixa</label>
+							<input name="termo" value="caixa" form="search" type="radio" id="ts19" />
+							<label for="ts19">caixa</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o20" />
-							<label for="o20">cobrança</label>
+							<input name="termo" value="cobrança" form="search" type="radio" id="ts20" />
+							<label for="ts20">cobrança</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o21" />
-							<label for="o21">comercial</label>
+							<input name="termo" value="comercial" form="search" type="radio" id="ts21" />
+							<label for="ts21">comercial</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o22" />
-							<label for="o22">comprador</label>
+							<input name="termo" value="comprador" form="search" type="radio" id="ts22" />
+							<label for="ts22">comprador</label>
 						</p>
 						<p>
-							<input class="wit-gap" name="search" type="radio" id="o23" />
-							<label for="o23">conferente</label>
+							<input name="termo" value="conferente" form="search" type="radio" id="ts23" />
+							<label for="ts23">conferente</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o24" />
-							<label for="o24">contador</label>
+							<input name="termo" value="contador" form="search" type="radio" id="ts24" />
+							<label for="ts24">contador</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o25" />
+							<input name="termo" value="coordenador" form="search" type="radio" id="ts25" />
 							<label for="25">coordenador</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o26" />
-							<label for="o26">copeira</label>
+							<input name="termo" value="copeira" form="search" type="radio" id="ts26" />
+							<label for="ts26">copeira</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o27" />
-							<label for="o27">costureira</label>
+							<input name="termo" value="costureira" form="search" type="radio" id="ts27" />
+							<label for="ts27">costureira</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o28" />
-							<label for="o28">cozinheiro</label>
+							<input name="termo" value="cozinheiro" form="search" type="radio" id="ts28" />
+							<label for="ts28">cozinheiro</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o29" />
-							<label for="o29">demonstradora</label>
+							<input name="termo" value="demonstradora" form="search" type="radio" id="ts29" />
+							<label for="ts29">demonstradora</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o30" />
-							<label for="o30">departamento pessoal</label>
+							<input name="termo" value="departamento pessoal" form="search" type="radio" id="ts30" />
+							<label for="ts30">departamento pessoal</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o31" />
-							<label for="o31">designer gráfico</label>
+							<input name="termo" value="designer gráfico" form="search" type="radio" id="ts31" />
+							<label for="ts31">designer gráfico</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o32" />
-							<label for="o32">diarista</label>
+							<input name="termo" value="diarista" form="search" type="radio" id="ts32" />
+							<label for="ts32">diarista</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o33" />
-							<label for="o33">digitador</label>
+							<input name="termo" value="digitador" form="search" type="radio" id="ts33" />
+							<label for="ts33">digitador</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o34" />
-							<label for="o34">domestica</label>
+							<input name="termo" value="doméstica" form="search" type="radio" id="ts34" />
+							<label for="ts34">doméstica</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o35" />
-							<label for="o35">eletricista</label>
+							<input name="termo" value="eletricista" form="search" type="radio" id="ts35" />
+							<label for="ts35">eletricista</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o36" />
-							<label for="o36">encanador</label>
+							<input name="termo" value="encanador" form="search" type="radio" id="ts36" />
+							<label for="ts36">encanador</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o37" />
-							<label for="o37">enfermeiro</label>
+							<input name="termo" value="enfermeiro" form="search" type="radio" id="ts37" />
+							<label for="ts37">enfermeiro</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o38" />
-							<label for="o38">estoquista</label>
+							<input name="termo" value="estoquista" form="search" type="radio" id="ts38" />
+							<label for="ts38">estoquista</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o39" />
-							<label for="o39">estágio</label>
-						</p>
-					</div>
-					<div class="col s12 l4">
-						<p>
-							<input name="search" type="radio" id="o40" />
-							<label for="o40">farmacia</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o41" />
-							<label for="o41">farmacêutico</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o42" />
-							<label for="o42">faturamento</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o43" />
-							<label for="o43">faturista</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o44" />
-							<label for="o44">financeiro</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o45" />
-							<label for="o45">fiscal de loja</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o46" />
-							<label for="o46">fisioterapeuta</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o47" />
-							<label for="o47">fonoaudíologo</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o48" />
-							<label for="o48">freelancer</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o49" />
-							<label for="o49">frentista</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o50" />
-							<label for="o50">garçom</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o51" />
-							<label for="o51">gerente</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o52" />
-							<label for="o52">gerente administrativo</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o53" />
-							<label for="o53">gerente comercial</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o54" />
-							<label for="o54">gerente de loja</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o55" />
-							<label for="o55">gerente de vendas</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o56" />
-							<label for="o56">grafica</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o57" />
-							<label for="o57">home office</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o58" />
-							<label for="o58">hospitalar</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o59" />
-							<label for="o59">hotelaria</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o60" />
-							<label for="o60">hotelaria e turismo</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o61" />
-							<label for="o61">informatica</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o62" />
-							<label for="o62">informatica ti telecomunicações</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o63" />
-							<label for="o63">inspetor de alunos</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o64" />
-							<label for="o64">inspetor de qualidade</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o65" />
-							<label for="o65">jornalista</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o66" />
-							<label for="o66">juridico</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o67" />
-							<label for="o67">laboratorio</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o68" />
-							<label for="o68">limpeza</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o69" />
-							<label for="o69">logistica</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o70" />
-							<label for="o70">manobrista</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o71" />
-							<label for="o71">marketing</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o72" />
-							<label for="o72">mecânico</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o73" />
-							<label for="o73">motoboy</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o74" />
-							<label for="o74">motorista</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o75" />
-							<label for="o75">motorista hab b</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o76" />
-							<label for="o76">motorista hab d</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o77" />
-							<label for="o77">motorista particular</label>
-						</p>
-						<p>
-							<input name="search" type="radio" id="o78" />
-							<label for="o78">nutricionista</label>
+							<input name="termo" value="estágio" form="search" type="radio" id="ts39" />
+							<label for="ts39">estágio</label>
 						</p>
 					</div>
 					<div class="col s12 l4">
 						<p>
-							<input name="search" type="radio" id="o79" />
-							<label for="o79">office boy</label>
+							<input name="termo" value="farmácia" form="search" type="radio" id="ts40" />
+							<label for="ts40">farmácia</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o80" />
-							<label for="o80">operacional</label>
+							<input name="termo" value="farmacêutico" form="search" type="radio" id="ts41" />
+							<label for="ts41">farmacêutico</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o81" />
-							<label for="o81">operador de caixa</label>
+							<input name="termo" value="faturamento" form="search" type="radio" id="ts42" />
+							<label for="ts42">faturamento</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o82" />
-							<label for="o82">operador de câmera</label>
+							<input name="termo" value="faturista" form="search" type="radio" id="ts43" />
+							<label for="ts43">faturista</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o83" />
-							<label for="o83">operador de empilhadeira</label>
+							<input name="termo" value="financeiro" form="search" type="radio" id="ts44" />
+							<label for="ts44">financeiro</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o84" />
-							<label for="o84">operador de máquinas</label>
+							<input name="termo" value="fiscal de loja" form="search" type="radio" id="ts45" />
+							<label for="ts45">fiscal de loja</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o85" />
-							<label for="o85">operador de produção</label>
+							<input name="termo" value="fisioterapeuta" form="search" type="radio" id="ts46" />
+							<label for="ts46">fisioterapeuta</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o86" />
-							<label for="o86">operador de telemarketing</label>
+							<input name="termo" value="fonoaudíologo" form="search" type="radio" id="ts47" />
+							<label for="ts47">fonoaudíologo</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o87" />
-							<label for="o87">personal trainner</label>
+							<input name="termo" value="freelancer" form="search" type="radio" id="ts48" />
+							<label for="ts48">freelancer</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o88" />
-							<label for="o88">pintor</label>
+							<input name="termo" value="frentista" form="search" type="radio" id="ts49" />
+							<label for="ts49">frentista</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o89" />
-							<label for="o89">porteiro</label>
+							<input name="termo" value="garçom" form="search" type="radio" id="ts50" />
+							<label for="ts50">garçom</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o90" />
-							<label for="o90">professor</label>
+							<input name="termo" value="gerente" form="search" type="radio" id="ts51" />
+							<label for="ts51">gerente</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o91" />
-							<label for="o91">programador</label>
+							<input name="termo" value="gerente administrativo" form="search" type="radio" id="ts52" />
+							<label for="ts52">gerente administrativo</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o92" />
-							<label for="o92">promotor de vendas</label>
+							<input name="termo" value="gerente comercial" form="search" type="radio" id="ts53" />
+							<label for="ts53">gerente comercial</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o93" />
-							<label for="o93">químico</label>
+							<input name="termo" value="gerente de loja" form="search" type="radio" id="ts54" />
+							<label for="ts54">gerente de loja</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o94" />
-							<label for="o94">recepcionista</label>
+							<input name="termo" value="gerente de vendas" form="search" type="radio" id="ts55" />
+							<label for="ts55">gerente de vendas</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o95" />
-							<label for="o95">recepção</label>
+							<input name="termo" value="gráfica" form="search" type="radio" id="ts56" />
+							<label for="ts56">gráfica</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o96" />
-							<label for="o96">recursos humanos</label>
+							<input name="termo" value="home office" form="search" type="radio" id="ts57" />
+							<label for="ts57">home office</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o97" />
-							<label for="o97">repositor</label>
+							<input name="termo" value="hospitalar" form="search" type="radio" id="ts58" />
+							<label for="ts58">hospitalar</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o98" />
-							<label for="o98">representante comercial</label>
+							<input name="termo" value="hotelaria" form="search" type="radio" id="ts59" />
+							<label for="ts59">hotelaria</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o99" />
-							<label for="o99">secretária</label>
+							<input name="termo" value="hotelaria e turismo" form="search" type="radio" id="ts60" />
+							<label for="ts60">hotelaria e turismo</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o100" />
-							<label for="o100">segurança</label>
+							<input name="termo" value="informática" form="search" type="radio" id="ts61" />
+							<label for="ts61">informática</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o101" />
-							<label for="o101">segurança do trabalho</label>
+							<input name="termo" value="informática ti telecomunicações" form="search" type="radio" id="ts62" />
+							<label for="ts62">informática ti telecomunicações</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o102" />
-							<label for="o102">supervisor</label>
+							<input name="termo" value="inspetor de alunos" form="search" type="radio" id="ts63" />
+							<label for="ts63">inspetor de alunos</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o103" />
-							<label for="o103">telefonista</label>
+							<input name="termo" value="inspetor de qualidade" form="search" type="radio" id="ts64" />
+							<label for="ts64">inspetor de qualidade</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o104" />
-							<label for="o104">telemarketing</label>
+							<input name="termo" value="jornalista" form="search" type="radio" id="ts65" />
+							<label for="ts65">jornalista</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o105" />
-							<label for="o105">téc. em ar condicionado</label>
+							<input name="termo" value="jurídico" form="search" type="radio" id="ts66" />
+							<label for="ts66">jurídico</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o106" />
-							<label for="o106">téc. em eletrônica</label>
+							<input name="termo" value="laboratório" form="search" type="radio" id="ts67" />
+							<label for="ts67">laboratório</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o107" />
-							<label for="o107">téc. em enfermagem</label>
+							<input name="termo" value="limpeza" form="search" type="radio" id="ts68" />
+							<label for="ts68">limpeza</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o108" />
-							<label for="o108">téc. em informática</label>
+							<input name="termo" value="logística" form="search" type="radio" id="ts69" />
+							<label for="ts69">logística</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o109" />
-							<label for="o109">téc. em segurança do trabalho</label>
+							<input name="termo" value="manobrista" form="search" type="radio" id="ts70" />
+							<label for="ts70">manobrista</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o110" />
-							<label for="o110">usinagem</label>
+							<input name="termo" value="marketing" form="search" type="radio" id="ts71" />
+							<label for="ts71">marketing</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o111" />
-							<label for="o111">vendedor</label>
+							<input name="termo" value="mecânico" form="search" type="radio" id="ts72" />
+							<label for="ts72">mecânico</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o112" />
-							<label for="o112">vendedor de loja</label>
+							<input name="termo" value="motoboy" form="search" type="radio" id="ts73" />
+							<label for="ts73">motoboy</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o113" />
-							<label for="o113">vendedor de veículos</label>
+							<input name="termo" value="motorista" form="search" type="radio" id="ts74" />
+							<label for="ts74">motorista</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o114" />
-							<label for="o114">vendedor externo</label>
+							<input name="termo" value="motorista hab b" form="search" type="radio" id="ts75" />
+							<label for="ts75">motorista hab b</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o115" />
-							<label for="o115">vendedora</label>
+							<input name="termo" value="motorista hab d" form="search" type="radio" id="ts76" />
+							<label for="ts76">motorista hab d</label>
 						</p>
 						<p>
-							<input name="search" type="radio" id="o116" />
-							<label for="o116">vigilante</label>
+							<input name="termo" value="motorista particular" form="search" type="radio" id="ts77" />
+							<label for="ts77">motorista particular</label>
+						</p>
+						<p>
+							<input name="termo" value="nutricionista" form="search" type="radio" id="ts78" />
+							<label for="ts78">nutricionista</label>
+						</p>
+					</div>
+					<div class="col s12 l4">
+						<p>
+							<input name="termo" value="office boy" form="search" type="radio" id="ts79" />
+							<label for="ts79">office boy</label>
+						</p>
+						<p>
+							<input name="termo" value="operacional" form="search" type="radio" id="ts80" />
+							<label for="ts80">operacional</label>
+						</p>
+						<p>
+							<input name="termo" value="operador de caixa" form="search" type="radio" id="ts81" />
+							<label for="ts81">operador de caixa</label>
+						</p>
+						<p>
+							<input name="termo" value="operador de câmera" form="search" type="radio" id="ts82" />
+							<label for="ts82">operador de câmera</label>
+						</p>
+						<p>
+							<input name="termo" value="operador de empilhadeira" form="search" type="radio" id="ts83" />
+							<label for="ts83">operador de empilhadeira</label>
+						</p>
+						<p>
+							<input name="termo" value="operador de máquinas" form="search" type="radio" id="ts84" />
+							<label for="ts84">operador de máquinas</label>
+						</p>
+						<p>
+							<input name="termo" value="operador de produção" form="search" type="radio" id="ts85" />
+							<label for="ts85">operador de produção</label>
+						</p>
+						<p>
+							<input name="termo" value="operador de telemarketing" form="search" type="radio" id="ts86" />
+							<label for="ts86">operador de telemarketing</label>
+						</p>
+						<p>
+							<input name="termo" value="personal trainner" form="search" type="radio" id="ts87" />
+							<label for="ts87">personal trainner</label>
+						</p>
+						<p>
+							<input name="termo" value="pintor" form="search" type="radio" id="ts88" />
+							<label for="ts88">pintor</label>
+						</p>
+						<p>
+							<input name="termo" value="porteiro" form="search" type="radio" id="ts89" />
+							<label for="ts89">porteiro</label>
+						</p>
+						<p>
+							<input name="termo" value="professor" form="search" type="radio" id="ts90" />
+							<label for="ts90">professor</label>
+						</p>
+						<p>
+							<input name="termo" value="programador" form="search" type="radio" id="ts91" />
+							<label for="ts91">programador</label>
+						</p>
+						<p>
+							<input name="termo" value="promotor de vendas" form="search" type="radio" id="ts92" />
+							<label for="ts92">promotor de vendas</label>
+						</p>
+						<p>
+							<input name="termo" value="químico" form="search" type="radio" id="ts93" />
+							<label for="ts93">químico</label>
+						</p>
+						<p>
+							<input name="termo" value="recepcionista" form="search" type="radio" id="ts94" />
+							<label for="ts94">recepcionista</label>
+						</p>
+						<p>
+							<input name="termo" value="recepção" form="search" type="radio" id="ts95" />
+							<label for="ts95">recepção</label>
+						</p>
+						<p>
+							<input name="termo" value="recursos humanos" form="search" type="radio" id="ts96" />
+							<label for="ts96">recursos humanos</label>
+						</p>
+						<p>
+							<input name="termo" value="repositor" form="search" type="radio" id="ts97" />
+							<label for="ts97">repositor</label>
+						</p>
+						<p>
+							<input name="termo" value="representante comercial" form="search" type="radio" id="ts98" />
+							<label for="ts98">representante comercial</label>
+						</p>
+						<p>
+							<input name="termo" value="secretária" form="search" type="radio" id="ts99" />
+							<label for="ts99">secretária</label>
+						</p>
+						<p>
+							<input name="termo" value="segurança" form="search" type="radio" id="ts100" />
+							<label for="ts100">segurança</label>
+						</p>
+						<p>
+							<input name="termo" value="segurança do trabalho" form="search" type="radio" id="ts101" />
+							<label for="ts101">segurança do trabalho</label>
+						</p>
+						<p>
+							<input name="termo" value="supervisor" form="search" type="radio" id="ts102" />
+							<label for="ts102">supervisor</label>
+						</p>
+						<p>
+							<input name="termo" value="telefonista" form="search" type="radio" id="ts103" />
+							<label for="ts103">telefonista</label>
+						</p>
+						<p>
+							<input name="termo" value="telemarketing" form="search" type="radio" id="ts104" />
+							<label for="ts104">telemarketing</label>
+						</p>
+						<p>
+							<input name="termo" value="téc. em ar condicionado" form="search" type="radio" id="ts105" />
+							<label for="ts105">téc. em ar condicionado</label>
+						</p>
+						<p>
+							<input name="termo" value="téc. em eletrônica" form="search" type="radio" id="ts106" />
+							<label for="ts106">téc. em eletrônica</label>
+						</p>
+						<p>
+							<input name="termo" value="téc. em enfermagem" form="search" type="radio" id="ts107" />
+							<label for="ts107">téc. em enfermagem</label>
+						</p>
+						<p>
+							<input name="termo" value="téc. em informática" form="search" type="radio" id="ts108" />
+							<label for="ts108">téc. em informática</label>
+						</p>
+						<p>
+							<input name="termo" value="téc. em segurança do trabalho" form="search" type="radio" id="ts109" />
+							<label for="ts109">téc. em segurança do trabalho</label>
+						</p>
+						<p>
+							<input name="termo" value="usinagem" form="search" type="radio" id="ts110" />
+							<label for="ts110">usinagem</label>
+						</p>
+						<p>
+							<input name="termo" value="vendedor" form="search" type="radio" id="ts111" />
+							<label for="ts111">vendedor</label>
+						</p>
+						<p>
+							<input name="termo" value="vendedor de loja" form="search" type="radio" id="ts112" />
+							<label for="ts112">vendedor de loja</label>
+						</p>
+						<p>
+							<input name="termo" value="vendedor de veículos" form="search" type="radio" id="ts113" />
+							<label for="ts113">vendedor de veículos</label>
+						</p>
+						<p>
+							<input name="termo" value="vendedor externo" form="search" type="radio" id="ts114" />
+							<label for="ts114">vendedor externo</label>
+						</p>
+						<p>
+							<input name="termo" value="vendedora" form="search" type="radio" id="ts115" />
+							<label for="ts115">vendedora</label>
+						</p>
+						<p>
+							<input name="termo" value="vigilante" form="search" type="radio" id="ts116" />
+							<label for="ts116">vigilante</label>
 						</p>									  								
-					</div>	      		      	
+					</div>      		      	
 				</div>
 			</form>
 		</div>
 	</div>
 	<div id="modal-foo" class="modal-footer">
-		<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Buscar</a>
+		<button class="waves-green btn-flat" form="search" type="submit">Buscar</button>
 	</div>
 </div>
 <!--

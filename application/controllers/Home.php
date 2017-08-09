@@ -66,6 +66,67 @@ class Home extends CI_Controller {
 	}
 	/**
 	 *
+	 * Pesquisa Page for this controller.
+	 *
+	 */
+	public function pesquisa()
+	{
+	    //carrega a sessão
+        $this->load->library('session');
+        //verifica se post foi realizado para gerar a sessão
+        if($this->input->post())
+        {
+            $this->session->set_userdata('termo', $this->input->post('termo', TRUE));
+        }
+        //captura valor da sessão de pesquisa
+        $termo = $this->session->userdata('termo');
+		//carrega a library de validação, para retorno de erros no template/footer
+		$this->load->library('form_validation');
+		// carrega library de paginação
+		$this->load->library('pagination');
+		//carrega model dos cards
+		$this->load->model('pesquisa');
+
+		$config = array();
+        $config["base_url"] = base_url('pesquisa');
+        $total_row = $this->pesquisa->record_count($termo);
+        $config["total_rows"] = $total_row;
+        $config["per_page"] = 4;
+        $config['use_page_numbers'] = false;
+        $config['num_links'] = $total_row;
+        $config['full_tag_open'] = '<ul class="pagination center-align">';
+        $config['full_tag_close'] = '</ul>';
+        $config['cur_tag_open'] = '<li class="waves-effect active red"><a>';
+        $config['cur_tag_close'] = '</a></li>';
+        $config['num_tag_open'] = '<li class="waves-effect">';
+		$config['num_tag_close'] = '</li>';
+
+        $config['next_link'] = '<i class="material-icons">chevron_right</i>';
+        $config['next_tag_open'] = '<li class="waves-effect">';
+        $config['next_tag_close'] = '</li>';
+        
+        $config['prev_link'] = '<i class="material-icons">chevron_left</i>';
+        $config['prev_tag_open'] = '<li class="waves-effect">';
+        $config['prev_tag_close'] = '</li>';
+        
+        $this->pagination->initialize($config);
+        if($this->uri->segment(2)){
+        	$range = ($this->uri->segment(2)) ;
+          }
+        else{
+			$range = 0;
+        }
+        $data["results"] = $this->pesquisa->fetch_data($config["per_page"], $range, $termo);
+        $data["links"] = $this->pagination->create_links();
+        
+		//carrega as views da pagina inicial
+		$this->load->view('template/header');
+		$this->load->view('template/menu');
+		$this->load->view('home', $data);
+		$this->load->view('template/footer');
+	}	
+	/**
+	 *
 	 * lerAnuncio link interno do card.
 	 *
 	 */	

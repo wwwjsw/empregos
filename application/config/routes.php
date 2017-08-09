@@ -80,3 +80,8 @@ $route['empregos'] = 'home/empregos';
 
 $route['candidatos/(:num)'] = 'home/candidatos/$1';
 $route['candidatos'] = 'home/candidatos';
+/**
+	ROTA DE PESQUISA 
+**/
+$route['pesquisa/(:num)'] = 'home/pesquisa/$1';
+$route['pesquisa'] = 'home/pesquisa';
