@@ -37,10 +37,10 @@ PAGINA INICIAL
 				</div>
 				<div class="row">
 					<div class="col s12 l12 center-align">
-					<a href=""><img src="<?=base_url('assets/images/facebook.png')?>" alt=""></a>
-					<a href=""><img src="<?=base_url('assets/images/twitter.png')?>" alt=""></a>
-					<a href=""><img src="<?=base_url('assets/images/g_plus.png')?>" alt=""></a>
-					<a href=""><img src="<?=base_url('assets/images/linkedin.png')?>" alt=""></a>
+					<a href="https://www.facebook.com/dialog/share?app_id=1927915467451509&display=page&href=https://wwwjsw.github.io/empregos/facebook_share.html&redirect_uri=<?=base_url()?>" target="_blank"><img src="<?=base_url('assets/images/facebook.png')?>" alt=""></a>
+					<a href="https://twitter.com/intent/tweet?text=eu&url=https://wwwjsw.github.io/empregos/facebook_share.html" target="_blank"><img src="<?=base_url('assets/images/twitter.png')?>" alt=""></a>
+					<a href="https://plus.google.com/share?url=https://wwwjsw.github.io/empregos/facebook_share.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank"><img src="<?=base_url('assets/images/g_plus.png')?>" alt=""></a>
+					<a href="https://www.linkedin.com/shareArticle?mini=true&url=https://wwwjsw.github.io/empregos/facebook_share.html&title=<?=$r->cargo?>&summary=<?php ?>&source=LinkedIn" target="_blank"><img src="<?=base_url('assets/images/linkedin.png')?>" alt=""></a>
 					</div>
 				</div>
 			</div>
