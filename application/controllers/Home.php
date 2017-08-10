@@ -62,6 +62,7 @@ class Home extends CI_Controller {
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
 		$this->load->view('home', $data);
+        $this->load->view('template/modals');
 		$this->load->view('template/footer');
 	}
 	/**
@@ -123,6 +124,7 @@ class Home extends CI_Controller {
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
 		$this->load->view('home', $data);
+        $this->load->view('template/modals');
 		$this->load->view('template/footer');
 	}	
 	/**
@@ -278,6 +280,7 @@ class Home extends CI_Controller {
         $this->load->view('template/header');
 		$this->load->view('template/menu');
 		$this->load->view('home', $data);
+        $this->load->view('template/modals');
 		$this->load->view('template/footer');
 	}	
 	public function candidatos()
@@ -323,6 +326,7 @@ class Home extends CI_Controller {
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
 		$this->load->view('home', $data);
+        $this->load->view('template/modals');
 		$this->load->view('template/footer');
 	}
 }
