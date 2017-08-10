@@ -132,15 +132,29 @@ class Home extends CI_Controller {
 	 * lerAnuncio link interno do card.
 	 *
 	 */	
-	public function lerAnuncio($name)
+	public function lerAnuncio($id)
 	{
-		$this->load->view('template/header');
+        // carrega library de validação
+        $this->load->library('form_validation');
+        // carrega model interna
+        $this->load->model('interna');
+        //generate data
+        $data["results"] = $this->interna->cardData($id);
+        //load views
+        $this->load->view('template/header');
+        $this->load->view('template/menu');
+        $this->load->view('interna', $data);
+        $this->load->view('template/modals');
+        $this->load->view('template/footer');
+
+		/*
 		echo $name;
 		echo '<br/>';
 		echo base_url(uri_string());
 		echo '<br/>';
 		echo current_url();
 		$this->output->enable_profiler(true);
+		*/
 	}
 	/**
 	 *
