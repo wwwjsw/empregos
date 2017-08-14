@@ -57,3 +57,85 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="row">
+        <h2 class="black-text center light">Outros candidatos e vagas</h2>
+    </div>
+</div>
+<div class="row">
+    <?php
+    if(!empty($relate))
+    {
+        foreach($relate as $i => $re)
+        {
+            ?>
+            <div class="col s12 m6 l3">
+                <div class="card medium <?=$re->cor?> darken-3">
+                    <div class="card-content white-text">
+				<span class="card-title">
+					<a href="" class="white-text emprego_desc center-align">
+						<?php if($re->tipo == 'vaga'){ ?>
+                            Contrata-se:
+                        <?php }else{ ?>
+                            Procuro serviço de:
+                        <?php } ?>
+					</a>
+					<a class="white-text" href="<?=base_url('/anuncio/'.$re->id)?>"><?=$re->cargo?></a>
+				</span>
+                        <div class="row">
+                            <div class="col l6 s6 lateral-text">
+                                <?php if($re->beneficios_clt == TRUE){ ?><p>C.L.T</p><?php } ?>
+                                <?php if($re->beneficios_diaria == TRUE){ ?><p>Diaria</p><?php } ?>
+                                <?php if($re->beneficios_vida == TRUE){ ?><p>Seguro de vida</p><?php } ?>
+                                <?php if($re->beneficios_odonto == TRUE){ ?><p>Plano odontológico</p><?php } ?>
+                            </div>
+                            <div class="col l6 s6 lateral-text">
+                                <?php if($re->beneficios_alimentacao == TRUE){ ?><p>Vale alimentação</p><?php } ?>
+                                <?php if($re->beneficios_saude == TRUE){ ?><p>Plano de saúde</p><?php } ?>
+                                <?php if($re->beneficios_comissao == TRUE){ ?><p>Comissão</p><?php } ?>
+                                <?php if($re->beneficios_vt == TRUE){ ?><p>Vale transporte</p><?php } ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 l12 center-align">
+                                <a href="https://www.facebook.com/dialog/share?app_id=1927915467451509&display=page&href=https://wwwjsw.github.io/empregos/facebook_share.html&redirect_uri=<?=base_url()?>" target="_blank"><img src="<?=base_url('assets/images/facebook.png')?>" alt=""></a>
+                                <a href="https://twitter.com/intent/tweet?text=eu&url=https://wwwjsw.github.io/empregos/facebook_share.html" target="_blank"><img src="<?=base_url('assets/images/twitter.png')?>" alt=""></a>
+                                <a href="https://plus.google.com/share?url=https://wwwjsw.github.io/empregos/facebook_share.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank"><img src="<?=base_url('assets/images/g_plus.png')?>" alt=""></a>
+                                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://wwwjsw.github.io/empregos/facebook_share.html&title=<?=$re->cargo?>&summary=<?php ?>&source=LinkedIn" target="_blank"><img src="<?=base_url('assets/images/linkedin.png')?>" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <div class="row">
+                            <div class="col s12 l12 center-align margin-number">
+                                <a href="#" class="white-text"><?=$re->numero?></a>
+                            </div>
+                            <a href="http://fb.com/<?=$re->fb_id?>" target="_blank">
+                                <div class="col s12 l12 center-align">
+                                    <div class="chip ">
+                                        <img src="http://graph.facebook.com/<?=$re->fb_id?>/picture?type=square" alt="Contact Person">
+                                        <?=$re->fb_name?>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <?php if($re->is_ad){ ?>
+                            <div class="left-align white-text patrocinado-text"><p>Anúncio patrocinado</p></div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+            <?php
+        }
+    }else
+    {
+        ?>
+        <div class="col s12 m12 l12">
+            <br>
+            <h2 class="center-align">Não há nada aqui. Tente mais tarde!</h2>
+            <br>
+        </div>
+        <?php
+    }
+    ?>
+</div>

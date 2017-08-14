@@ -140,6 +140,8 @@ class Home extends CI_Controller {
         $this->load->model('interna');
         //generate data
         $data["results"] = $this->interna->cardData($id);
+        //generate data to related cards
+        $data['relate'] = $this->interna->cardRelate();
         //load views
         $this->load->view('template/header');
         $this->load->view('template/menu');
