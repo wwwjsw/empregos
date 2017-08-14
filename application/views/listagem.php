@@ -7,7 +7,7 @@
 			<thead>
 				<tr>
 					<th>Nome</th>
-					<th>Vaga Oferecida/Requerida</th>
+					<th>Emprego/Serviço</th>
 					<th>Ações</th>
 				</tr>
 			</thead>
@@ -16,7 +16,7 @@
 			<?php foreach($results as $i => $r){ ?>
 				<tr>
 					<td><?=$r->fb_name?></td>
-					<td><?=$r->cargo?> <div class="chip"><?=$r->tipo?></div></td>
+					<td><?=$r->cargo?> <div class="chip"><?=($r->tipo == 'servico'? 'serviço' : 'emprego')?></div></td>
 					<td><a class='dropdown-button btn' href='<?=$r->id?>' data-activates='<?=$r->id?>'>Ações</a></td>
 				</tr>
 			<?php } ?>				
