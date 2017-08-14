@@ -122,9 +122,19 @@ class Admin extends CI_Controller {
 	}
 	/**
 	 *
-	 * Index Page for this controller.
+	 * Actions Page for this controller.
 	 *
 	 */
+	public function actions($action, $id)
+    {
+        echo $action.'</br>';
+        echo $id;
+    }
+    /**
+     *
+     * Actions Page for this controller.
+     *
+     */
 	public function logout()
 	{
 		session_destroy();
