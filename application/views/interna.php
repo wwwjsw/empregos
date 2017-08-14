@@ -1,7 +1,4 @@
-<?php
-    //var_dump($results);
-    $r = $results[0];
-?>
+<?php $r = $results[0]; ?>
 <div class="row">
     <div class="col s12 m6 l6 offset-l3 offset-m3">
         <div class="card medium <?=$r->cor?> darken-3">
