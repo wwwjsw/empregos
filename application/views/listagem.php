@@ -27,10 +27,18 @@
 		-->
 		<?php foreach($results as $i => $r){ ?> 
 			<ul id='<?=$r->id?>' class='dropdown-content'>
-				<li><a href="<?=base_url('administrativo/block/'.$r->id)?>"><i class="material-icons">block</i>Bloquear</a></li>
-				<li><a href="<?=base_url('administrativo/delete/'.$r->id)?>"><i class="material-icons">delete</i>Excluir</a></li>
-				<li><a href="<?=base_url('administrativo/ads/'.$r->id)?>"><i class="material-icons">star</i>Patrocinado</a></li>
-				<li><a href="<?=base_url('administrativo/edit/'.$r->id)?>"><i class="material-icons">edit</i>Editar</a></li>
+                <?php if($r->block == TRUE){ ?>
+                    <li><a class="red-text" href="<?=base_url('administrativo/unblock/'.$r->id)?>"><i class="material-icons">check_circle</i>Desbloquear</a></li>
+                <?php }else{?>
+                    <li><a class="green-text" href="<?=base_url('administrativo/block/'.$r->id)?>"><i class="material-icons">block</i>Bloquear</a></li>
+                <?php } ?>
+				<li><a onclick="return deleteConfirmation(this)" href="<?=base_url('administrativo/delete/'.$r->id)?>"><i class="material-icons">delete</i>Excluir</a></li>
+                <?php if($r->is_ad == TRUE){ ?>
+                    <li><a class="red-text" href="<?=base_url('administrativo/disableAds/'.$r->id)?>"><i class="material-icons">money_off</i>Tirar patrocinio</a></li>
+                <?php }else{?>
+                    <li><a class="green-text" href="<?=base_url('administrativo/ads/'.$r->id)?>"><i class="material-icons">monetization_on</i>Patrocinado</a></li>
+                <?php } ?>
+                <li><a href="<?=base_url('administrativo/edit/'.$r->id)?>"><i class="material-icons">edit</i>Editar</a></li>
 			</ul>
 		<?php } ?>
   		<!--

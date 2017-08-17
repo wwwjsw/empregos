@@ -127,8 +127,115 @@ class Admin extends CI_Controller {
 	 */
 	public function actions($action, $id)
     {
-        echo $action.'</br>';
-        echo $id;
+        if($this->session->logged_in == TRUE)
+        {
+            switch ($action)
+            {
+                case 'block':
+                    $this->blockCard($id, $action);
+                    break;
+                case 'delete':
+                    $this->deleteCard($id, $action);
+                    break;
+                case 'ads':
+                    $this->adsCard($id, $action);
+                    break;
+                case 'edit':
+                    $this->editCard($id, $action);
+                    break;
+                case 'unblock':
+                    $this->unblockCard($id, $action);
+                    break;
+                case 'removeads':
+                    $this->removeAdsCard($id, $action);
+                    break;
+            }
+        }
+    }
+    /**
+     *
+     * Block card function.
+     *
+     */
+    public function blockCard($id, $action)
+    {
+        $this->load->model('actions');
+        if($this->actions->block($id))
+        {
+            redirect(base_url('administrativo'));
+        }
+    }
+    /**
+     *
+     * Unblock card function.
+     *
+     */
+    public function unblockCard($id, $action)
+    {
+        $this->load->model('actions');
+        if($this->actions->unblock($id))
+        {
+            redirect(base_url('administrativo'));
+        }
+    }
+    /**
+     *
+     * Delete card function.
+     *
+     */
+    public function deleteCard($id, $action)
+    {
+        $this->load->model('actions');
+        if($this->actions->delete($id))
+        {
+            redirect(base_url('administrativo'));
+        }
+    }
+    /**
+     *
+     * Ads card function.
+     *
+     */
+    public function adsCard($id, $action)
+    {
+        $this->load->model('actions');
+        if($this->actions->ads($id))
+        {
+            redirect(base_url('administrativo'));
+        }
+
+    }
+    /**
+     *
+     * Remove ads card function.
+     *
+     */
+    public function removeAdsCard($id, $action)
+    {
+        $this->load->model('actions');
+        if($this->actions->removeAds($id))
+        {
+            redirect(base_url('administrativo'));
+        }
+
+    }
+    /**
+     *
+     * Edit card function.
+     *
+     */
+    public function editCard($id, $action)
+    {
+        // carrega model interna
+        $this->load->model('interna');
+        //generate data
+        $data["results"] = $this->interna->cardData($id);
+        //load views
+        $this->load->view('administrativo/header');
+        $this->load->view('administrativo/menu');
+        $this->load->view('editor', $data);
+        $this->load->view('administrativo/footer');
+
     }
     /**
      *

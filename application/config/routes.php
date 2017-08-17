@@ -69,11 +69,13 @@ $route['administrativo'] = 'admin';
 $route['administrativo/(:num)'] = 'admin/index/$1';
 $route['administrativo/logout'] = 'admin/logout';
 /**
-    ROTA ADMIN - BLOCK CARD, REMOVE CARD, PROMOTE CARD, EDIT CARD
+    ROTA ADMIN - BLOCK CARD, UNBLOCK CARD, REMOVE CARD, PROMOTE CARD, EDIT CARD
 **/
 $route['administrativo/block/(:num)'] = 'admin/actions/block/$1';
+$route['administrativo/unblock/(:num)'] = 'admin/actions/unblock/$1';
 $route['administrativo/delete/(:num)'] = 'admin/actions/delete/$1';
 $route['administrativo/ads/(:num)'] = 'admin/actions/ads/$1';
+$route['administrativo/disableAds/(:num)'] = 'admin/actions/removeads/$1';
 $route['administrativo/edit/(:num)'] = 'admin/actions/edit/$1';
 /**
 	ROTA DA PAGINAÇÃO
