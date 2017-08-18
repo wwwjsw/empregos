@@ -80,8 +80,27 @@ class Actions extends CI_Model
      * EDIT card SQL.
      *
      */
-    public function edit($id)
+    public function edit($id,$clt,$diaria,$odontologico,$vida,$alimentacao,$saude,$comissao,$vt,$numero,$cor,$cargo)
     {
+        $data = array(
+            'beneficios_clt'        => $clt,
+            'beneficios_diaria'     => $diaria,
+            'beneficios_odonto'     => $odontologico,
+            'beneficios_vida'       => $vida,
+            'beneficios_alimentacao'=> $alimentacao,
+            'beneficios_saude'      => $saude,
+            'beneficios_comissao'   => $comissao,
+            'beneficios_vt'         => $vt,
+            'numero'                => $numero,
+            'cor'                   => $cor,
+            'cargo'                 => $cargo,
+            'block'                 => FALSE
+        );
+        $this->db->where('id',$id);
+        if($this->db->update('cards', $data))
+        {
+            return TRUE;
+        }
 
     }
 }

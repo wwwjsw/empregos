@@ -145,7 +145,7 @@
                         </p>
                         <p>
                             <input name="cargo" value="auxiliar de limpeza" form="anunciar" type="radio" id="t12" />
-                            <label for="t13">auxiliar de limpeza</label>
+                            <label for="t12">auxiliar de limpeza</label>
                         </p>
                         <p>
                             <input name="cargo" value="auxiliar de produção" form="anunciar" type="radio" id="t13" />
@@ -197,7 +197,7 @@
                         </p>
                         <p>
                             <input name="cargo" value="coordenador" form="anunciar" type="radio" id="t25" />
-                            <label for="25">coordenador</label>
+                            <label for="t25">coordenador</label>
                         </p>
                         <p>
                             <input name="cargo" value="copeira" form="anunciar" type="radio" id="t26" />
@@ -639,7 +639,7 @@
                         </p>
                         <p>
                             <input name="termo" value="auxiliar de limpeza" form="search" type="radio" id="ts12" />
-                            <label for="ts13">auxiliar de limpeza</label>
+                            <label for="ts12">auxiliar de limpeza</label>
                         </p>
                         <p>
                             <input name="termo" value="auxiliar de produção" form="search" type="radio" id="ts13" />
@@ -691,7 +691,7 @@
                         </p>
                         <p>
                             <input name="termo" value="coordenador" form="search" type="radio" id="ts25" />
-                            <label for="25">coordenador</label>
+                            <label for="ts25">coordenador</label>
                         </p>
                         <p>
                             <input name="termo" value="copeira" form="search" type="radio" id="ts26" />

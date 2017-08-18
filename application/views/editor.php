@@ -5,7 +5,7 @@
             <br>
             <input class="waves-effect waves-light btn" type="submit" form="anunciar" value="Salvar">
         </div>
-        <form id="anunciar" method="post" action="<?=base_url('/enviar')?>" class="col s12">
+        <form id="anunciar" method="post" action="" class="col s12">
             <div class="row">
                 <div class="col s12 l12">
                     <h5><span id="beneficios"></span></h5>
@@ -71,9 +71,9 @@
                         <option <?=($r->cor == 'amber' ? 'selected': '')?> value="amber" data-icon="<?=base_url('/assets/images/ff8f00.png')?>" class="left circle">Âmbar</option>
                         <option <?=($r->cor == 'orange' ? 'selected': '')?> value="orange" data-icon="<?=base_url('/assets/images/ef6c00.png')?>" class="left circle">Laranja</option>
                         <option <?=($r->cor == 'deep-orange' ? 'selected': '')?> value="deep-orange" data-icon="<?=base_url('/assets/images/d84315.png')?>" class="left circle">Laranja escuro</option>
-                        <option value="brown" data-icon="<?=base_url('/assets/images/4e342e.png')?>" class="left circle">Marron</option>
-                        <option value="grey" data-icon="<?=base_url('/assets/images/424242.png')?>" class="left circle">Cinza</option>
-                        <option value="blue-grey" data-icon="<?=base_url('/assets/images/37474f.png')?>" class="left circle">Cinza azulado</option>
+                        <option <?=($r->cor == 'brown' ? 'selected': '')?> value="brown" data-icon="<?=base_url('/assets/images/4e342e.png')?>" class="left circle">Marron</option>
+                        <option <?=($r->cor == 'grey' ? 'selected': '')?> value="grey" data-icon="<?=base_url('/assets/images/424242.png')?>" class="left circle">Cinza</option>
+                        <option <?=($r->cor == 'blue-grey' ? 'selected': '')?> value="blue-grey" data-icon="<?=base_url('/assets/images/37474f.png')?>" class="left circle">Cinza azulado</option>
                     </select>
                     <label for="color">Cor do Card</label>
                 </div>
@@ -131,7 +131,7 @@
                     </p>
                     <p>
                         <input <?=($r->cargo=='auxiliar de limpeza'? 'checked': '')?> name="cargo" value="auxiliar de limpeza" form="anunciar" type="radio" id="t12" />
-                        <label for="t13">auxiliar de limpeza</label>
+                        <label for="t12">auxiliar de limpeza</label>
                     </p>
                     <p>
                         <input <?=($r->cargo=='auxiliar de produção'? 'checked': '')?> name="cargo" value="auxiliar de produção" form="anunciar" type="radio" id="t13" />
@@ -183,7 +183,7 @@
                     </p>
                     <p>
                         <input <?=($r->cargo=='coordenador'? 'checked': '')?> name="cargo" value="coordenador" form="anunciar" type="radio" id="t25" />
-                        <label for="25">coordenador</label>
+                        <label for="t25">coordenador</label>
                     </p>
                     <p>
                         <input <?=($r->cargo=='copeira'? 'checked': '')?> name="cargo" value="copeira" form="anunciar" type="radio" id="t26" />
@@ -356,201 +356,201 @@
                         <label for="t67">laboratório</label>
                     </p>
                     <p>
-                        <input name="cargo" value="limpeza" form="anunciar" type="radio" id="t68" />
+                        <input <?=($r->cargo=='limpeza'? 'checked': '')?> name="cargo" value="limpeza" form="anunciar" type="radio" id="t68" />
                         <label for="t68">limpeza</label>
                     </p>
                     <p>
-                        <input name="cargo" value="logística" form="anunciar" type="radio" id="t69" />
+                        <input <?=($r->cargo=='logística'? 'checked': '')?> name="cargo" value="logística" form="anunciar" type="radio" id="t69" />
                         <label for="t69">logística</label>
                     </p>
                     <p>
-                        <input name="cargo" value="manobrista" form="anunciar" type="radio" id="t70" />
+                        <input <?=($r->cargo=='manobrista'? 'checked': '')?> name="cargo" value="manobrista" form="anunciar" type="radio" id="t70" />
                         <label for="t70">manobrista</label>
                     </p>
                     <p>
-                        <input name="cargo" value="marketing" form="anunciar" type="radio" id="t71" />
+                        <input <?=($r->cargo=='marketing'? 'checked': '')?> name="cargo" value="marketing" form="anunciar" type="radio" id="t71" />
                         <label for="t71">marketing</label>
                     </p>
                     <p>
-                        <input name="cargo" value="mecânico" form="anunciar" type="radio" id="t72" />
+                        <input <?=($r->cargo=='mecânico'? 'checked': '')?> name="cargo" value="mecânico" form="anunciar" type="radio" id="t72" />
                         <label for="t72">mecânico</label>
                     </p>
                     <p>
-                        <input name="cargo" value="motoboy" form="anunciar" type="radio" id="t73" />
+                        <input <?=($r->cargo=='motoboy'? 'checked': '')?> name="cargo" value="motoboy" form="anunciar" type="radio" id="t73" />
                         <label for="t73">motoboy</label>
                     </p>
                     <p>
-                        <input name="cargo" value="motorista" form="anunciar" type="radio" id="t74" />
+                        <input <?=($r->cargo=='motorista'? 'checked': '')?> name="cargo" value="motorista" form="anunciar" type="radio" id="t74" />
                         <label for="t74">motorista</label>
                     </p>
                     <p>
-                        <input name="cargo" value="motorista hab b" form="anunciar" type="radio" id="t75" />
+                        <input <?=($r->cargo=='motorista hab b'? 'checked': '')?> name="cargo" value="motorista hab b" form="anunciar" type="radio" id="t75" />
                         <label for="t75">motorista hab b</label>
                     </p>
                     <p>
-                        <input name="cargo" value="motorista hab d" form="anunciar" type="radio" id="t76" />
+                        <input <?=($r->cargo=='motorista hab d'? 'checked': '')?> name="cargo" value="motorista hab d" form="anunciar" type="radio" id="t76" />
                         <label for="t76">motorista hab d</label>
                     </p>
                     <p>
-                        <input name="cargo" value="motorista particular" form="anunciar" type="radio" id="t77" />
+                        <input <?=($r->cargo=='motorista particular'? 'checked': '')?> name="cargo" value="motorista particular" form="anunciar" type="radio" id="t77" />
                         <label for="t77">motorista particular</label>
                     </p>
                     <p>
-                        <input name="cargo" value="nutricionista" form="anunciar" type="radio" id="t78" />
+                        <input <?=($r->cargo=='nutricionista'? 'checked': '')?> name="cargo" value="nutricionista" form="anunciar" type="radio" id="t78" />
                         <label for="t78">nutricionista</label>
                     </p>
                 </div>
                 <div class="col s12 l4">
                     <p>
-                        <input name="cargo" value="office boy" form="anunciar" type="radio" id="t79" />
+                        <input <?=($r->cargo=='office boy'? 'checked': '')?> name="cargo" value="office boy" form="anunciar" type="radio" id="t79" />
                         <label for="t79">office boy</label>
                     </p>
                     <p>
-                        <input name="cargo" value="operacional" form="anunciar" type="radio" id="t80" />
+                        <input <?=($r->cargo=='operacional'? 'checked': '')?> name="cargo" value="operacional" form="anunciar" type="radio" id="t80" />
                         <label for="t80">operacional</label>
                     </p>
                     <p>
-                        <input name="cargo" value="operador de caixa" form="anunciar" type="radio" id="t81" />
+                        <input <?=($r->cargo=='operador de caixa'? 'checked': '')?> name="cargo" value="operador de caixa" form="anunciar" type="radio" id="t81" />
                         <label for="t81">operador de caixa</label>
                     </p>
                     <p>
-                        <input name="cargo" value="operador de câmera" form="anunciar" type="radio" id="t82" />
+                        <input <?=($r->cargo=='operador de câmera'? 'checked': '')?> name="cargo" value="operador de câmera" form="anunciar" type="radio" id="t82" />
                         <label for="t82">operador de câmera</label>
                     </p>
                     <p>
-                        <input name="cargo" value="operador de empilhadeira" form="anunciar" type="radio" id="t83" />
+                        <input <?=($r->cargo=='operador de empilhadeira'? 'checked': '')?> name="cargo" value="operador de empilhadeira" form="anunciar" type="radio" id="t83" />
                         <label for="t83">operador de empilhadeira</label>
                     </p>
                     <p>
-                        <input name="cargo" value="operador de máquinas" form="anunciar" type="radio" id="t84" />
+                        <input <?=($r->cargo=='operador de máquinas'? 'checked': '')?> name="cargo" value="operador de máquinas" form="anunciar" type="radio" id="t84" />
                         <label for="t84">operador de máquinas</label>
                     </p>
                     <p>
-                        <input name="cargo" value="operador de produção" form="anunciar" type="radio" id="t85" />
+                        <input <?=($r->cargo=='operador de produção'? 'checked': '')?> name="cargo" value="operador de produção" form="anunciar" type="radio" id="t85" />
                         <label for="t85">operador de produção</label>
                     </p>
                     <p>
-                        <input name="cargo" value="operador de telemarketing" form="anunciar" type="radio" id="t86" />
+                        <input <?=($r->cargo=='operador de telemarketing'? 'checked': '')?> name="cargo" value="operador de telemarketing" form="anunciar" type="radio" id="t86" />
                         <label for="t86">operador de telemarketing</label>
                     </p>
                     <p>
-                        <input name="cargo" value="personal trainner" form="anunciar" type="radio" id="t87" />
+                        <input <?=($r->cargo=='personal trainner'? 'checked': '')?> name="cargo" value="personal trainner" form="anunciar" type="radio" id="t87" />
                         <label for="t87">personal trainner</label>
                     </p>
                     <p>
-                        <input name="cargo" value="pintor" form="anunciar" type="radio" id="t88" />
+                        <input <?=($r->cargo=='pintor'? 'checked': '')?> name="cargo" value="pintor" form="anunciar" type="radio" id="t88" />
                         <label for="t88">pintor</label>
                     </p>
                     <p>
-                        <input name="cargo" value="porteiro" form="anunciar" type="radio" id="t89" />
+                        <input <?=($r->cargo=='porteiro'? 'checked': '')?> name="cargo" value="porteiro" form="anunciar" type="radio" id="t89" />
                         <label for="t89">porteiro</label>
                     </p>
                     <p>
-                        <input name="cargo" value="professor" form="anunciar" type="radio" id="t90" />
+                        <input <?=($r->cargo=='professor'? 'checked': '')?> name="cargo" value="professor" form="anunciar" type="radio" id="t90" />
                         <label for="t90">professor</label>
                     </p>
                     <p>
-                        <input name="cargo" value="programador" form="anunciar" type="radio" id="t91" />
+                        <input <?=($r->cargo=='programador'? 'checked': '')?> name="cargo" value="programador" form="anunciar" type="radio" id="t91" />
                         <label for="t91">programador</label>
                     </p>
                     <p>
-                        <input name="cargo" value="promotor de vendas" form="anunciar" type="radio" id="t92" />
+                        <input <?=($r->cargo=='promotor de vendas'? 'checked': '')?> name="cargo" value="promotor de vendas" form="anunciar" type="radio" id="t92" />
                         <label for="t92">promotor de vendas</label>
                     </p>
                     <p>
-                        <input name="cargo" value="químico" form="anunciar" type="radio" id="t93" />
+                        <input <?=($r->cargo=='químico'? 'checked': '')?> name="cargo" value="químico" form="anunciar" type="radio" id="t93" />
                         <label for="t93">químico</label>
                     </p>
                     <p>
-                        <input name="cargo" value="recepcionista" form="anunciar" type="radio" id="t94" />
+                        <input <?=($r->cargo=='recepcionista'? 'checked': '')?> name="cargo" value="recepcionista" form="anunciar" type="radio" id="t94" />
                         <label for="t94">recepcionista</label>
                     </p>
                     <p>
-                        <input name="cargo" value="recepção" form="anunciar" type="radio" id="t95" />
+                        <input <?=($r->cargo=='recepção'? 'checked': '')?> name="cargo" value="recepção" form="anunciar" type="radio" id="t95" />
                         <label for="t95">recepção</label>
                     </p>
                     <p>
-                        <input name="cargo" value="recursos humanos" form="anunciar" type="radio" id="t96" />
+                        <input <?=($r->cargo=='recursos humanos'? 'checked': '')?> name="cargo" value="recursos humanos" form="anunciar" type="radio" id="t96" />
                         <label for="t96">recursos humanos</label>
                     </p>
                     <p>
-                        <input name="cargo" value="repositor" form="anunciar" type="radio" id="t97" />
+                        <input <?=($r->cargo=='repositor'? 'checked': '')?> name="cargo" value="repositor" form="anunciar" type="radio" id="t97" />
                         <label for="t97">repositor</label>
                     </p>
                     <p>
-                        <input name="cargo" value="representante comercial" form="anunciar" type="radio" id="t98" />
+                        <input <?=($r->cargo=='representante comercial'? 'checked': '')?> name="cargo" value="representante comercial" form="anunciar" type="radio" id="t98" />
                         <label for="t98">representante comercial</label>
                     </p>
                     <p>
-                        <input name="cargo" value="secretária" form="anunciar" type="radio" id="t99" />
+                        <input <?=($r->cargo=='secretária'? 'checked': '')?> name="cargo" value="secretária" form="anunciar" type="radio" id="t99" />
                         <label for="t99">secretária</label>
                     </p>
                     <p>
-                        <input name="cargo" value="segurança" form="anunciar" type="radio" id="t100" />
+                        <input <?=($r->cargo=='segurança'? 'checked': '')?> name="cargo" value="segurança" form="anunciar" type="radio" id="t100" />
                         <label for="t100">segurança</label>
                     </p>
                     <p>
-                        <input name="cargo" value="segurança do trabalho" form="anunciar" type="radio" id="t101" />
+                        <input <?=($r->cargo=='segurança do trabalho'? 'checked': '')?> name="cargo" value="segurança do trabalho" form="anunciar" type="radio" id="t101" />
                         <label for="t101">segurança do trabalho</label>
                     </p>
                     <p>
-                        <input name="cargo" value="supervisor" form="anunciar" type="radio" id="t102" />
+                        <input <?=($r->cargo=='supervisor'? 'checked': '')?> name="cargo" value="supervisor" form="anunciar" type="radio" id="t102" />
                         <label for="t102">supervisor</label>
                     </p>
                     <p>
-                        <input name="cargo" value="telefonista" form="anunciar" type="radio" id="t103" />
+                        <input <?=($r->cargo=='telefonista'? 'checked': '')?> name="cargo" value="telefonista" form="anunciar" type="radio" id="t103" />
                         <label for="t103">telefonista</label>
                     </p>
                     <p>
-                        <input name="cargo" value="telemarketing" form="anunciar" type="radio" id="t104" />
+                        <input <?=($r->cargo=='telemarketing'? 'checked': '')?> name="cargo" value="telemarketing" form="anunciar" type="radio" id="t104" />
                         <label for="t104">telemarketing</label>
                     </p>
                     <p>
-                        <input name="cargo" value="téc. em ar condicionado" form="anunciar" type="radio" id="t105" />
+                        <input <?=($r->cargo=='téc. em ar condicionado'? 'checked': '')?> name="cargo" value="téc. em ar condicionado" form="anunciar" type="radio" id="t105" />
                         <label for="t105">téc. em ar condicionado</label>
                     </p>
                     <p>
-                        <input name="cargo" value="téc. em eletrônica" form="anunciar" type="radio" id="t106" />
+                        <input <?=($r->cargo=='téc. em eletrônica'? 'checked': '')?> name="cargo" value="téc. em eletrônica" form="anunciar" type="radio" id="t106" />
                         <label for="t106">téc. em eletrônica</label>
                     </p>
                     <p>
-                        <input name="cargo" value="téc. em enfermagem" form="anunciar" type="radio" id="t107" />
+                        <input <?=($r->cargo=='téc. em enfermagem'? 'checked': '')?> name="cargo" value="téc. em enfermagem" form="anunciar" type="radio" id="t107" />
                         <label for="t107">téc. em enfermagem</label>
                     </p>
                     <p>
-                        <input name="cargo" value="téc. em informática" form="anunciar" type="radio" id="t108" />
+                        <input <?=($r->cargo=='téc. em informática'? 'checked': '')?> name="cargo" value="téc. em informática" form="anunciar" type="radio" id="t108" />
                         <label for="t108">téc. em informática</label>
                     </p>
                     <p>
-                        <input name="cargo" value="téc. em segurança do trabalho" form="anunciar" type="radio" id="t109" />
+                        <input <?=($r->cargo=='téc. em segurança do trabalho'? 'checked': '')?> name="cargo" value="téc. em segurança do trabalho" form="anunciar" type="radio" id="t109" />
                         <label for="t109">téc. em segurança do trabalho</label>
                     </p>
                     <p>
-                        <input name="cargo" value="usinagem" form="anunciar" type="radio" id="t110" />
+                        <input <?=($r->cargo=='usinagem'? 'checked': '')?> name="cargo" value="usinagem" form="anunciar" type="radio" id="t110" />
                         <label for="t110">usinagem</label>
                     </p>
                     <p>
-                        <input name="cargo" value="vendedor" form="anunciar" type="radio" id="t111" />
+                        <input <?=($r->cargo=='vendedor'? 'checked': '')?> name="cargo" value="vendedor" form="anunciar" type="radio" id="t111" />
                         <label for="t111">vendedor</label>
                     </p>
                     <p>
-                        <input name="cargo" value="vendedor de loja" form="anunciar" type="radio" id="t112" />
+                        <input <?=($r->cargo=='vendedor de loja'? 'checked': '')?> name="cargo" value="vendedor de loja" form="anunciar" type="radio" id="t112" />
                         <label for="t112">vendedor de loja</label>
                     </p>
                     <p>
-                        <input name="cargo" value="vendedor de veículos" form="anunciar" type="radio" id="t113" />
+                        <input <?=($r->cargo=='vendedor de veículos'? 'checked': '')?> name="cargo" value="vendedor de veículos" form="anunciar" type="radio" id="t113" />
                         <label for="t113">vendedor de veículos</label>
                     </p>
                     <p>
-                        <input name="cargo" value="vendedor externo" form="anunciar" type="radio" id="t114" />
+                        <input <?=($r->cargo=='vendedor externo'? 'checked': '')?> name="cargo" value="vendedor externo" form="anunciar" type="radio" id="t114" />
                         <label for="t114">vendedor externo</label>
                     </p>
                     <p>
-                        <input name="cargo" value="vendedora" form="anunciar" type="radio" id="t115" />
+                        <input <?=($r->cargo=='vendedora'? 'checked': '')?> name="cargo" value="vendedora" form="anunciar" type="radio" id="t115" />
                         <label for="t115">vendedora</label>
                     </p>
                     <p>
-                        <input name="cargo" value="vigilante" form="anunciar" type="radio" id="t116" />
+                        <input <?=($r->cargo=='vigilante'? 'checked': '')?> name="cargo" value="vigilante" form="anunciar" type="radio" id="t116" />
                         <label for="t116">vigilante</label>
                     </p>
                 </div>

@@ -226,6 +226,67 @@ class Admin extends CI_Controller {
      */
     public function editCard($id, $action)
     {
+        /*
+         *inicio do post
+         */
+        if($_POST)
+        {
+            $this->load->library('form_validation');
+
+                //regras de validação para o card
+                $this->form_validation->set_rules('beneficios_clt',			'C.L.T',				'alpha');
+                $this->form_validation->set_rules('beneficios_diaria',		'Diaria',				'alpha');
+                $this->form_validation->set_rules('beneficios_odonto',		'Plano odontológico',	'alpha');
+                $this->form_validation->set_rules('beneficios_vida',		'Seguro de vida',		'alpha');
+                $this->form_validation->set_rules('beneficios_alimentacao',	'Vale alimentação',		'alpha');
+                $this->form_validation->set_rules('beneficios_saude',		'Plano de saúde',		'alpha');
+                $this->form_validation->set_rules('beneficios_comissao',	'Comissão',				'alpha');
+                $this->form_validation->set_rules('beneficios_vt',			'Vale transporte',		'alpha');
+                $this->form_validation->set_rules('numero',					'Numero',				'required|min_length[9]|max_length[17]|trim');
+                $this->form_validation->set_rules('cor',					'Cor',					'required');
+                $this->form_validation->set_rules('cargo',					'Cargo',				'required');
+
+
+                //tradução da validação
+                $this->form_validation->set_message('required', '{field} é um campo obrigatório.');
+                $this->form_validation->set_message('in_list', '{field} é um campo que permite apenas {param}');
+                $this->form_validation->set_message('alpha', '{field} é um campo que aceita apenas caracteres alfabéticos');
+                $this->form_validation->set_message('min_length', '{field} deve conter no mínimo {param} caracteres');
+                $this->form_validation->set_message('max_length', '{field} deve conter no máximo {param} caracteres');
+
+                if($this->form_validation->run() == FALSE){
+                    $this->editComponent($id);
+                }else
+                {
+                    $this->load->model('actions');
+
+                    $clt			=	($this->input->post('beneficios_clt') == 'on' ? TRUE : FALSE);
+                    $diaria 		=	($this->input->post('beneficios_diaria') == 'on' ? TRUE : FALSE);
+                    $odontologico	=	($this->input->post('beneficios_odonto') == 'on' ? TRUE : FALSE);
+                    $vida			=	($this->input->post('beneficios_vida') == 'on' ? TRUE : FALSE);
+                    $alimentacao	=	($this->input->post('beneficios_alimentacao') == 'on' ? TRUE : FALSE);
+                    $saude			=	($this->input->post('beneficios_saude') == 'on' ? TRUE : FALSE);
+                    $comissao		=	($this->input->post('beneficios_comissao') == 'on' ? TRUE : FALSE);
+                    $vt				=	($this->input->post('beneficios_vt') == 'on' ? TRUE : FALSE);
+                    $numero			=	$this->input->post('numero');
+                    $cor			=	$this->input->post('cor');
+                    $cargo 			=	$this->input->post('cargo');
+
+                    if($this->actions->edit($id,$clt,$diaria,$odontologico,$vida,$alimentacao,$saude,$comissao,$vt,$numero,$cor,$cargo))
+                    {
+                        redirect(base_url('administrativo'));
+                    }
+                }
+        }else{
+            $this->editComponent($id);
+        }
+        /*
+         *final do post
+         */
+
+    }
+    public function editComponent($id)
+    {
         // carrega model interna
         $this->load->model('interna');
         //generate data
@@ -235,7 +296,6 @@ class Admin extends CI_Controller {
         $this->load->view('administrativo/menu');
         $this->load->view('editor', $data);
         $this->load->view('administrativo/footer');
-
     }
     /**
      *
