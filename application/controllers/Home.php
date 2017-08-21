@@ -30,7 +30,7 @@ class Home extends CI_Controller {
         $config["base_url"] = base_url();
         $total_row = $this->card->record_count();
         $config["total_rows"] = $total_row;
-        $config["per_page"] = 4;
+        $config["per_page"] = 12;
         $config['use_page_numbers'] = false;
         $config['num_links'] = $total_row;
         $config['full_tag_open'] = '<ul class="pagination center-align">';
@@ -92,7 +92,7 @@ class Home extends CI_Controller {
         $config["base_url"] = base_url('pesquisa');
         $total_row = $this->pesquisa->record_count($termo);
         $config["total_rows"] = $total_row;
-        $config["per_page"] = 4;
+        $config["per_page"] = 12;
         $config['use_page_numbers'] = false;
         $config['num_links'] = $total_row;
         $config['full_tag_open'] = '<ul class="pagination center-align">';
@@ -265,7 +265,7 @@ class Home extends CI_Controller {
         $config["base_url"] = base_url('empregos');
         $total_row = $this->card->record_count('vaga');
         $config["total_rows"] = $total_row;
-        $config["per_page"] = 4;
+        $config["per_page"] = 12;
         $config['use_page_numbers'] = false;
         $config['num_links'] = $total_row;
         $config['full_tag_open'] = '<ul class="pagination center-align">';
@@ -312,7 +312,7 @@ class Home extends CI_Controller {
         $config["base_url"] = base_url('candidatos');
         $total_row = $this->card->record_count('servico');
         $config["total_rows"] = $total_row;
-        $config["per_page"] = 4;
+        $config["per_page"] = 12;
         $config['use_page_numbers'] = false;
         $config['num_links'] = $total_row;
         $config['full_tag_open'] = '<ul class="pagination center-align">';
