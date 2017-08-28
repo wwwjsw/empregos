@@ -3,6 +3,7 @@
 -->
 <div class="container">
 	<div class="row">
+        <?php if(!empty($results)){ ?>
 		<table class="highlight">
 			<thead>
 				<tr>
@@ -12,7 +13,7 @@
 				</tr>
 			</thead>
 
-			<tbody>
+            <tbody>
 			<?php foreach($results as $i => $r){ ?>
 				<tr>
 					<td><?=$r->fb_name?></td>
@@ -40,7 +41,10 @@
                 <?php } ?>
                 <li><a href="<?=base_url('administrativo/edit/'.$r->id)?>"><i class="material-icons">edit</i>Editar</a></li>
 			</ul>
-		<?php } ?>
+        <?php } ?>
+        <?php }else{ ?>
+            <h2>Não há nada aqui. Tente mais tarde!</h2>
+        <?php } ?>
   		<!--
 			End Of Dropdown Structure
   		-->
