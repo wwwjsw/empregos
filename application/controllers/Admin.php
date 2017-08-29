@@ -154,6 +154,56 @@ class Admin extends CI_Controller {
     }
     /**
      *
+     * listagem de empregos disponiveis
+     *
+     */
+    public function empregos()
+    {
+        $this->load->library('pagination');
+        $this->load->model('empregos');
+
+        if($this->input->post()){
+            //regras de validação
+            $this->form_validation->set_rules('profissao', 'Profissão', 'required|trim|min_length[3]|max_length[32]|is_unique[empregos.nome_cargo]');
+
+            //tradução da validação
+            $this->form_validation->set_message('min_length', '{field} deve ter no mínimo {param} caracteres.');
+            $this->form_validation->set_message('max_length', '{field} deve ter no máximo {param} caracteres.');
+            $this->form_validation->set_message('is_unique', 'A {field} já existe.');
+            $this->form_validation->set_message('required', '{field} é um campo obrigatório.');
+
+
+            //verifica se a validação ocorreu bem
+            if($this->form_validation->run() == FALSE)
+            {
+                //echo validation_errors();
+            }else
+            {
+                $cargo = $this->input->post('profissao');
+                $this->empregos->addEmpregos($cargo);
+            }
+        }
+        $data["results"] = $this->empregos->getEmpregos();
+        //load views
+        $this->load->view('administrativo/header');
+        $this->load->view('administrativo/menu');
+        $this->load->view('empregos', $data);
+        $this->load->view('administrativo/footer');
+    }
+    /**
+     *
+     * excluir empregos
+     *
+     */
+    public function empregosExcluir($id)
+    {
+        $this->load->model('empregos');
+        if($this->empregos->removeEmpregos($id) == true){
+            redirect(base_url('administrativo/empregos'));
+        }
+    }
+    /**
+     *
      * Block card function.
      *
      */

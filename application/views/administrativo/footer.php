@@ -53,6 +53,7 @@ WINDOW MESSAGE TO DELETE CONFIRMATION
         Materialize.toast('<?=form_error('numero')?>', 5000);
         Materialize.toast('<?=form_error('cor')?>', 5000);
         Materialize.toast('<?=form_error('cargo')?>', 5000);
+        Materialize.toast('<?=form_error('profissao')?>', 5000);
     </script>
 <?php } ?>
 </body>

@@ -78,6 +78,11 @@ $route['administrativo/ads/(:num)'] = 'admin/actions/ads/$1';
 $route['administrativo/disableAds/(:num)'] = 'admin/actions/removeads/$1';
 $route['administrativo/edit/(:num)'] = 'admin/actions/edit/$1';
 /**
+ROTA ADMIN - LISTAGEM DE EMPREGOS DISPONIVEIS, E EXCLUSÃO
+ **/
+$route['administrativo/empregos'] = 'admin/empregos';
+$route['administrativo/empregos/excluir/(:num)'] = 'admin/empregosExcluir/$1';
+/**
 	ROTA DA PAGINAÇÃO
 **/
 $route['(:num)'] = 'home/index/$1';
