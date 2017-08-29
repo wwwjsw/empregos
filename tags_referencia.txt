@@ -1,116 +1,320 @@
 administrativo
+
 advogado
+
 ajudante de cozinha
+
 ajudante geral
+
 analista fiscal
+
 assistente administrativo
+
 atendente
+
 auxiliar
+
 auxiliar administrativo
+
 auxiliar de enfermagem
-auxiliar de escritÃ³rio
+
+auxiliar de escritório
+
 auxiliar de limpeza
-auxiliar de produÃ§Ã£o
-auxiliar de serviÃ§os em geral
+
+auxiliar de produção
+
+auxiliar de serviços em geral
+
 auxiliar de vendas
-baba
+
+babá
+
 balconista
-bilingue
+
+
 caixa
-cobranÃ§a
+
+cobrança
+
 comercial
+
 comprador
+
 conferente
+
 contador
+
 coordenador
+
 copeira
+
 costureira
+
 cozinheiro
+
 demonstradora
+
 departamento pessoal
-designer grÃ¡fico
+
+designer gráfico
+
 diarista
+
 digitador
-domestica
+
+doméstica
+
 eletricista
+
 encanador
+
 enfermeiro
+
 estoquista
-estÃ¡gio
-farmacia
-farmacÃªutico
+
+estágio
+
+
+farmacêutico
+
 faturamento
+
 faturista
+
 financeiro
+
 fiscal de loja
+
 fisioterapeuta
-fonoaudÃ­ologo
+
+fonoaudiólogo
+
 freelancer
+
 frentista
-garÃ§om
+
+garçom
+
 gerente
+
 gerente administrativo
+
 gerente comercial
+
 gerente de loja
+
 gerente de vendas
-grafica
+
 home office
+
 hospitalar
+
 hotelaria
+
 hotelaria e turismo
-informatica
-informatica ti telecomunicaÃ§Ãµes
+
+informática
+
+informática ti telecomunicações
+
 inspetor de alunos
+
 inspetor de qualidade
+
 jornalista
-juridico
-laboratorio
+
+jurídico
+
 limpeza
-logistica
+
+logística
+
 manobrista
+
 marketing
-mecÃ¢nico
+
+mecânico
+
 motoboy
+
 motorista
+
 motorista hab b
+
 motorista hab d
+
 motorista particular
+
 nutricionista
+
 office boy
+
 operacional
+
 operador de caixa
-operador de cÃ¢mera
+
+operador de câmera
+
 operador de empilhadeira
-operador de mÃ¡quinas
-operador de produÃ§Ã£o
+
+operador de máquinas
+
+operador de produção
+
 operador de telemarketing
+
 personal trainner
+
 pintor
+
 porteiro
+
 professor
+
 programador
+
 promotor de vendas
-quÃ­mico
+
+químico
+
 recepcionista
-recepÃ§Ã£o
+
+recepção
+
 recursos humanos
+
 repositor
+
 representante comercial
-secretÃ¡ria
-seguranÃ§a
-seguranÃ§a do trabalho
+
+secretária
+
+segurança
+
+segurança do trabalho
+
 supervisor
+
 telefonista
+
 telemarketing
-tÃ©c. em ar condicionado
-tÃ©c. em eletrÃ´nica
-tÃ©c. em enfermagem
-tÃ©c. em informÃ¡tica
-tÃ©c. em seguranÃ§a do trabalho
+
+téc. em ar condicionado
+
+téc. em eletrônica
+
+téc. em enfermagem
+
+téc. em informática
+
+téc. em segurança do trabalho
+
 usinagem
+
 vendedor
+
 vendedor de loja
-vendedor de veÃ­culos
+
+vendedor de veículos
+
 vendedor externo
-vendedora
-vigilante
+
+vigilante                        
+Açougueiro
+
+Arquiteto
+
+Aux. de dentista
+
+Azulegista
+
+Borracheiro
+
+Cabeleireiro
+
+Carteiro
+
+Chaveiro
+
+Cinegrafista
+
+Confeiteiro
+
+Cuidador de idoso
+
+Dentista
+
+Depilador
+
+Empacotador
+
+Entregador
+
+Esteticista
+
+Estofador / Tapeceiro
+
+Florista
+
+Fotógrafo
+
+Gari
+
+Instrutor de autoescola
+
+Intérprete de Libras
+
+Jardineiro
+
+Lavador de carros
+
+Manicure/Pedicure
+
+Maquiador
+
+Marceneiro
+
+Massagista
+
+Mestre de Obras
+
+Montador de móveis
+
+Padeiro
+
+Panfleteiro
+
+Pedreiro
+
+Pizzaiolo
+
+Projetista
+
+Protético
+
+Psicólogo
+
+Publicitário
+
+Revisor de textos
+
+Serralheiro
+
+Servente de Pedreiro
+
+Soldador
+
+Téc. em contabilidade
+
+Téc. em Meio Ambiente
+
+Tosador
+
+Tratador de piscina
+
+Veterinário 
+
+Vidraceiro
+
+Zelador
