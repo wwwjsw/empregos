@@ -99,7 +99,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <select required>
+                        <select name="cargo" required>
                             <?php if(!empty($emprego)){ foreach ($emprego as $key => $e ){ ?>                            
                                 <option value="<?=$e->nome_cargo?>"><?=$e->nome_cargo?></option>
                             <?php }}else{?>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <select required>
+                        <select name="termo" required>
                             <?php if(!empty($emprego)){ foreach ($emprego as $key => $e ){ ?>
                                 <option value="<?=$e->nome_cargo?>"><?=$e->nome_cargo?></option>
                             <?php }}else{?>
