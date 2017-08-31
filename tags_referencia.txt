@@ -1,320 +1,173 @@
 administrativo
-
 advogado
-
 ajudante de cozinha
-
 ajudante geral
-
 analista fiscal
-
-assistente administrativo
-
-atendente
-
-auxiliar
-
-auxiliar administrativo
-
-auxiliar de enfermagem
-
-auxiliar de escritório
-
-auxiliar de limpeza
-
-auxiliar de produção
-
-auxiliar de serviços em geral
-
-auxiliar de vendas
-
-babá
-
-balconista
-
-
-caixa
-
-cobrança
-
-comercial
-
-comprador
-
-conferente
-
-contador
-
-coordenador
-
-copeira
-
-costureira
-
-cozinheiro
-
-demonstradora
-
-departamento pessoal
-
-designer gráfico
-
-diarista
-
-digitador
-
-doméstica
-
-eletricista
-
-encanador
-
-enfermeiro
-
-estoquista
-
-estágio
-
-
-farmacêutico
-
-faturamento
-
-faturista
-
-financeiro
-
-fiscal de loja
-
-fisioterapeuta
-
-fonoaudiólogo
-
-freelancer
-
-frentista
-
-garçom
-
-gerente
-
-gerente administrativo
-
-gerente comercial
-
-gerente de loja
-
-gerente de vendas
-
-home office
-
-hospitalar
-
-hotelaria
-
-hotelaria e turismo
-
-informática
-
-informática ti telecomunicações
-
-inspetor de alunos
-
-inspetor de qualidade
-
-jornalista
-
-jurídico
-
-limpeza
-
-logística
-
-manobrista
-
-marketing
-
-mecânico
-
-motoboy
-
-motorista
-
-motorista hab b
-
-motorista hab d
-
-motorista particular
-
-nutricionista
-
-office boy
-
-operacional
-
-operador de caixa
-
-operador de câmera
-
-operador de empilhadeira
-
-operador de máquinas
-
-operador de produção
-
-operador de telemarketing
-
-personal trainner
-
-pintor
-
-porteiro
-
-professor
-
-programador
-
-promotor de vendas
-
-químico
-
-recepcionista
-
-recepção
-
-recursos humanos
-
-repositor
-
-representante comercial
-
-secretária
-
-segurança
-
-segurança do trabalho
-
-supervisor
-
-telefonista
-
-telemarketing
-
-téc. em ar condicionado
-
-téc. em eletrônica
-
-téc. em enfermagem
-
-téc. em informática
-
-téc. em segurança do trabalho
-
-usinagem
-
-vendedor
-
-vendedor de loja
-
-vendedor de veículos
-
-vendedor externo
-
-vigilante                        
-Açougueiro
-
 Arquiteto
-
+assistente administrativo
+atendente
 Aux. de dentista
-
+auxiliar
+auxiliar administrativo
+auxiliar de enfermagem
+auxiliar de escritório
+auxiliar de limpeza
+auxiliar de produção
+auxiliar de serviços em geral
+auxiliar de vendas
 Azulegista
-
+Açougueiro
+babá
+balconista
 Borracheiro
-
 Cabeleireiro
-
+cabelereira
+caixa
 Carteiro
-
 Chaveiro
-
 Cinegrafista
-
+cobrança
+comercial
+comprador
 Confeiteiro
-
+conferente
+contador
+coordenador
+copeira
+costureira
+cozinheiro
 Cuidador de idoso
-
+demonstradora
 Dentista
-
+departamento pessoal
 Depilador
-
+designer gráfico
+diarista
+digitador
+doméstica
+eletricista
 Empacotador
-
+encanador
+enfermeiro
 Entregador
-
 Esteticista
-
 Estofador / Tapeceiro
-
+estoquista
+estágio
+farmacêutico
+faturamento
+faturista
+financeiro
+fiscal de loja
+fisioterapeuta
 Florista
-
+fonoaudiólogo
 Fotógrafo
-
+freelancer
+frentista
 Gari
-
+garçom
+gerente
+gerente administrativo
+gerente comercial
+gerente de loja
+gerente de vendas
+home office
+hospitalar
+hotelaria
+hotelaria e turismo
+informática
+informática ti telecomunicações
+inspetor de alunos
+inspetor de qualidade
 Instrutor de autoescola
-
 Intérprete de Libras
-
 Jardineiro
-
+jornalista
+jurídico
 Lavador de carros
-
+limpeza
+logística
 Manicure/Pedicure
-
+manobrista
 Maquiador
-
 Marceneiro
-
+marketing
 Massagista
-
+mecânico
 Mestre de Obras
-
 Montador de móveis
-
+motoboy
+motorista
+motorista hab b
+motorista hab d
+motorista particular
+nutricionista
+office boy
+operacional
+operador de caixa
+operador de câmera
+operador de empilhadeira
+operador de máquinas
+operador de produção
+operador de telemarketing
 Padeiro
-
 Panfleteiro
-
 Pedreiro
-
+personal trainner
+pintor
 Pizzaiolo
-
+porteiro
+professor
+professor de alemão
+professor de bateria
+professor de espanhol
+professor de frances
+professor de guitarra
+professor de ingles
+professor de italiano
+professor de mandarin
+professor de russo
+professor de saxofone
+professor de teclado/piano
+professor de violão
+programador
 Projetista
-
+promotor de vendas
 Protético
-
 Psicólogo
-
 Publicitário
-
+químico
+recepcionista
+recepção
+recursos humanos
+repositor
+representante comercial
 Revisor de textos
-
+secretária
+segurança
+segurança do trabalho
 Serralheiro
-
 Servente de Pedreiro
-
 Soldador
-
-Téc. em contabilidade
-
-Téc. em Meio Ambiente
-
+supervisor
+telefonista
+telemarketing
 Tosador
-
 Tratador de piscina
-
-Veterinário 
-
+téc. em ar condicionado
+Téc. em contabilidade
+téc. em eletrônica
+téc. em enfermagem
+téc. em informática
+Téc. em Meio Ambiente
+téc. em segurança do trabalho
+usinagem
+vendedor
+vendedor de loja
+vendedor de veículos
+vendedor externo
+Veterinário
 Vidraceiro
-
+vigilante
 Zelador
