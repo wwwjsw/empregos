@@ -57,12 +57,15 @@ class Home extends CI_Controller {
         }
         $data["results"] = $this->card->fetch_data($config["per_page"], $range);
         $data["links"] = $this->pagination->create_links();
+        //empregos
+        $this->load->model("empregos");
+        $data["emprego"] = $this->empregos->getEmpregos();
         
 		//carrega as views da pagina inicial
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
 		$this->load->view('home', $data);
-        $this->load->view('template/modals');
+        $this->load->view('template/modals', $data);
 		$this->load->view('template/footer');
 	}
 	/**
@@ -119,12 +122,15 @@ class Home extends CI_Controller {
         }
         $data["results"] = $this->pesquisa->fetch_data($config["per_page"], $range, $termo);
         $data["links"] = $this->pagination->create_links();
-        
+        //empregos
+        $this->load->model("empregos");
+        $data["emprego"] = $this->empregos->getEmpregos();
+
 		//carrega as views da pagina inicial
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
 		$this->load->view('home', $data);
-        $this->load->view('template/modals');
+        $this->load->view('template/modals', $data);
 		$this->load->view('template/footer');
 	}	
 	/**
@@ -134,6 +140,10 @@ class Home extends CI_Controller {
 	 */	
 	public function lerAnuncio($id)
 	{
+        //empregos
+        $this->load->model("empregos");
+        $data["emprego"] = $this->empregos->getEmpregos();
+
         // carrega library de validação
         $this->load->library('form_validation');
         // carrega model interna
@@ -146,7 +156,7 @@ class Home extends CI_Controller {
         $this->load->view('template/header');
         $this->load->view('template/menu');
         $this->load->view('interna', $data);
-        $this->load->view('template/modals');
+        $this->load->view('template/modals', $data);
         $this->load->view('template/footer');
 
 		/*
@@ -292,11 +302,14 @@ class Home extends CI_Controller {
         }
         $data["results"] = $this->card->fetch_data($config["per_page"], $range, 'vaga');
         $data["links"] = $this->pagination->create_links();
+        //empregos
+        $this->load->model("empregos");
+        $data["emprego"] = $this->empregos->getEmpregos();
 
         $this->load->view('template/header');
 		$this->load->view('template/menu');
 		$this->load->view('home', $data);
-        $this->load->view('template/modals');
+        $this->load->view('template/modals', $data);
 		$this->load->view('template/footer');
 	}	
 	public function candidatos()
@@ -339,10 +352,14 @@ class Home extends CI_Controller {
         }
         $data["results"] = $this->card->fetch_data($config["per_page"], $range, 'servico');
         $data["links"] = $this->pagination->create_links();
+        //empregos
+        $this->load->model("empregos");
+        $data["emprego"] = $this->empregos->getEmpregos();
+
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
 		$this->load->view('home', $data);
-        $this->load->view('template/modals');
+        $this->load->view('template/modals', $data);
 		$this->load->view('template/footer');
 	}
 }
