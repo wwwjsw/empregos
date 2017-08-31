@@ -1,173 +1,173 @@
-administrativo
-advogado
-ajudante de cozinha
-ajudante geral
-analista fiscal
+Administrativo
+Advogado
+Ajudante de cozinha
+Ajudante geral
+Analista fiscal
 Arquiteto
-assistente administrativo
-atendente
+Assistente administrativo
+Atendente
 Aux. de dentista
-auxiliar
-auxiliar administrativo
-auxiliar de enfermagem
-auxiliar de escritório
-auxiliar de limpeza
-auxiliar de produção
-auxiliar de serviços em geral
-auxiliar de vendas
+Auxiliar
+Auxiliar administrativo
+Auxiliar de enfermagem
+Auxiliar de escritório
+Auxiliar de limpeza
+Auxiliar de produção
+Auxiliar de serviços em geral
+Auxiliar de vendas
 Azulegista
 Açougueiro
-babá
-balconista
+Babá
+Balconista
 Borracheiro
 Cabeleireiro
-cabelereira
-caixa
+Cabelereira
+Caixa
 Carteiro
 Chaveiro
 Cinegrafista
-cobrança
-comercial
-comprador
+Cobrança
+Comercial
+Comprador
 Confeiteiro
-conferente
-contador
-coordenador
-copeira
-costureira
-cozinheiro
+Conferente
+Contador
+Coordenador
+Copeira
+Costureira
+Cozinheiro
 Cuidador de idoso
-demonstradora
+Demonstradora
 Dentista
-departamento pessoal
+Departamento pessoal
 Depilador
-designer gráfico
-diarista
-digitador
-doméstica
-eletricista
+Designer gráfico
+Diarista
+Digitador
+Doméstica
+Eletricista
 Empacotador
-encanador
-enfermeiro
+Encanador
+Enfermeiro
 Entregador
 Esteticista
 Estofador / Tapeceiro
-estoquista
-estágio
-farmacêutico
-faturamento
-faturista
-financeiro
-fiscal de loja
-fisioterapeuta
+Estoquista
+Estágio
+Farmacêutico
+Faturamento
+Faturista
+Financeiro
+Fiscal de loja
+Fisioterapeuta
 Florista
-fonoaudiólogo
+Fonoaudiólogo
 Fotógrafo
-freelancer
-frentista
+Freelancer
+Frentista
 Gari
-garçom
-gerente
-gerente administrativo
-gerente comercial
-gerente de loja
-gerente de vendas
-home office
-hospitalar
-hotelaria
-hotelaria e turismo
-informática
-informática ti telecomunicações
-inspetor de alunos
-inspetor de qualidade
+Garçom
+Gerente
+Gerente administrativo
+Gerente comercial
+Gerente de loja
+Gerente de vendas
+Home office
+Hospitalar
+Hotelaria
+Hotelaria e turismo
+Informática
+Informática ti telecomunicações
+Inspetor de alunos
+Inspetor de qualidade
 Instrutor de autoescola
 Intérprete de Libras
 Jardineiro
-jornalista
-jurídico
+Jornalista
+Jurídico
 Lavador de carros
-limpeza
-logística
+Limpeza
+Logística
 Manicure/Pedicure
-manobrista
+Manobrista
 Maquiador
 Marceneiro
-marketing
+Marketing
 Massagista
-mecânico
+Mecânico
 Mestre de Obras
 Montador de móveis
-motoboy
-motorista
-motorista hab b
-motorista hab d
-motorista particular
-nutricionista
-office boy
-operacional
-operador de caixa
-operador de câmera
-operador de empilhadeira
-operador de máquinas
-operador de produção
-operador de telemarketing
+Motoboy
+Motorista
+Motorista hab b
+Motorista hab d
+Motorista particular
+Nutricionista
+Office boy
+Operacional
+Operador de caixa
+Operador de câmera
+Operador de empilhadeira
+Operador de máquinas
+Operador de produção
+Operador de telemarketing
 Padeiro
 Panfleteiro
 Pedreiro
-personal trainner
-pintor
+Personal trainner
+Pintor
 Pizzaiolo
-porteiro
-professor
-professor de alemão
-professor de bateria
-professor de espanhol
-professor de frances
-professor de guitarra
-professor de ingles
-professor de italiano
-professor de mandarin
-professor de russo
-professor de saxofone
-professor de teclado/piano
-professor de violão
-programador
+Porteiro
+Professor
+Professor de alemão
+Professor de bateria
+Professor de espanhol
+Professor de frances
+Professor de guitarra
+Professor de ingles
+Professor de italiano
+Professor de mandarin
+Professor de russo
+Professor de saxofone
+Professor de teclado/piano
+Professor de violão
+Programador
 Projetista
-promotor de vendas
+Promotor de vendas
 Protético
 Psicólogo
 Publicitário
-químico
-recepcionista
-recepção
-recursos humanos
-repositor
-representante comercial
+Químico
+Recepcionista
+Recepção
+Recursos humanos
+Repositor
+Representante comercial
 Revisor de textos
-secretária
-segurança
-segurança do trabalho
+Secretária
+Segurança
+Segurança do trabalho
 Serralheiro
 Servente de Pedreiro
 Soldador
-supervisor
-telefonista
-telemarketing
+Supervisor
+Telefonista
+Telemarketing
 Tosador
 Tratador de piscina
-téc. em ar condicionado
+Téc. em ar condicionado
 Téc. em contabilidade
-téc. em eletrônica
-téc. em enfermagem
-téc. em informática
+Téc. em eletrônica
+Téc. em enfermagem
+Téc. em informática
 Téc. em Meio Ambiente
-téc. em segurança do trabalho
-usinagem
-vendedor
-vendedor de loja
-vendedor de veículos
-vendedor externo
+Téc. em segurança do trabalho
+Usinagem
+Vendedor
+Vendedor de loja
+Vendedor de veículos
+Vendedor externo
 Veterinário
 Vidraceiro
-vigilante
+Vigilante
 Zelador
