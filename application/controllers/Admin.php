@@ -341,6 +341,10 @@ class Admin extends CI_Controller {
         $this->load->model('interna');
         //generate data
         $data["results"] = $this->interna->cardData($id);
+        //empregos
+        $this->load->model("empregos");
+        $data["emprego"] = $this->empregos->getEmpregos();
+
         //load views
         $this->load->view('administrativo/header');
         $this->load->view('administrativo/menu');
