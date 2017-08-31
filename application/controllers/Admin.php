@@ -192,6 +192,18 @@ class Admin extends CI_Controller {
     }
     /**
      *
+     * listagem de users (são usuarios do facebook e administradores do sistema)
+     *
+     */
+    public function users()
+    {
+        $this->load->view('administrativo/header');
+        $this->load->view('administrativo/menu');
+        //$this->load->view('empregos', $data);
+        $this->load->view('administrativo/footer');
+    }
+    /**
+     *
      * excluir empregos
      *
      */
