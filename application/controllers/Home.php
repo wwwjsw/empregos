@@ -199,7 +199,7 @@ class Home extends CI_Controller {
 				$fb_name	=	$this->input->post('fb_name');
 				
 				//verifica se usuario do facebook já existe e retorna id
-				if($this->usuario->verifyFbUser($fb_id))
+				if($this->usuario->verifyFbUser($fb_id) == true)
 				{
 					$id = $this->usuario->verifyFbUser($fb_id);
 					//echo $id;

@@ -199,7 +199,7 @@ class Admin extends CI_Controller {
     {
         $this->load->view('administrativo/header');
         $this->load->view('administrativo/menu');
-        //$this->load->view('empregos', $data);
+        $this->load->view('usuarios');
         $this->load->view('administrativo/footer');
     }
     /**
