@@ -13,7 +13,7 @@ class Usuario extends CI_Model {
                 $this->db->where('fb_id', $id);
                 $this->db->limit(1);
                 $query = $this->db->get();
-                return $query->row('id');
+                return $query->row('id_f');
         }
         public function insertFbUser($id, $name)
         {
