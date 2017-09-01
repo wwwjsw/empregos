@@ -40,7 +40,7 @@ CREATE TABLE `cards` (
 CHARACTER SET = utf8
 COLLATE = utf8_general_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 43;
+AUTO_INCREMENT = 48;
 -- -------------------------------------------------------------
 -- ---------------------------------------------------------
 
@@ -54,7 +54,7 @@ CREATE TABLE `empregos` (
 CHARACTER SET = utf8
 COLLATE = utf8_general_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 18;
+AUTO_INCREMENT = 211;
 -- -------------------------------------------------------------
 -- ---------------------------------------------------------
 
@@ -86,32 +86,201 @@ CREATE TABLE `usuarios_facebook` (
 CHARACTER SET = utf8
 COLLATE = utf8_general_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 33;
+AUTO_INCREMENT = 43;
 -- -------------------------------------------------------------
 -- ---------------------------------------------------------
 
 
 -- Dump data of "cards" ------------------------------------
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '16', '0', '4', 'servico', '1', '1', '1', '1', '0', '1', '0', '1', '(45) 12345 - 1234', 'light-blue', 'motoboy', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '17', '0', '5', 'servico', '1', '0', '0', '0', '1', '0', '0', '1', '(45) 00000 - 0000', 'orange', 'farmácia', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '18', '0', '6', 'servico', '0', '1', '0', '0', '0', '0', '1', '0', '(45) 00000 - 0000', 'green', 'freelancer', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '19', '0', '7', 'servico', '1', '0', '1', '1', '1', '1', '0', '1', '(45) 00000 - 0000', 'grey', 'jurídico', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '20', '0', '9', 'servico', '1', '0', '0', '1', '0', '1', '0', '0', '(45) 12345 - 7777', 'yellow', 'operador de câmera', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '21', '0', '11', 'servico', '1', '0', '1', '0', '1', '0', '0', '0', '(45) 99999 - 6666', 'green', 'frentista', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '22', '0', '13', 'servico', '0', '1', '0', '1', '0', '0', '0', '1', '(45) 12345 - 1234', 'cyan', 'fiscal de loja', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '23', '0', '14', 'servico', '0', '1', '1', '0', '1', '0', '0', '0', '(45) 88888 - 0000', 'deep-purple', 'administrativo', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '24', '0', '15', 'servico', '0', '0', '0', '0', '1', '1', '0', '0', '(45) 12345 - 1234', 'amber', 'personal trainner', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '25', '0', '16', 'servico', '0', '1', '0', '0', '0', '0', '1', '0', '(45) 99999 - 0000', 'blue-grey', 'faturamento', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '26', '0', '17', 'servico', '0', '1', '0', '0', '0', '0', '0', '0', '45 66666 0000', 'light-blue', 'diarista', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '27', '1', '18', 'servico', '0', '1', '0', '0', '0', '1', '0', '1', '(45) 00000 - 9999', 'brown', 'gerente de loja', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '28', '0', '19', 'servico', '0', '1', '1', '0', '1', '0', '0', '0', '(45) 99999 - 4444', 'orange', 'operador de telemarketing', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '29', '1', '20', 'vaga', '1', '0', '0', '0', '1', '0', '0', '0', '(45) 12345 - 1234', 'teal', 'farmácia', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '30', '0', '21', 'vaga', '0', '0', '1', '0', '0', '0', '1', '0', '45 00000 0000', 'indigo', 'operador de caixa', '0' );
-INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '31', '1', '22', 'vaga', '1', '1', '0', '0', '1', '0', '1', '0', '(45) 99999 - 0000', 'lime', 'faturamento', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '52', '0', '45', 'servico', '1', '0', '0', '0', '1', '0', '0', '0', '(45) 99999 - 0000', 'blue', 'Auxiliar de escritório', '0' );
+INSERT INTO `cards`(`id`,`is_ad`,`facebook`,`tipo`,`beneficios_clt`,`beneficios_diaria`,`beneficios_odonto`,`beneficios_vida`,`beneficios_alimentacao`,`beneficios_saude`,`beneficios_comissao`,`beneficios_vt`,`numero`,`cor`,`cargo`,`block`) VALUES ( '53', '0', '45', 'servico', '0', '1', '1', '0', '1', '1', '1', '1', '(45) 00000 - 0000', 'pink', 'Manicure/Pedicure', '0' );
 -- ---------------------------------------------------------
 
 
 -- Dump data of "empregos" ---------------------------------
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '27', 'Zelador' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '28', 'Vigilante' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '29', 'Vidraceiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '30', 'Veterinário' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '31', 'Vendedor externo' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '32', 'Vendedor de veículos' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '33', 'Vendedor de loja' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '34', 'Vendedor' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '35', 'Usinagem' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '36', 'Téc. em segurança do trabalho' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '37', 'Téc. em Meio Ambiente' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '38', 'Téc. em informática' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '39', 'Téc. em enfermagem' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '40', 'Téc. em eletrônica' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '41', 'Téc. em contabilidade' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '42', 'Téc. em ar condicionado' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '43', 'Tratador de piscina' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '44', 'Tosador' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '45', 'Telemarketing' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '46', 'Telefonista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '47', 'Supervisor' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '48', 'Soldador' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '49', 'Servente de Pedreiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '50', 'Serralheiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '51', 'Segurança do trabalho' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '52', 'Segurança' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '53', 'Secretária' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '54', 'Revisor de textos' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '55', 'Representante comercial' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '56', 'Repositor' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '57', 'Recursos humanos' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '58', 'Recepção' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '59', 'Recepcionista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '60', 'Químico' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '61', 'Publicitário' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '62', 'Psicólogo' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '63', 'Protético' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '64', 'Promotor de vendas' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '65', 'Projetista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '66', 'Programador' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '67', 'Professor de violão' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '68', 'Professor de teclado/piano' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '69', 'Professor de saxofone' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '70', 'Professor de russo' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '71', 'Professor de mandarin' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '72', 'Professor de italiano' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '73', 'Professor de inglês' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '74', 'Professor de guitarra' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '75', 'Professor de francês' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '76', 'Professor de espanhol' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '77', 'Professor de bateria' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '78', 'Professor de alemão' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '79', 'Professor' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '80', 'Porteiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '81', 'Pizzaiolo' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '82', 'Pintor' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '83', 'Personal trainer' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '84', 'Pedreiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '85', 'Panfleteiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '86', 'Padeiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '87', 'Operador de telemarketing' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '88', 'Operador de produção' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '89', 'Operador de máquinas' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '90', 'Operador de empilhadeira' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '91', 'Operador de câmera' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '92', 'Operador de caixa' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '93', 'Operacional' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '94', 'Office boy' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '95', 'Nutricionista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '96', 'Motorista particular' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '97', 'Motorista hab d' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '98', 'Motorista hab b' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '99', 'Motorista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '100', 'Motoboy' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '101', 'Montador de móveis' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '102', 'Mestre de Obras' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '103', 'Mecânico' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '104', 'Massagista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '105', 'Marketing' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '106', 'Marceneiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '107', 'Maquiador' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '108', 'Manobrista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '109', 'Manicure/Pedicure' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '110', 'Logística' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '111', 'Limpeza' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '112', 'Lavador de carros' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '113', 'Jurídico' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '114', 'Jornalista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '115', 'Jardineiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '116', 'Intérprete de Libras' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '117', 'Instrutor de autoescola' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '118', 'Inspetor de qualidade' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '119', 'Inspetor de alunos' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '120', 'Informática ti telecomunicações' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '121', 'Informática' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '122', 'Hotelaria e turismo' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '123', 'Hotelaria' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '124', 'Hospitalar' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '125', 'Home office' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '126', 'Gerente de vendas' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '127', 'Gerente de loja' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '128', 'Gerente comercial' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '129', 'Gerente administrativo' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '130', 'Gerente' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '131', 'Garçom' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '132', 'Gari' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '133', 'Frentista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '134', 'Freelancer' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '135', 'Fotógrafo' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '136', 'Fonoaudiólogo' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '137', 'Florista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '138', 'Fisioterapeuta' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '139', 'Fiscal de loja' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '140', 'Financeiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '141', 'Faturista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '142', 'Faturamento' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '143', 'Farmacêutico' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '144', 'Estágio' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '145', 'Estoquista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '146', 'Estofador/tapeceiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '147', 'Esteticista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '148', 'Entregador' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '149', 'Enfermeiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '150', 'Encanador' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '151', 'Empacotador' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '152', 'Eletricista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '153', 'Doméstica' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '154', 'Digitador' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '155', 'Diarista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '156', 'Designer gráfico' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '157', 'Depilador' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '159', 'Dentista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '160', 'Demonstradora' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '161', 'Cuidador de idoso' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '162', 'Cozinheiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '163', 'Costureira' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '164', 'Copeira' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '165', 'Coordenador' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '166', 'Contador' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '167', 'Conferente' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '168', 'Confeiteiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '169', 'Comprador' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '170', 'Comercial' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '171', 'Cobrança' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '172', 'Cinegrafista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '173', 'Chaveiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '174', 'Carteiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '175', 'Caixa' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '176', 'Cabeleireira' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '177', 'Borracheiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '178', 'Balconista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '179', 'Babá' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '180', 'Açougueiro' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '181', 'Auxiliar de vendas' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '182', 'Auxiliar de serviços em geral' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '183', 'Auxiliar de produção' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '184', 'Auxiliar de limpeza' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '185', 'Auxiliar de escritório' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '186', 'Auxiliar de enfermagem' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '187', 'Auxiliar administrativo' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '188', 'Auxiliar' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '189', 'Auxiliar de dentista' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '190', 'Atendente' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '191', 'Assistente administrativo' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '192', 'Arquiteto' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '193', 'Analista fiscal' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '194', 'Ajudante geral' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '195', 'Ajudante de cozinha' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '196', 'Advogado' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '197', 'Administrativo' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '198', 'Encarregado de dep. pessoal' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '199', 'Estagiário de direito' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '200', 'Estagiário de ciências contábeis' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '201', 'Estagiário de administração' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '202', 'Estagiário em farmácia' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '203', 'Estagiário de enfermagem' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '204', 'Estagiário de jornalismo' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '205', 'Estagiário de psicologia' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '206', 'Estagiário de nível médio' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '207', 'Primeiro emprego' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '208', 'Estagiário de fisioterapia' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '209', 'Estagiário em pedagogia' );
+INSERT INTO `empregos`(`id_cargo`,`nome_cargo`) VALUES ( '210', 'Estagiário de logística' );
 -- ---------------------------------------------------------
 
 
@@ -121,36 +290,7 @@ INSERT INTO `usuarios`(`id`,`username`,`password`,`nivel`,`status`) VALUES ( '1'
 
 
 -- Dump data of "usuarios_facebook" ------------------------
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '3', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '4', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '5', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '6', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '7', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '8', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '9', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '10', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '11', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '12', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '13', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '14', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '15', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '16', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '17', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '18', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '19', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '20', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '21', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '22', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '23', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '24', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '25', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '26', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '27', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '28', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '29', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '30', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '31', '903743969763615', 'Guilherme Henrique' );
-INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '32', '903743969763615', 'Guilherme Henrique' );
+INSERT INTO `usuarios_facebook`(`id_f`,`fb_id`,`fb_name`) VALUES ( '45', '903743969763615', 'Guilherme Henrique' );
 -- ---------------------------------------------------------
 
 
